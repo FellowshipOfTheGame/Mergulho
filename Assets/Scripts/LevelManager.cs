@@ -5,17 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-    public GameObject menu;
-    public GameObject credits;
+    public GameObject pause;
 
-    public void LoadScreenMenu() {
-        menu.SetActive(true);
-        credits.SetActive(false);
+	// Use this for initialization
+	void Start () {
+        pause.SetActive(false);
     }
-    
-    public void LoadScreenCredits() {
-        menu.SetActive(false);
-        credits.SetActive(true);
+
+    public void LoadScreenPause(bool on) {
+        pause.SetActive(on);
     }
 
     public void LoadScene(string name) {
