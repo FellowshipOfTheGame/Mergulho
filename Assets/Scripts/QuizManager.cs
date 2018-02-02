@@ -9,8 +9,7 @@ public class QuizManager : MonoBehaviour {
 
     // Use this for initialization
     private void Start() {
-        info.SetActive(false);
-        question.SetActive(false);
+        LoadScreenInfo();
     }
 
     public void LoadScreenInfo() {
