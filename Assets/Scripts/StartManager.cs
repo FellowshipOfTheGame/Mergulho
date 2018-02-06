@@ -7,26 +7,38 @@ public class StartManager : MonoBehaviour {
 
     public GameObject menu;
     public GameObject credits;
+    public GameObject instructions;
 
     // Use this for initialization
-    private void Start() {
+    private void Start()
+    {
         menu.SetActive(true);
         credits.SetActive(false);
+        instructions.SetActive(false);
     }
 
-    public void LoadScreenMenu(bool on) {
-        menu.SetActive(on);
-    }
-    
-    public void LoadScreenCredits(bool on) {
-        credits.SetActive(on);
+    public void ShowMenuScreen(bool show)
+    {
+        menu.SetActive(show);
     }
 
-    public void LoadScene(string name) {
+    public void ShowCreditsScreen(bool show)
+    {
+        credits.SetActive(show);
+    }
+
+    public void ShowInstructionsScreen(bool show)
+    {
+        instructions.SetActive(show);
+    }
+
+    public void LoadScene(string name)
+    {
         SceneManager.LoadScene(name);
     }
 
-    public void QuitGame() {
+    public void QuitGame()
+    {
         Application.Quit();
     }
 }
