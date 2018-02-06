@@ -79,14 +79,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlbumController.cs" />
+    <Compile Include="Assets\Scripts\AnswerButton.cs" />
     <Compile Include="Assets\Scripts\AnswerData.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Scripts\GameDataEditor.cs" />
+    <Compile Include="Assets\Scripts\PlayerData.cs" />
     <Compile Include="Assets\Scripts\QuestionData.cs" />
     <Compile Include="Assets\Scripts\QuizController.cs" />
     <Compile Include="Assets\Scripts\RoundData.cs" />
+    <Compile Include="Assets\Scripts\SimpleObjectPool.cs" />
     <Compile Include="Assets\Scripts\StartController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
