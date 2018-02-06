@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class QuizController : MonoBehaviour {
 
-    public GameObject infoScreen;
-    public GameObject questionScreen;
+    public GameObject infoDisplay;
+    public GameObject questionDisplay;
 
     public Text infoText;
     public Text numberText;
@@ -22,13 +22,13 @@ public class QuizController : MonoBehaviour {
 
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
-    private int questionIndex;
+    private int questionIndex = 0;
 
     // Use this for initialization
     private void Start()
     {
-        infoScreen.SetActive(true);
-        questionScreen.SetActive(false);
+        infoDisplay.SetActive(true);
+        questionDisplay.SetActive(false);
 
         dataController = FindObjectOfType<DataController>();                              
         // Store a reference to the DataController so we can request the data we need for this round
@@ -85,13 +85,13 @@ public class QuizController : MonoBehaviour {
         }
     }
 
-    public void ShowInfoScreen(bool show)
+    public void ShowInfoDisplay(bool show)
     {
-        infoScreen.SetActive(show);
+        infoDisplay.SetActive(show);
     }
 
-    public void ShowQuestionScreen(bool show)
+    public void ShowQuestionDisplay(bool show)
     {
-        questionScreen.SetActive(show);
+        questionDisplay.SetActive(show);
     }
 }

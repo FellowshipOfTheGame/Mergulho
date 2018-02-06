@@ -17,17 +17,17 @@ public class StartController : MonoBehaviour {
         instructions.SetActive(false);
     }
 
-    public void ShowMenuScreen(bool show)
+    public void ShowMenuDisplay(bool show)
     {
         menu.SetActive(show);
     }
 
-    public void ShowCreditsScreen(bool show)
+    public void ShowCreditsDisplay(bool show)
     {
         credits.SetActive(show);
     }
 
-    public void ShowInstructionsScreen(bool show)
+    public void ShowInstructionsDisplay(bool show)
     {
         instructions.SetActive(show);
     }
