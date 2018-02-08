@@ -80,6 +80,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlbumController.cs" />
     <Compile Include="Assets\Scripts\AnswerButton.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\ClickedChest.cs" />
+    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\ControllerKeys.cs" />
     <Compile Include="Assets\Scripts\Data\AnswerData.cs" />
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Data\QuestionData.cs" />
