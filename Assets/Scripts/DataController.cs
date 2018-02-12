@@ -16,7 +16,16 @@ public class DataController : MonoBehaviour
 
         LoadGameData();
 
+        StartPlayerPrefs();
+
         SceneManager.LoadScene("Start");
+    }
+
+    private void StartPlayerPrefs()
+    {
+        PlayerPrefs.SetFloat("timeRemaining", 30);
+        PlayerPrefs.SetInt("score", 0);
+        PlayerPrefs.SetInt("clickedChest", 0);
     }
 
     public RoundData GetCurrentRoundData()

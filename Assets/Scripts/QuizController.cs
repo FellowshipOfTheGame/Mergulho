@@ -23,10 +23,13 @@ public class QuizController : MonoBehaviour {
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
     private int questionIndex = 0;
+    private int score = 0;
 
     // Use this for initialization
     private void Start()
     {
+        score = PlayerPrefs.GetInt("score");
+
         infoDisplay.SetActive(true);
         questionDisplay.SetActive(false);
 
@@ -40,6 +43,8 @@ public class QuizController : MonoBehaviour {
         questionPool = currentRoundData.questions;
         // Take a copy of the questions so we could shuffle the pool or drop questions from it 
         // without affecting the original RoundData object
+
+        questionIndex = PlayerPrefs.GetInt("clickedChest");
 
         ShowQuestion();
     }
@@ -81,7 +86,16 @@ public class QuizController : MonoBehaviour {
     {
         if (isCorrect)
         {
+            //Calcular pontuação a partir de um range de tempo (quanto mais tempo menos pontos)
+            score += 100;
+            PlayerPrefs.SetInt("score", score);
+
+            //Salva num objeto json o tempo levado para responder, quantos erros até a resposta correta
             SceneManager.LoadScene("Game");
+        }
+        else
+        {
+            //Retira oxigenio (tempo) do que o player tem
         }
     }
 
