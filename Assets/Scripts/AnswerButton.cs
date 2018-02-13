@@ -9,7 +9,7 @@ public class AnswerButton : MonoBehaviour
 	private QuizController gameController;
 	private AnswerData answerData;
 
-	void Start()
+	private void Start()
 	{
 		gameController = FindObjectOfType<QuizController>();
 	}

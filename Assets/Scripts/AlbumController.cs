@@ -4,28 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class AlbumController : MonoBehaviour {
-
+public class AlbumController : MonoBehaviour
+{
     public AudioSource bookFlip;
 
-	// Use this for initialization
-	void Start () {
+	private void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	private void Update () {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
             SceneManager.LoadScene("Game");
-        }
     }
 
-    public void LoadImages(Button button) {
-        //if(tem mais paginas)
-
+    public void LoadImages() {
         bookFlip.Play();
-        //else nao carrega mais paginas
     }
-
 }

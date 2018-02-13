@@ -3,33 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartController : MonoBehaviour {
+public class StartController : MonoBehaviour
+{
+    public GameObject menuDisplay;
+    public GameObject creditsDisplay;
+    public GameObject instrucDisplay;
 
-    public GameObject menu;
-    public GameObject credits;
-    public GameObject instructions;
-
-    // Use this for initialization
     private void Start()
     {
-        menu.SetActive(true);
-        credits.SetActive(false);
-        instructions.SetActive(false);
+        menuDisplay.SetActive(true);
+        creditsDisplay.SetActive(false);
+        instrucDisplay.SetActive(false);
     }
 
     public void ShowMenuDisplay(bool show)
     {
-        menu.SetActive(show);
+        menuDisplay.SetActive(show);
     }
 
     public void ShowCreditsDisplay(bool show)
     {
-        credits.SetActive(show);
+        creditsDisplay.SetActive(show);
     }
 
     public void ShowInstructionsDisplay(bool show)
     {
-        instructions.SetActive(show);
+        instrucDisplay.SetActive(show);
     }
 
     public void LoadScene(string name)

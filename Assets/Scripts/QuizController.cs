@@ -12,29 +12,22 @@ public class QuizController : MonoBehaviour {
     public Text infoText;
     public Text numberText;
     public Text questionText;
+    public SimpleObjectPool answerButtonObjectPool;
+    public Transform answerButtonParent;
 
     private DataController dataController;
     private RoundData currentRoundData;
     private QuestionData[] questionPool;
-
-    public SimpleObjectPool answerButtonObjectPool;
-    public Transform answerButtonParent;
-
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
-    private int questionIndex = 0;
-    private int score = 0;
-
-    // Use this for initialization
     private void Start()
     {
-        score = PlayerPrefs.GetInt("score");
-
         infoDisplay.SetActive(true);
         questionDisplay.SetActive(false);
 
-        dataController = FindObjectOfType<DataController>();                              
-        // Store a reference to the DataController so we can request the data we need for this round
+        dataController = FindObjectOfType<DataController>();
+        // Store a reference to the DataController so we can request the data we need for 
+        //this round
 
         currentRoundData = dataController.GetCurrentRoundData();
         // Ask the DataController for the data for the current round. At the moment, 
@@ -44,16 +37,14 @@ public class QuizController : MonoBehaviour {
         // Take a copy of the questions so we could shuffle the pool or drop questions from it 
         // without affecting the original RoundData object
 
-        questionIndex = PlayerPrefs.GetInt("clickedChest");
-
         ShowQuestion();
     }
 
-    void ShowQuestion()
+    private void ShowQuestion()
     {
         RemoveAnswerButtons();
 
-        QuestionData questionData = questionPool[questionIndex];                            
+        QuestionData questionData = questionPool[0];                           
         // Get the QuestionData for the current question
         questionText.text = questionData.questionText;
         // Update questionText with the correct text
@@ -73,7 +64,7 @@ public class QuizController : MonoBehaviour {
         }
     }
 
-    void RemoveAnswerButtons()
+    private void RemoveAnswerButtons()
     {
         while (answerButtonGameObjects.Count > 0)                                            // Return all spawned AnswerButtons to the object pool
         {
@@ -87,15 +78,16 @@ public class QuizController : MonoBehaviour {
         if (isCorrect)
         {
             //Calcular pontuação a partir de um range de tempo (quanto mais tempo menos pontos)
-            score += 100;
-            PlayerPrefs.SetInt("score", score);
+            //Salvar quanto tempo foi levado para responder a pergunta e quantos erros cometeu
+            dataController.score += 100;
+            dataController.UpdatePlayerPrefs();
 
-            //Salva num objeto json o tempo levado para responder, quantos erros até a resposta correta
             SceneManager.LoadScene("Game");
         }
         else
         {
             //Retira oxigenio (tempo) do que o player tem
+            dataController.UpdatePlayerPrefs();
         }
     }
 
