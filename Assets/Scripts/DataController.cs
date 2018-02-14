@@ -9,6 +9,7 @@ public class DataController : MonoBehaviour
 
     private string gameDataFileName = "data.json";
 
+    public float time = 30;
     public float timeRemaining;
     public int score;
     public int currentQuestion;
@@ -40,6 +41,8 @@ public class DataController : MonoBehaviour
 
             // Retrieve the allRoundData property of loadedData
             allRoundData = loadedData.allRoundData;
+
+            time = allRoundData.Length * 30;
         }
         else
         {
@@ -49,7 +52,7 @@ public class DataController : MonoBehaviour
 
     private void StartPlayerPrefs()
     {
-        PlayerPrefs.SetFloat("timeRemaining", 30);
+        PlayerPrefs.SetFloat("timeRemaining", time);
         PlayerPrefs.SetInt("score", 0);
         PlayerPrefs.SetInt("clickedChest", 0);
     }
