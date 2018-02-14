@@ -5,7 +5,7 @@ using System.IO; //This namespace contains functions related to loading and savi
 
 public class DataController : MonoBehaviour
 {
-    private RoundData[] allRoundData;
+    private QuestionData[] allQuestionData;
 
     private string gameDataFileName = "data.json";
 
@@ -39,10 +39,10 @@ public class DataController : MonoBehaviour
             // Pass the json to JsonUtility, and tell it to create a GameData object from it
             GameData loadedData = JsonUtility.FromJson<GameData>(dataAsJson);
 
-            // Retrieve the allRoundData property of loadedData
-            allRoundData = loadedData.allRoundData;
+            // Retrieve the allQuestionData property of loadedData
+            allQuestionData = loadedData.allQuestionData;
 
-            time = allRoundData.Length * 30;
+            time = allQuestionData.Length * 30;
         }
         else
         {
@@ -54,7 +54,7 @@ public class DataController : MonoBehaviour
     {
         PlayerPrefs.SetFloat("timeRemaining", time);
         PlayerPrefs.SetInt("score", 0);
-        PlayerPrefs.SetInt("clickedChest", 0);
+        PlayerPrefs.SetInt("currentQuestion", 0);
     }
 
     public void GetPlayerPrefs()
@@ -71,10 +71,10 @@ public class DataController : MonoBehaviour
         PlayerPrefs.SetInt("currentQuestion", currentQuestion);
     }
 
-    public RoundData GetCurrentRoundData()
+    public QuestionData GetCurrentQuestionData()
     {
         // If we wanted to return different rounds, we could do that here
         // We could store an int representing the current round index in PlayerProgress
-        return allRoundData[currentQuestion];
+        return allQuestionData[currentQuestion];
     }
 }

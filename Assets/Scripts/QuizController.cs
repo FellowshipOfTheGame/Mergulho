@@ -16,8 +16,7 @@ public class QuizController : MonoBehaviour {
     public Transform answerButtonParent;
 
     private DataController dataController;
-    private RoundData currentRoundData;
-    private QuestionData[] questionPool;
+    private QuestionData currentQuestionData;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
     private void Start()
@@ -29,13 +28,9 @@ public class QuizController : MonoBehaviour {
         // Store a reference to the DataController so we can request the data we need for 
         //this round
 
-        currentRoundData = dataController.GetCurrentRoundData();
+        currentQuestionData = dataController.GetCurrentQuestionData();
         // Ask the DataController for the data for the current round. At the moment, 
         // we only have one round - but we could extend this
-
-        questionPool = currentRoundData.questions;
-        // Take a copy of the questions so we could shuffle the pool or drop questions from it 
-        // without affecting the original RoundData object
 
         ShowQuestion();
     }
@@ -43,13 +38,13 @@ public class QuizController : MonoBehaviour {
     private void ShowQuestion()
     {
         RemoveAnswerButtons();
-
-        QuestionData questionData = questionPool[0];                           
+                          
         // Get the QuestionData for the current question
-        questionText.text = questionData.questionText;
+        questionText.text = currentQuestionData.questionText;
         // Update questionText with the correct text
+        infoText.text = currentQuestionData.info;
 
-        for (int i = 0; i < questionData.answers.Length; i++)                              
+        for (int i = 0; i < currentQuestionData.answers.Length; i++)                              
         // For every AnswerData in the current QuestionData...
         {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();         
@@ -59,7 +54,7 @@ public class QuizController : MonoBehaviour {
             answerButtonGameObject.transform.localScale = Vector3.one;
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.SetUp(questionData.answers[i]);                                    
+            answerButton.SetUp(currentQuestionData.answers[i]);                                    
             // Pass the AnswerData to the AnswerButton so the AnswerButton knows what text to display and whether it is the correct answer
         }
     }
