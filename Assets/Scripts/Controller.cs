@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller : MonoBehaviour {
-
+public class Controller : MonoBehaviour
+{
     private Vector3 playerPos;
     private bool hasStarted = false;
-
-    // Use this for initialization
-    void Start() {
+    
+    private void Start() {
         playerPos = new Vector3(0f, 0f, 0f);
     }
 
-    void Update(){
+    private void Update(){
         if (Input.GetMouseButtonDown(0)) {
             hasStarted = true;
             playerPos = new Vector3(0f, 0f, 0f);

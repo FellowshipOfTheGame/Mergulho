@@ -4,13 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class QuizController : MonoBehaviour {
+public class QuizController : MonoBehaviour
+{
+    public float lostTime;
 
     public GameObject infoDisplay;
     public GameObject questionDisplay;
 
     public Text infoText;
-    public Text numberText;
+    public Text questionNumber;
     public Text questionText;
     public SimpleObjectPool answerButtonObjectPool;
     public Transform answerButtonParent;
@@ -19,49 +21,54 @@ public class QuizController : MonoBehaviour {
     private QuestionData currentQuestionData;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
+    private float oxygenTime = 0;
+    private int scoreEarned = 0;
+    private float timeToAnswer = 0;
+    private bool questionAvaliable = false;
+
     private void Start()
     {
         infoDisplay.SetActive(true);
         questionDisplay.SetActive(false);
 
         dataController = FindObjectOfType<DataController>();
-        // Store a reference to the DataController so we can request the data we need for 
-        //this round
 
         currentQuestionData = dataController.GetCurrentQuestionData();
-        // Ask the DataController for the data for the current round. At the moment, 
-        // we only have one round - but we could extend this
 
         ShowQuestion();
+    }
+
+    private void Update()
+    {
+        if (questionAvaliable)
+            timeToAnswer += Time.deltaTime;
     }
 
     private void ShowQuestion()
     {
         RemoveAnswerButtons();
-                          
-        // Get the QuestionData for the current question
-        questionText.text = currentQuestionData.questionText;
-        // Update questionText with the correct text
-        infoText.text = currentQuestionData.info;
 
-        for (int i = 0; i < currentQuestionData.answers.Length; i++)                              
-        // For every AnswerData in the current QuestionData...
+        questionNumber.text = (currentQuestionData.index + 1).ToString();
+        infoText.text = currentQuestionData.infoText;
+        questionText.text = currentQuestionData.questionText;
+
+        for (int i = 0; i < currentQuestionData.answers.Length; i++)
         {
-            GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();         
-            // Spawn an AnswerButton from the object pool
+            GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
             answerButtonGameObject.transform.localScale = Vector3.one;
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.SetUp(currentQuestionData.answers[i]);                                    
-            // Pass the AnswerData to the AnswerButton so the AnswerButton knows what text to display and whether it is the correct answer
+            answerButton.SetUp(currentQuestionData.answers[i]);
         }
+
+        questionAvaliable = true;
     }
 
     private void RemoveAnswerButtons()
     {
-        while (answerButtonGameObjects.Count > 0)                                            // Return all spawned AnswerButtons to the object pool
+        while (answerButtonGameObjects.Count > 0)
         {
             answerButtonObjectPool.ReturnObject(answerButtonGameObjects[0]);
             answerButtonGameObjects.RemoveAt(0);
@@ -74,15 +81,22 @@ public class QuizController : MonoBehaviour {
         {
             //Calcular pontuação a partir de um range de tempo (quanto mais tempo menos pontos)
             //Salvar quanto tempo foi levado para responder a pergunta e quantos erros cometeu
-            dataController.score += 100;
-            dataController.UpdatePlayerPrefs();
+            questionAvaliable = false;
+
+            scoreEarned = (int)timeToAnswer / 10;
+
+            scoreEarned += PlayerPrefs.GetInt("score");
+            PlayerPrefs.SetInt("score", scoreEarned);
+
+            oxygenTime += PlayerPrefs.GetFloat("timeRemaining");
+            PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
 
             SceneManager.LoadScene("Game");
         }
         else
         {
-            //Retira oxigenio (tempo) do que o player tem
-            dataController.UpdatePlayerPrefs();
+            currentQuestionData.mistakes++;
+            oxygenTime -= lostTime;
         }
     }
 

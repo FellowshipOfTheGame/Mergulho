@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllerKeys : MonoBehaviour {
-
+public class ControllerKeys : MonoBehaviour
+{
     public Rigidbody2D rb;
     public SpriteRenderer sr;
     private float yVelocity;
     private float xVelocity;
     public float speed;
 
-
-
-    // Use this for initialization
-    void Start() {
+    private void Start() {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update() {
+    private void Update() {
         if (Input.GetKeyDown(KeyCode.UpArrow)) {
             yVelocity = 1;
         } else if (Input.GetKeyUp(KeyCode.UpArrow)) {
