@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class QuizController : MonoBehaviour
 {
     public float lostTime;
+    public int maxScore;
+    public int scoreLostPerError;
 
     public GameObject infoDisplay;
     public GameObject questionDisplay;
@@ -18,22 +20,21 @@ public class QuizController : MonoBehaviour
     public Transform answerButtonParent;
 
     private DataController dataController;
-    private QuestionData currentQuestionData;
+    private QuestionData curQuestionData;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
     private float oxygenTime = 0;
-    private int scoreEarned = 0;
     private float timeToAnswer = 0;
     private bool questionAvaliable = false;
 
     private void Start()
     {
-        infoDisplay.SetActive(true);
-        questionDisplay.SetActive(false);
+        ShowInfoDisplay(true);
+        ShowQuestionDisplay(false);
 
         dataController = FindObjectOfType<DataController>();
 
-        currentQuestionData = dataController.GetCurrentQuestionData();
+        curQuestionData = dataController.GetCurrentQuestionData();
 
         ShowQuestion();
     }
@@ -48,11 +49,11 @@ public class QuizController : MonoBehaviour
     {
         RemoveAnswerButtons();
 
-        questionNumber.text = (currentQuestionData.index + 1).ToString();
-        infoText.text = currentQuestionData.infoText;
-        questionText.text = currentQuestionData.questionText;
+        questionNumber.text = (curQuestionData.index + 1).ToString();
+        infoText.text = curQuestionData.infoText;
+        questionText.text = curQuestionData.questionText;
 
-        for (int i = 0; i < currentQuestionData.answers.Length; i++)
+        for (int i = 0; i < curQuestionData.answers.Length; i++)
         {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
@@ -60,7 +61,7 @@ public class QuizController : MonoBehaviour
             answerButtonGameObject.transform.localScale = Vector3.one;
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.SetUp(currentQuestionData.answers[i]);
+            answerButton.SetUp(curQuestionData.answers[i]);
         }
 
         questionAvaliable = true;
@@ -79,14 +80,13 @@ public class QuizController : MonoBehaviour
     {
         if (isCorrect)
         {
-            //Calcular pontuação a partir de um range de tempo (quanto mais tempo menos pontos)
-            //Salvar quanto tempo foi levado para responder a pergunta e quantos erros cometeu
             questionAvaliable = false;
 
-            scoreEarned = (int)timeToAnswer / 10;
+            curQuestionData.questionScore = maxScore - scoreLostPerError * curQuestionData.mistakes;
 
-            scoreEarned += PlayerPrefs.GetInt("score");
-            PlayerPrefs.SetInt("score", scoreEarned);
+            PlayerPrefs.SetInt("score", curQuestionData.questionScore + PlayerPrefs.GetInt("score"));
+
+            curQuestionData.timeUsed = timeToAnswer;
 
             oxygenTime += PlayerPrefs.GetFloat("timeRemaining");
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
@@ -95,7 +95,7 @@ public class QuizController : MonoBehaviour
         }
         else
         {
-            currentQuestionData.mistakes++;
+            curQuestionData.mistakes++;
             oxygenTime -= lostTime;
         }
     }

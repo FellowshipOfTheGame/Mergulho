@@ -7,21 +7,26 @@ public class ObjectController : MonoBehaviour
 {
     public int index;
     public float earnOxygenTime;
-
-    private float timeRemaining;
+    public bool needKey = false;
 
     private void OnMouseDown()
     {
         if (gameObject.tag == "Chest")
         {
-            //Checar se nao precisa de chave para ser aberto
-            PlayerPrefs.SetInt("currentQuestion", index);
-            SceneManager.LoadScene("Quiz");
+            if (needKey)
+            {
+                //Checar se possui chave correspondente a esse baú
+            }
+            else
+            {
+                PlayerPrefs.SetInt("currentQuestion", index);
+                SceneManager.LoadScene("Quiz");
+            }
         }
         else if (gameObject.tag == "Bubble")
         {
-            timeRemaining = PlayerPrefs.GetFloat("timeRemaining") + earnOxygenTime;
-            PlayerPrefs.SetFloat("timeRemaining", timeRemaining);
+            PlayerPrefs.SetFloat("timeRemaining", PlayerPrefs.GetFloat("timeRemaining") + earnOxygenTime);
+            gameObject.SetActive(false);
         }
         else if (gameObject.tag == "Key")
         {
