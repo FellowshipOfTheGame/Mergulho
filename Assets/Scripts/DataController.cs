@@ -51,8 +51,16 @@ public class DataController : MonoBehaviour
 
     public QuestionData GetCurrentQuestionData()
     {
-        // If we wanted to return different rounds, we could do that here
-        // We could store an int representing the current round index in PlayerProgress
         return allQuestionData[PlayerPrefs.GetInt("currentQuestion")];
+    }
+
+    public QuestionData GetQuestionData(int index)
+    {
+        return allQuestionData[index];
+    }
+
+    public int GetQuestionDataLengh()
+    {
+        return allQuestionData.Length;
     }
 }

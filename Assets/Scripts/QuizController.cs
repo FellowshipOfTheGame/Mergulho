@@ -86,6 +86,7 @@ public class QuizController : MonoBehaviour
 
             PlayerPrefs.SetInt("score", curQuestionData.questionScore + PlayerPrefs.GetInt("score"));
 
+            curQuestionData.wasAnswered = true;
             curQuestionData.timeUsed = timeToAnswer;
 
             oxygenTime += PlayerPrefs.GetFloat("timeRemaining");
