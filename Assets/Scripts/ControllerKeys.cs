@@ -13,6 +13,8 @@ public class ControllerKeys : MonoBehaviour
     private void Start() {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+
+        LoadPlayerPosition();
     }
 
     private void Update() {
@@ -40,5 +42,19 @@ public class ControllerKeys : MonoBehaviour
         }
 
         rb.velocity = new Vector2(xVelocity, yVelocity) * speed;
+
+        SavePlayerPosition();
+    }
+
+    private void SavePlayerPosition()
+    {
+        PlayerPrefs.SetFloat("playerX", transform.position.x);
+        PlayerPrefs.SetFloat("playerY", transform.position.y);
+        PlayerPrefs.SetFloat("playerZ", transform.position.z);
+    }
+
+    private void LoadPlayerPosition()
+    {
+        transform.position = new Vector3(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"), PlayerPrefs.GetFloat("playerZ"));
     }
 }

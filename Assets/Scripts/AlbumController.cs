@@ -105,4 +105,9 @@ public class AlbumController : MonoBehaviour
         LoadImages(index, length - 4, imgsPage1);
         LoadImages(index + 4, length, imgsPage2);
     }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 }
