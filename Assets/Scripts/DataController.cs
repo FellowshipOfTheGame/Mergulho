@@ -1,20 +1,26 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.IO;
+using System.Collections;
+using System.IO; //This namespace contains functions related to loading and saving files
 
 public class DataController : MonoBehaviour
 {
-    public float timePerQuestion;
-
     private QuestionData[] allQuestionData;
+
     private string gameDataFileName = "data.json";
-    private float playTimeAvaliable;
+
+    public float time = 30;
+    public float timeRemaining;
+    public int score;
+    public int currentQuestion;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
 
         LoadGameData();
+
+        StartPlayerPrefs();
 
         SceneManager.LoadScene("Start");
     }
@@ -36,12 +42,7 @@ public class DataController : MonoBehaviour
             // Retrieve the allQuestionData property of loadedData
             allQuestionData = loadedData.allQuestionData;
 
-            playTimeAvaliable = allQuestionData.Length * timePerQuestion;
-
-            PlayerPrefs.SetFloat("playTimeAvaliable", playTimeAvaliable);
-            PlayerPrefs.SetFloat("timeRemaining", playTimeAvaliable);
-            PlayerPrefs.SetInt("score", 0);
-            PlayerPrefs.SetInt("currentQuestion", 0);
+            time = allQuestionData.Length * 30;
         }
         else
         {
@@ -49,18 +50,31 @@ public class DataController : MonoBehaviour
         }
     }
 
+    private void StartPlayerPrefs()
+    {
+        PlayerPrefs.SetFloat("timeRemaining", time);
+        PlayerPrefs.SetInt("score", 0);
+        PlayerPrefs.SetInt("currentQuestion", 0);
+    }
+
+    public void GetPlayerPrefs()
+    {
+        timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
+        score = PlayerPrefs.GetInt("score");
+        currentQuestion = PlayerPrefs.GetInt("currentQuestion");
+    }
+
+    public void UpdatePlayerPrefs()
+    {
+        PlayerPrefs.SetFloat("timeRemaining", timeRemaining);
+        PlayerPrefs.SetInt("score", score);
+        PlayerPrefs.SetInt("currentQuestion", currentQuestion);
+    }
+
     public QuestionData GetCurrentQuestionData()
     {
+        // If we wanted to return different rounds, we could do that here
+        // We could store an int representing the current round index in PlayerProgress
         return allQuestionData[PlayerPrefs.GetInt("currentQuestion")];
-    }
-
-    public QuestionData GetQuestionData(int index)
-    {
-        return allQuestionData[index];
-    }
-
-    public int GetQuestionDataLengh()
-    {
-        return allQuestionData.Length;
     }
 }

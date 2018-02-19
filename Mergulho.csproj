@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\AlbumController.cs" />
     <Compile Include="Assets\Scripts\AnswerButton.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\ChestController.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\ControllerKeys.cs" />
     <Compile Include="Assets\Scripts\Data\AnswerData.cs" />
@@ -88,7 +89,6 @@
     <Compile Include="Assets\Scripts\Data\QuestionData.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
-    <Compile Include="Assets\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Scripts\QuizController.cs" />
     <Compile Include="Assets\Scripts\SimpleObjectPool.cs" />
     <Compile Include="Assets\Scripts\StartController.cs" />
