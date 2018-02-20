@@ -27,6 +27,7 @@ public class ObjectController : MonoBehaviour
         {
             PlayerPrefs.SetFloat("timeRemaining", PlayerPrefs.GetFloat("timeRemaining") + earnOxygenTime);
             gameObject.SetActive(false);
+            //Nao resolve, pois se mudar a cena e depois voltar, a bolha estara de volta tambem
         }
         else if (gameObject.tag == "Key")
         {

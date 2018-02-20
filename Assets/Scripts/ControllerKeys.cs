@@ -2,25 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllerKeys : MonoBehaviour {
-
+public class ControllerKeys : MonoBehaviour
+{
     public Animator anim;
     public Rigidbody2D rb;
     public SpriteRenderer sr;
+    public float speed;
+
     private float yVelocity;
     private float xVelocity;
-    public float speed;
     private bool movement;
-
-
 
     void Start() {
         anim = GetComponent<Animator>();
+
         rb = GetComponent<Rigidbody2D>();
+
         sr = GetComponent<SpriteRenderer>();
+
         movement = false;
         anim.SetBool("HorizontalMovement", movement);
 
+        LoadPlayerPosition();
     }
 
     void Update() {
@@ -50,7 +53,23 @@ public class ControllerKeys : MonoBehaviour {
             movement = false;
             xVelocity = 0;
         }
+
         anim.SetBool("HorizontalMovement", movement);
+
         rb.velocity = new Vector2(xVelocity, yVelocity) * speed;
+
+        SavePlayerPosition();
+    }
+
+    private void SavePlayerPosition()
+    {
+        PlayerPrefs.SetFloat("playerX", transform.position.x);
+        PlayerPrefs.SetFloat("playerY", transform.position.y);
+        PlayerPrefs.SetFloat("playerZ", transform.position.z);
+    }
+
+    private void LoadPlayerPosition()
+    {
+        transform.position = new Vector3(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"), PlayerPrefs.GetFloat("playerZ"));
     }
 }
