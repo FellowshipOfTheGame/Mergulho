@@ -19,8 +19,13 @@ public class CameraController : MonoBehaviour {
         if (player.transform.position.x > leftLimit) {
             if (player.transform.position.x < rightLimit) {
                 posicao.x = player.transform.position.x + offset.x;
+            } else {
+                posicao.x = rightLimit-1;
             }
+        } else {
+            posicao.x = leftLimit-1;
         }
+    
         if (player.transform.position.y > downLimit) {
             if (player.transform.position.y < upLimit){
                 posicao.y = player.transform.position.y + offset.y;

@@ -3,35 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ObjectController : MonoBehaviour
-{
+public class ObjectController : MonoBehaviour {
     public int index;
     public float earnOxygenTime;
     public bool needKey = false;
+    public bool open = false;
+    public bool bubbleActive = true;
+    public Sprite[] sprites;
 
-    private void OnMouseDown()
-    {
-        if (gameObject.tag == "Chest")
-        {
-            if (needKey)
-            {
-                //Checar se possui chave correspondente a esse baú
-            }
-            else
-            {
-                PlayerPrefs.SetInt("currentQuestion", index);
-                SceneManager.LoadScene("Quiz");
+    private void Update() {
+        if (bubbleActive == false){
+            Destroy(gameObject);
+        }
+
+        if (gameObject.tag == "Chest") {
+            if (open == true) {
+                ChangeSprite(1);
+            } else {
+                ChangeSprite(0);
             }
         }
-        else if (gameObject.tag == "Bubble")
-        {
+    }
+
+    private void OnMouseDown() {
+        if (gameObject.tag == "Chest") {
+            if (!open) {
+                if (needKey){
+                    //Checar se possui chave correspondente a esse baú
+                } else {
+                    open = true;
+                    PlayerPrefs.SetInt("currentQuestion", index);
+                    SceneManager.LoadScene("Quiz");
+                }
+            }
+        }
+        else if (gameObject.tag == "Bubble"){
             PlayerPrefs.SetFloat("timeRemaining", PlayerPrefs.GetFloat("timeRemaining") + earnOxygenTime);
-            gameObject.SetActive(false);
+            bubbleActive = false;
+            Destroy(gameObject);
             //Nao resolve, pois se mudar a cena e depois voltar, a bolha estara de volta tambem
         }
-        else if (gameObject.tag == "Key")
-        {
+        else if (gameObject.tag == "Key") {
             //Captura a chave para ser usada em um único baú indicado pelo index
         }
     }
+
+    //Troca  as sprites
+    void ChangeSprite(int index) {
+        this.GetComponent<SpriteRenderer>().sprite = sprites[index];
+    }
 }
+
