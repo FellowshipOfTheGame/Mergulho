@@ -1,55 +1,59 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ObjectController : MonoBehaviour {
+public class ObjectController : MonoBehaviour
+{
     public int index;
     public float earnOxygenTime;
-    public bool needKey = false;
-    public bool open = false;
-    public bool bubbleActive = true;
     public Sprite[] sprites;
 
-    private void Update() {
-        if (bubbleActive == false){
-            Destroy(gameObject);
-        }
+    private DataController dataController;
+    private QuestionData questionData;
+    private int recoveredKeys;
+    private float timeRemaining;
 
-        if (gameObject.tag == "Chest") {
-            if (open == true) {
-                ChangeSprite(1);
-            } else {
-                ChangeSprite(0);
-            }
-        }
+    private void Start()
+    {
+        dataController = FindObjectOfType<DataController>();
+
+        questionData = dataController.GetQuestionData(index);
+
+        if (questionData.wasAnswered && gameObject.tag == "Chest")
+            ChangeSprite(1);
+    }
+
+    private void Update()
+    {
+        recoveredKeys = PlayerPrefs.GetInt("recoveredKeys");
+        timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
     }
 
     private void OnMouseDown() {
-        if (gameObject.tag == "Chest") {
-            if (!open) {
-                if (needKey){
-                    //Checar se possui chave correspondente a esse baú
-                } else {
-                    open = true;
-                    PlayerPrefs.SetInt("currentQuestion", index);
-                    SceneManager.LoadScene("Quiz");
-                }
+        if (gameObject.tag == "Chest")
+        {
+            if (!questionData.wasAnswered && recoveredKeys > 0)
+            {
+                PlayerPrefs.SetInt("currentQuestion", index);
+
+                PlayerPrefs.SetInt("recoveredKeys", recoveredKeys - 1);
+
+                SceneManager.LoadScene("Quiz");
             }
         }
-        else if (gameObject.tag == "Bubble"){
-            PlayerPrefs.SetFloat("timeRemaining", PlayerPrefs.GetFloat("timeRemaining") + earnOxygenTime);
-            bubbleActive = false;
+        else if (gameObject.tag == "Bubble")
+        {
+            PlayerPrefs.SetFloat("timeRemaining", timeRemaining + earnOxygenTime);
             Destroy(gameObject);
-            //Nao resolve, pois se mudar a cena e depois voltar, a bolha estara de volta tambem
         }
-        else if (gameObject.tag == "Key") {
-            //Captura a chave para ser usada em um único baú indicado pelo index
+        else if (gameObject.tag == "Key")
+        {
+            PlayerPrefs.SetInt("recoveredKeys", recoveredKeys + 1);
+            Destroy(gameObject);
         }
     }
 
-    //Troca  as sprites
-    void ChangeSprite(int index) {
+    private void ChangeSprite(int index)
+    {
         this.GetComponent<SpriteRenderer>().sprite = sprites[index];
     }
 }

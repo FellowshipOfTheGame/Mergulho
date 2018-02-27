@@ -90,6 +90,7 @@
     <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\FishController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\ItemsController.cs" />
     <Compile Include="Assets\Scripts\LightController.cs" />
     <Compile Include="Assets\Scripts\ObjectController.cs" />
     <Compile Include="Assets\Scripts\QuizController.cs" />

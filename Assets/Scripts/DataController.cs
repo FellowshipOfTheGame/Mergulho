@@ -42,6 +42,7 @@ public class DataController : MonoBehaviour
             PlayerPrefs.SetFloat("timeRemaining", playTimeAvaliable);
             PlayerPrefs.SetInt("score", 0);
             PlayerPrefs.SetInt("currentQuestion", 0);
+            PlayerPrefs.SetInt("recoveredKeys", 0);
         }
         else
         {
