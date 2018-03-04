@@ -18,14 +18,32 @@ public class ObjectController : MonoBehaviour
 
         questionData = dataController.GetQuestionData(index);
 
-        if (questionData.wasAnswered && gameObject.tag == "Chest")
-            ChangeSprite(1);
+        if (gameObject.tag == "Chest" && questionData.wasAnswered)
+            ChangeSprite(2);
+
+        if (gameObject.tag == "Bubble" && PlayerPrefs.GetString("bubble_" + index).Equals("caught"))
+            Destroy(gameObject);
+
+        if (gameObject.tag == "Key" && PlayerPrefs.GetString("key_" + index).Equals("caught"))
+            Destroy(gameObject);
     }
 
     private void Update()
     {
         recoveredKeys = PlayerPrefs.GetInt("recoveredKeys");
         timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
+    }
+
+    private void OnMouseOver()
+    {
+        if (gameObject.tag == "Chest" && !questionData.wasAnswered)
+            ChangeSprite(0);
+    }
+
+    private void OnMouseExit()
+    {
+        if (gameObject.tag == "Chest" && !questionData.wasAnswered)
+            ChangeSprite(1);
     }
 
     private void OnMouseDown() {
@@ -43,11 +61,13 @@ public class ObjectController : MonoBehaviour
         else if (gameObject.tag == "Bubble")
         {
             PlayerPrefs.SetFloat("timeRemaining", timeRemaining + earnOxygenTime);
+            PlayerPrefs.SetString("bubble_" + index, "caught");
             Destroy(gameObject);
         }
         else if (gameObject.tag == "Key")
         {
             PlayerPrefs.SetInt("recoveredKeys", recoveredKeys + 1);
+            PlayerPrefs.SetString("key_" + index, "caught");
             Destroy(gameObject);
         }
     }

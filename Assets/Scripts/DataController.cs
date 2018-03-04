@@ -12,6 +12,9 @@ public class DataController : MonoBehaviour
 
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
+        //Carregar progresso do player de json 
+
         DontDestroyOnLoad(gameObject);
 
         LoadGameData();
