@@ -15,15 +15,12 @@ public class ObjectController : MonoBehaviour
     private void Start()
     {
         dataController = FindObjectOfType<DataController>();
-
         questionData = dataController.GetQuestionData(index);
 
         if (gameObject.tag == "Chest" && questionData.wasAnswered)
             ChangeSprite(2);
-
         if (gameObject.tag == "Bubble" && PlayerPrefs.GetString("bubble_" + index).Equals("caught"))
             Destroy(gameObject);
-
         if (gameObject.tag == "Key" && PlayerPrefs.GetString("key_" + index).Equals("caught"))
             Destroy(gameObject);
     }
@@ -52,9 +49,7 @@ public class ObjectController : MonoBehaviour
             if (!questionData.wasAnswered && recoveredKeys > 0)
             {
                 PlayerPrefs.SetInt("currentQuestion", index);
-
                 PlayerPrefs.SetInt("recoveredKeys", recoveredKeys - 1);
-
                 SceneManager.LoadScene("Quiz");
             }
         }
@@ -74,7 +69,7 @@ public class ObjectController : MonoBehaviour
 
     private void ChangeSprite(int index)
     {
-        this.GetComponent<SpriteRenderer>().sprite = sprites[index];
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index];
     }
 }
 
