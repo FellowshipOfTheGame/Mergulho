@@ -12,13 +12,14 @@ public class ControllerKeys : MonoBehaviour
     private float yVelocity;
     private float xVelocity;
     private bool movement;
+    private GameController game;
+
 
     void Start() {
         anim = GetComponent<Animator>();
-
         rb = GetComponent<Rigidbody2D>();
-
         sr = GetComponent<SpriteRenderer>();
+        game = GameObject.FindObjectOfType<GameController>();
 
         movement = false;
         anim.SetBool("HorizontalMovement", movement);
@@ -27,49 +28,50 @@ public class ControllerKeys : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.UpArrow)) {
-            yVelocity = 1;
-        } else if (Input.GetKeyUp(KeyCode.UpArrow)) {
-            yVelocity = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow)) {
-            yVelocity = -1;
-        } else if (Input.GetKeyUp(KeyCode.DownArrow)) {
-            yVelocity = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
-            movement = true;
-            sr.flipX = false;
-            xVelocity = 1;
-        } else if (Input.GetKeyUp(KeyCode.RightArrow)) {
-            movement = false;
-            xVelocity = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            movement = true;
-            sr.flipX = true;
-            xVelocity = -1;
-        } else if (Input.GetKeyUp(KeyCode.LeftArrow)) {
-            movement = false;
-            xVelocity = 0;
-        }
+        if (game.isGameActive == true) {
 
-        anim.SetBool("HorizontalMovement", movement);
+            if (Input.GetKeyDown(KeyCode.W)) {
+                yVelocity = 1;
+            } else if (Input.GetKeyUp(KeyCode.W)) {
+                yVelocity = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.S))  {
+                yVelocity = -1;
+            }  else if (Input.GetKeyUp(KeyCode.S)){
+                yVelocity = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.D)) {
+                movement = true;
+                sr.flipX = false;
+                xVelocity = 1;
+            } else if (Input.GetKeyUp(KeyCode.D)) {
+                movement = false;
+                xVelocity = 0;
+            }
+            if (Input.GetKeyDown(KeyCode.A)){
+                movement = true;
+                sr.flipX = true;
+                xVelocity = -1;
+            }  else if (Input.GetKeyUp(KeyCode.A)) {
+                movement = false;
+                xVelocity = 0;
+            }
 
-        rb.velocity = new Vector2(xVelocity, yVelocity) * speed;
+            anim.SetBool("HorizontalMovement", movement);
 
-        SavePlayerPosition();
+            rb.velocity = new Vector2(xVelocity, yVelocity) * speed;
+
+            SavePlayerPosition();
+        }
     }
 
-    private void SavePlayerPosition()
-    {
+    private void SavePlayerPosition() {
         PlayerPrefs.SetFloat("playerX", transform.position.x);
         PlayerPrefs.SetFloat("playerY", transform.position.y);
         PlayerPrefs.SetFloat("playerZ", transform.position.z);
     }
 
-    private void LoadPlayerPosition()
-    {
+    private void LoadPlayerPosition() {
         transform.position = new Vector3(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"), PlayerPrefs.GetFloat("playerZ"));
     }
 }
