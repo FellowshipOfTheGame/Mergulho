@@ -12,6 +12,9 @@ public class QuizController : MonoBehaviour
 
     public GameObject infoDisplay;
     public GameObject questionDisplay;
+    public GameObject newPhotoDisplay;
+
+    public GameObject oxygenTimeBar;
 
     public Text infoText;
     public Text questionNumber;
@@ -23,18 +26,25 @@ public class QuizController : MonoBehaviour
     private QuestionData curQuestionData;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
-    private float oxygenTime = 0;
+    private float oxygenTime;
     private float timeToAnswer = 0;
+    private float playTimeAvaliable;
+    private float timePerCent;
     private bool questionAvaliable = false;
 
     private void Start()
     {
         ShowInfoDisplay(true);
         ShowQuestionDisplay(false);
+        ShowPhotoDisplay(false);
 
         dataController = FindObjectOfType<DataController>();
 
         curQuestionData = dataController.GetCurrentQuestionData();
+
+        oxygenTime = PlayerPrefs.GetFloat("timeRemaining");
+
+        playTimeAvaliable = PlayerPrefs.GetFloat("playTimeAvaliable");
 
         ShowQuestion();
     }
@@ -43,6 +53,10 @@ public class QuizController : MonoBehaviour
     {
         if (questionAvaliable)
             timeToAnswer += Time.deltaTime;
+
+        timePerCent = oxygenTime / playTimeAvaliable;
+
+        oxygenTimeBar.transform.localScale = new Vector3(timePerCent, oxygenTimeBar.transform.localScale.y);
     }
 
     private void ShowQuestion()
@@ -59,6 +73,20 @@ public class QuizController : MonoBehaviour
             answerButtonGameObjects.Add(answerButtonGameObject);
             answerButtonGameObject.transform.SetParent(answerButtonParent);
             answerButtonGameObject.transform.localScale = Vector3.one;
+
+            ColorBlock colors;
+            if (!curQuestionData.answers[i].isCorrect)
+            {
+                colors = answerButtonGameObject.GetComponent<Button>().colors;
+                colors.pressedColor = Color.red;
+                answerButtonGameObject.GetComponent<Button>().colors = colors;
+            }
+            else
+            {
+                colors = answerButtonGameObject.GetComponent<Button>().colors;
+                colors.pressedColor = Color.green;
+                answerButtonGameObject.GetComponent<Button>().colors = colors;
+            }
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.SetUp(curQuestionData.answers[i]);
@@ -89,16 +117,21 @@ public class QuizController : MonoBehaviour
             curQuestionData.wasAnswered = true;
             curQuestionData.timeUsed = timeToAnswer;
 
-            oxygenTime += PlayerPrefs.GetFloat("timeRemaining");
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
 
-            SceneManager.LoadScene("Game");
+            ShowPhotoDisplay(true);
+            ShowQuestionDisplay(false);
         }
         else
         {
             curQuestionData.mistakes++;
             oxygenTime -= lostTime;
         }
+    }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene("Game");
     }
 
     public void ShowInfoDisplay(bool show)
@@ -109,5 +142,10 @@ public class QuizController : MonoBehaviour
     public void ShowQuestionDisplay(bool show)
     {
         questionDisplay.SetActive(show);
+    }
+
+    public void ShowPhotoDisplay(bool show)
+    {
+        newPhotoDisplay.SetActive(show);
     }
 }

@@ -38,12 +38,16 @@ public class ObjectController : MonoBehaviour
     {
         if (gameObject.tag == "Chest" && !questionData.wasAnswered)
             ChangeSprite(0);
+        else if (gameObject.tag == "Key" || gameObject.tag == "Bubble")
+            ChangeSprite(1);
     }
 
     private void OnMouseExit()
     {
         if (gameObject.tag == "Chest" && !questionData.wasAnswered)
             ChangeSprite(1);
+        else if(gameObject.tag == "Key" || gameObject.tag == "Bubble")
+            ChangeSprite(0);
     }
 
     private void OnMouseDown() {
