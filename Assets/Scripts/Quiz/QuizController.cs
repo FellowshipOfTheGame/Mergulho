@@ -63,9 +63,9 @@ public class QuizController : MonoBehaviour
     {
         RemoveAnswerButtons();
 
-        questionNumber.text = (curQuestionData.index + 1).ToString();
+        questionNumber.text = (System.Int32.Parse(curQuestionData.index) + 1).ToString();
         infoText.text = curQuestionData.infoText;
-        questionText.text = curQuestionData.questionText;
+
 
         for (int i = 0; i < curQuestionData.answers.Length; i++)
         {

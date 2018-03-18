@@ -9,27 +9,23 @@ public class SceneLoader : MonoBehaviour
     public GameObject sprite;
 
     private SpriteRenderer spriteRenderer;
+    private AsyncOperation async;
 
     private void Start()
     {
+        spriteRenderer = sprite.GetComponent<SpriteRenderer>();
         StartCoroutine(LoadNewScene());
     }
 
     private void Update()
     {
-        /*spriteRenderer = sprite.GetComponent<SpriteRenderer>();
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, Mathf.PingPong(Time.time, 1f));
-        */
+        //spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, f);
     }
 
-    // The coroutine runs on its own at the same time as Update() and takes an integer indicating which scene to load.
     private IEnumerator LoadNewScene()
     {
-        // Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
-        AsyncOperation async = SceneManager.LoadSceneAsync(sceneName);
-        
-        // While the asynchronous operation to load the new scene is not yet complete, continue waiting until it's done.
+        async = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         while (!async.isDone)
-            yield return null;
+            yield return new WaitForSeconds(0.5f);
     }
 }
