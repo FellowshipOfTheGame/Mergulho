@@ -28,34 +28,20 @@ public class ControllerKeys : MonoBehaviour
     }
 
     void Update() {
-        if (game.isGameActive == true) {
+        if (game.isGameActive == true)
+        {
+            yVelocity = Input.GetAxis("Vertical");
+            xVelocity = Input.GetAxis("Horizontal");
 
-            if (Input.GetKeyDown(KeyCode.W)) {
-                yVelocity = 1;
-            } else if (Input.GetKeyUp(KeyCode.W)) {
-                yVelocity = 0;
-            }
-            if (Input.GetKeyDown(KeyCode.S))  {
-                yVelocity = -1;
-            }  else if (Input.GetKeyUp(KeyCode.S)){
-                yVelocity = 0;
-            }
-            if (Input.GetKeyDown(KeyCode.D)) {
+            if (xVelocity == 0)
+                movement = false;
+            else
                 movement = true;
+
+            if (xVelocity > 0 && xVelocity <= 1)
                 sr.flipX = false;
-                xVelocity = 1;
-            } else if (Input.GetKeyUp(KeyCode.D)) {
-                movement = false;
-                xVelocity = 0;
-            }
-            if (Input.GetKeyDown(KeyCode.A)){
-                movement = true;
+            if (xVelocity < 0 && xVelocity >= - 1)
                 sr.flipX = true;
-                xVelocity = -1;
-            }  else if (Input.GetKeyUp(KeyCode.A)) {
-                movement = false;
-                xVelocity = 0;
-            }
 
             anim.SetBool("HorizontalMovement", movement);
 

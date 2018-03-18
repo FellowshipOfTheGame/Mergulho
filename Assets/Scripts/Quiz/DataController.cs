@@ -9,15 +9,17 @@ public class DataController : MonoBehaviour
     private QuestionData[] allQuestionData;
     private string gameDataFileName = "data.json";
     private float playTimeAvaliable;
+    private Sprite[] sprites;
 
     private void Start()
     {
         PlayerPrefs.DeleteAll();
-        //Carregar progresso do player de json 
 
         DontDestroyOnLoad(gameObject);
 
         LoadGameData();
+
+        LoadCollectibleImages();
 
         SceneManager.LoadScene("Start");
     }
@@ -46,11 +48,45 @@ public class DataController : MonoBehaviour
             PlayerPrefs.SetInt("score", 0);
             PlayerPrefs.SetInt("currentQuestion", 0);
             PlayerPrefs.SetInt("recoveredKeys", 0);
+            PlayerPrefs.SetInt("questionsAnswered", 0);
+            PlayerPrefs.SetInt("questionsLength", GetQuestionDataLengh());
         }
         else
         {
             Debug.LogError("Cannot load game data!");
         }
+    }
+
+    private void LoadCollectibleImages()
+    {
+        Texture2D texture = null;
+        byte[] imageBytes;
+        string oneImagePath;
+        string imagesPath = Application.dataPath + "/StreamingAssets/Collectible/";
+        sprites = new Sprite[allQuestionData.Length];
+
+        for (int i = 0; i < allQuestionData.Length; i++)
+        {
+            texture = null;
+            oneImagePath = imagesPath + i + ".png";
+
+            if (File.Exists(oneImagePath))
+            {
+                imageBytes = File.ReadAllBytes(oneImagePath);
+                texture = new Texture2D(170, 160);
+                texture.LoadImage(imageBytes);
+
+                Rect r = new Rect(0, 0, texture.width, texture.height);
+                Vector2 v = new Vector2(0.5f, 0.5f);
+
+                sprites[i] = Sprite.Create(texture, r, v);
+            }
+        }
+    }
+
+    public Sprite[] GetCollectibleSprites()
+    {
+        return sprites;
     }
 
     public QuestionData GetCurrentQuestionData()

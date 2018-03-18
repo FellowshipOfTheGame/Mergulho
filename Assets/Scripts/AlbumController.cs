@@ -25,6 +25,9 @@ public class AlbumController : MonoBehaviour
     private int pages;
     private int currentPages;
 
+
+    private Sprite[] sprites;
+
     private void Start () {
         dataController = FindObjectOfType<DataController>();
 
@@ -38,6 +41,8 @@ public class AlbumController : MonoBehaviour
         currentPages = 1;
 
         emptySprite = Resources.Load<Sprite>("emptySprite");
+
+        sprites = dataController.GetCollectibleSprites();
 
         TurnPage(0);
 	}
@@ -66,9 +71,7 @@ public class AlbumController : MonoBehaviour
 
                 if (questionData.wasAnswered)
                 {
-                    newSprite = Resources.Load<Sprite>("Collectible/" + index);
-
-                    imgs[i].sprite = newSprite;
+                    imgs[i].sprite = sprites[index];
                     imgs[i].color = Color.white;
                 }
                 else

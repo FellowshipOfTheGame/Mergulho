@@ -118,6 +118,7 @@ public class QuizController : MonoBehaviour
             curQuestionData.timeUsed = timeToAnswer;
 
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
+            PlayerPrefs.SetInt("questionsAnswered", PlayerPrefs.GetInt("questionsAnswered") + 1);
 
             ShowPhotoDisplay(true);
             ShowQuestionDisplay(false);
