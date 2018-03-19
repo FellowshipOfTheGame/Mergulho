@@ -28,8 +28,10 @@ public class ControllerKeys : MonoBehaviour
     }
 
     void Update() {
-        if (game.isGameActive == true)
+        if (game.isGameActive)
         {
+            anim.speed = 1;
+
             yVelocity = Input.GetAxis("Vertical");
             xVelocity = Input.GetAxis("Horizontal");
 
@@ -40,15 +42,23 @@ public class ControllerKeys : MonoBehaviour
 
             if (xVelocity > 0 && xVelocity <= 1)
                 sr.flipX = false;
-            if (xVelocity < 0 && xVelocity >= - 1)
+            if (xVelocity < 0 && xVelocity >= -1)
                 sr.flipX = true;
 
-            anim.SetBool("HorizontalMovement", movement);
-
             rb.velocity = new Vector2(xVelocity, yVelocity) * speed;
-
-            SavePlayerPosition();
         }
+        else
+        {
+            yVelocity = 0;
+            xVelocity = 0;
+            rb.velocity = new Vector2(0, 0);
+            movement = false;
+            anim.speed = 0;
+        }
+
+        anim.SetBool("HorizontalMovement", movement);
+
+        SavePlayerPosition();
     }
 
     private void SavePlayerPosition() {

@@ -6,7 +6,7 @@ public class ObjectController : MonoBehaviour
     public int index;
     public float earnOxygenTime;
     public Sprite[] sprites;
-    public AudioClip bubbleSound;
+    public AudioClip soundEffect;
 
     private DataController dataController;
     private QuestionData questionData;
@@ -63,13 +63,14 @@ public class ObjectController : MonoBehaviour
         }
         else if (gameObject.tag == "Bubble")
         {
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(bubbleSound);
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(soundEffect);
             PlayerPrefs.SetFloat("timeRemaining", timeRemaining + earnOxygenTime);
             PlayerPrefs.SetString("bubble_" + index, "caught");
             Destroy(gameObject);
         }
         else if (gameObject.tag == "Key")
         {
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(soundEffect);
             PlayerPrefs.SetInt("recoveredKeys", recoveredKeys + 1);
             PlayerPrefs.SetString("key_" + index, "caught");
             Destroy(gameObject);

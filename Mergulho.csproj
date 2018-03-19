@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Data\AnswerData.cs" />
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Data\QuestionData.cs" />
+    <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
     <Compile Include="Assets\Scripts\Game\ControllerKeys.cs" />
     <Compile Include="Assets\Scripts\Game\Creator.cs" />
@@ -89,9 +90,9 @@
     <Compile Include="Assets\Scripts\Game\GameController.cs" />
     <Compile Include="Assets\Scripts\Game\LightController.cs" />
     <Compile Include="Assets\Scripts\Game\ObjectController.cs" />
+    <Compile Include="Assets\Scripts\Game\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Game\Swim.cs" />
     <Compile Include="Assets\Scripts\Quiz\AnswerButton.cs" />
-    <Compile Include="Assets\Scripts\Quiz\DataController.cs" />
     <Compile Include="Assets\Scripts\Quiz\QuizController.cs" />
     <Compile Include="Assets\Scripts\Quiz\SimpleObjectPool.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />

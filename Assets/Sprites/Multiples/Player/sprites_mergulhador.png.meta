@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b922eaa57622e164e8092e56ecf4ddb2
-timeCreated: 1519167769
+timeCreated: 1521408994
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,6 +14,371 @@ TextureImporter:
     21300014: sprites_mergulhador_7
     21300016: sprites_mergulhador_8
     21300018: sprites_mergulhador_9
+    21300020: sprites_mergulhador_10
+    21300022: sprites_mergulhador_11
+    21300024: sprites_mergulhador_12
+    21300026: sprites_mergulhador_13
+    21300028: sprites_mergulhador_14
+    21300030: sprites_mergulhador_15
+    21300032: sprites_mergulhador_16
+    21300034: sprites_mergulhador_17
+    21300036: sprites_mergulhador_18
+    21300038: sprites_mergulhador_19
+    21300040: sprites_mergulhador_20
+    21300042: sprites_mergulhador_21
+    21300044: sprites_mergulhador_22
+    21300046: sprites_mergulhador_23
+    21300048: sprites_mergulhador_24
+    21300050: sprites_mergulhador_25
+    21300052: sprites_mergulhador_26
+    21300054: sprites_mergulhador_27
+    21300056: sprites_mergulhador_28
+    21300058: sprites_mergulhador_29
+    21300060: sprites_mergulhador_30
+    21300062: sprites_mergulhador_31
+    21300064: sprites_mergulhador_32
+    21300066: sprites_mergulhador_33
+    21300068: sprites_mergulhador_34
+    21300070: sprites_mergulhador_35
+    21300072: sprites_mergulhador_36
+    21300074: sprites_mergulhador_37
+    21300076: sprites_mergulhador_38
+    21300078: sprites_mergulhador_39
+    21300080: sprites_mergulhador_40
+    21300082: sprites_mergulhador_41
+    21300084: sprites_mergulhador_42
+    21300086: sprites_mergulhador_43
+    21300088: sprites_mergulhador_44
+    21300090: sprites_mergulhador_45
+    21300092: sprites_mergulhador_46
+    21300094: sprites_mergulhador_47
+    21300096: sprites_mergulhador_48
+    21300098: sprites_mergulhador_49
+    21300100: sprites_mergulhador_50
+    21300102: sprites_mergulhador_51
+    21300104: sprites_mergulhador_52
+    21300106: sprites_mergulhador_53
+    21300108: sprites_mergulhador_54
+    21300110: sprites_mergulhador_55
+    21300112: sprites_mergulhador_56
+    21300114: sprites_mergulhador_57
+    21300116: sprites_mergulhador_58
+    21300118: sprites_mergulhador_59
+    21300120: sprites_mergulhador_60
+    21300122: sprites_mergulhador_61
+    21300124: sprites_mergulhador_62
+    21300126: sprites_mergulhador_63
+    21300128: sprites_mergulhador_64
+    21300130: sprites_mergulhador_65
+    21300132: sprites_mergulhador_66
+    21300134: sprites_mergulhador_67
+    21300136: sprites_mergulhador_68
+    21300138: sprites_mergulhador_69
+    21300140: sprites_mergulhador_70
+    21300142: sprites_mergulhador_71
+    21300144: sprites_mergulhador_72
+    21300146: sprites_mergulhador_73
+    21300148: sprites_mergulhador_74
+    21300150: sprites_mergulhador_75
+    21300152: sprites_mergulhador_76
+    21300154: sprites_mergulhador_77
+    21300156: sprites_mergulhador_78
+    21300158: sprites_mergulhador_79
+    21300160: sprites_mergulhador_80
+    21300162: sprites_mergulhador_81
+    21300164: sprites_mergulhador_82
+    21300166: sprites_mergulhador_83
+    21300168: sprites_mergulhador_84
+    21300170: sprites_mergulhador_85
+    21300172: sprites_mergulhador_86
+    21300174: sprites_mergulhador_87
+    21300176: sprites_mergulhador_88
+    21300178: sprites_mergulhador_89
+    21300180: sprites_mergulhador_90
+    21300182: sprites_mergulhador_91
+    21300184: sprites_mergulhador_92
+    21300186: sprites_mergulhador_93
+    21300188: sprites_mergulhador_94
+    21300190: sprites_mergulhador_95
+    21300192: sprites_mergulhador_96
+    21300194: sprites_mergulhador_97
+    21300196: sprites_mergulhador_98
+    21300198: sprites_mergulhador_99
+    21300200: sprites_mergulhador_100
+    21300202: sprites_mergulhador_101
+    21300204: sprites_mergulhador_102
+    21300206: sprites_mergulhador_103
+    21300208: sprites_mergulhador_104
+    21300210: sprites_mergulhador_105
+    21300212: sprites_mergulhador_106
+    21300214: sprites_mergulhador_107
+    21300216: sprites_mergulhador_108
+    21300218: sprites_mergulhador_109
+    21300220: sprites_mergulhador_110
+    21300222: sprites_mergulhador_111
+    21300224: sprites_mergulhador_112
+    21300226: sprites_mergulhador_113
+    21300228: sprites_mergulhador_114
+    21300230: sprites_mergulhador_115
+    21300232: sprites_mergulhador_116
+    21300234: sprites_mergulhador_117
+    21300236: sprites_mergulhador_118
+    21300238: sprites_mergulhador_119
+    21300240: sprites_mergulhador_120
+    21300242: sprites_mergulhador_121
+    21300244: sprites_mergulhador_122
+    21300246: sprites_mergulhador_123
+    21300248: sprites_mergulhador_124
+    21300250: sprites_mergulhador_125
+    21300252: sprites_mergulhador_126
+    21300254: sprites_mergulhador_127
+    21300256: sprites_mergulhador_128
+    21300258: sprites_mergulhador_129
+    21300260: sprites_mergulhador_130
+    21300262: sprites_mergulhador_131
+    21300264: sprites_mergulhador_132
+    21300266: sprites_mergulhador_133
+    21300268: sprites_mergulhador_134
+    21300270: sprites_mergulhador_135
+    21300272: sprites_mergulhador_136
+    21300274: sprites_mergulhador_137
+    21300276: sprites_mergulhador_138
+    21300278: sprites_mergulhador_139
+    21300280: sprites_mergulhador_140
+    21300282: sprites_mergulhador_141
+    21300284: sprites_mergulhador_142
+    21300286: sprites_mergulhador_143
+    21300288: sprites_mergulhador_144
+    21300290: sprites_mergulhador_145
+    21300292: sprites_mergulhador_146
+    21300294: sprites_mergulhador_147
+    21300296: sprites_mergulhador_148
+    21300298: sprites_mergulhador_149
+    21300300: sprites_mergulhador_150
+    21300302: sprites_mergulhador_151
+    21300304: sprites_mergulhador_152
+    21300306: sprites_mergulhador_153
+    21300308: sprites_mergulhador_154
+    21300310: sprites_mergulhador_155
+    21300312: sprites_mergulhador_156
+    21300314: sprites_mergulhador_157
+    21300316: sprites_mergulhador_158
+    21300318: sprites_mergulhador_159
+    21300320: sprites_mergulhador_160
+    21300322: sprites_mergulhador_161
+    21300324: sprites_mergulhador_162
+    21300326: sprites_mergulhador_163
+    21300328: sprites_mergulhador_164
+    21300330: sprites_mergulhador_165
+    21300332: sprites_mergulhador_166
+    21300334: sprites_mergulhador_167
+    21300336: sprites_mergulhador_168
+    21300338: sprites_mergulhador_169
+    21300340: sprites_mergulhador_170
+    21300342: sprites_mergulhador_171
+    21300344: sprites_mergulhador_172
+    21300346: sprites_mergulhador_173
+    21300348: sprites_mergulhador_174
+    21300350: sprites_mergulhador_175
+    21300352: sprites_mergulhador_176
+    21300354: sprites_mergulhador_177
+    21300356: sprites_mergulhador_178
+    21300358: sprites_mergulhador_179
+    21300360: sprites_mergulhador_180
+    21300362: sprites_mergulhador_181
+    21300364: sprites_mergulhador_182
+    21300366: sprites_mergulhador_183
+    21300368: sprites_mergulhador_184
+    21300370: sprites_mergulhador_185
+    21300372: sprites_mergulhador_186
+    21300374: sprites_mergulhador_187
+    21300376: sprites_mergulhador_188
+    21300378: sprites_mergulhador_189
+    21300380: sprites_mergulhador_190
+    21300382: sprites_mergulhador_191
+    21300384: sprites_mergulhador_192
+    21300386: sprites_mergulhador_193
+    21300388: sprites_mergulhador_194
+    21300390: sprites_mergulhador_195
+    21300392: sprites_mergulhador_196
+    21300394: sprites_mergulhador_197
+    21300396: sprites_mergulhador_198
+    21300398: sprites_mergulhador_199
+    21300400: sprites_mergulhador_200
+    21300402: sprites_mergulhador_201
+    21300404: sprites_mergulhador_202
+    21300406: sprites_mergulhador_203
+    21300408: sprites_mergulhador_204
+    21300410: sprites_mergulhador_205
+    21300412: sprites_mergulhador_206
+    21300414: sprites_mergulhador_207
+    21300416: sprites_mergulhador_208
+    21300418: sprites_mergulhador_209
+    21300420: sprites_mergulhador_210
+    21300422: sprites_mergulhador_211
+    21300424: sprites_mergulhador_212
+    21300426: sprites_mergulhador_213
+    21300428: sprites_mergulhador_214
+    21300430: sprites_mergulhador_215
+    21300432: sprites_mergulhador_216
+    21300434: sprites_mergulhador_217
+    21300436: sprites_mergulhador_218
+    21300438: sprites_mergulhador_219
+    21300440: sprites_mergulhador_220
+    21300442: sprites_mergulhador_221
+    21300444: sprites_mergulhador_222
+    21300446: sprites_mergulhador_223
+    21300448: sprites_mergulhador_224
+    21300450: sprites_mergulhador_225
+    21300452: sprites_mergulhador_226
+    21300454: sprites_mergulhador_227
+    21300456: sprites_mergulhador_228
+    21300458: sprites_mergulhador_229
+    21300460: sprites_mergulhador_230
+    21300462: sprites_mergulhador_231
+    21300464: sprites_mergulhador_232
+    21300466: sprites_mergulhador_233
+    21300468: sprites_mergulhador_234
+    21300470: sprites_mergulhador_235
+    21300472: sprites_mergulhador_236
+    21300474: sprites_mergulhador_237
+    21300476: sprites_mergulhador_238
+    21300478: sprites_mergulhador_239
+    21300480: sprites_mergulhador_240
+    21300482: sprites_mergulhador_241
+    21300484: sprites_mergulhador_242
+    21300486: sprites_mergulhador_243
+    21300488: sprites_mergulhador_244
+    21300490: sprites_mergulhador_245
+    21300492: sprites_mergulhador_246
+    21300494: sprites_mergulhador_247
+    21300496: sprites_mergulhador_248
+    21300498: sprites_mergulhador_249
+    21300500: sprites_mergulhador_250
+    21300502: sprites_mergulhador_251
+    21300504: sprites_mergulhador_252
+    21300506: sprites_mergulhador_253
+    21300508: sprites_mergulhador_254
+    21300510: sprites_mergulhador_255
+    21300512: sprites_mergulhador_256
+    21300514: sprites_mergulhador_257
+    21300516: sprites_mergulhador_258
+    21300518: sprites_mergulhador_259
+    21300520: sprites_mergulhador_260
+    21300522: sprites_mergulhador_261
+    21300524: sprites_mergulhador_262
+    21300526: sprites_mergulhador_263
+    21300528: sprites_mergulhador_264
+    21300530: sprites_mergulhador_265
+    21300532: sprites_mergulhador_266
+    21300534: sprites_mergulhador_267
+    21300536: sprites_mergulhador_268
+    21300538: sprites_mergulhador_269
+    21300540: sprites_mergulhador_270
+    21300542: sprites_mergulhador_271
+    21300544: sprites_mergulhador_272
+    21300546: sprites_mergulhador_273
+    21300548: sprites_mergulhador_274
+    21300550: sprites_mergulhador_275
+    21300552: sprites_mergulhador_276
+    21300554: sprites_mergulhador_277
+    21300556: sprites_mergulhador_278
+    21300558: sprites_mergulhador_279
+    21300560: sprites_mergulhador_280
+    21300562: sprites_mergulhador_281
+    21300564: sprites_mergulhador_282
+    21300566: sprites_mergulhador_283
+    21300568: sprites_mergulhador_284
+    21300570: sprites_mergulhador_285
+    21300572: sprites_mergulhador_286
+    21300574: sprites_mergulhador_287
+    21300576: sprites_mergulhador_288
+    21300578: sprites_mergulhador_289
+    21300580: sprites_mergulhador_290
+    21300582: sprites_mergulhador_291
+    21300584: sprites_mergulhador_292
+    21300586: sprites_mergulhador_293
+    21300588: sprites_mergulhador_294
+    21300590: sprites_mergulhador_295
+    21300592: sprites_mergulhador_296
+    21300594: sprites_mergulhador_297
+    21300596: sprites_mergulhador_298
+    21300598: sprites_mergulhador_299
+    21300600: sprites_mergulhador_300
+    21300602: sprites_mergulhador_301
+    21300604: sprites_mergulhador_302
+    21300606: sprites_mergulhador_303
+    21300608: sprites_mergulhador_304
+    21300610: sprites_mergulhador_305
+    21300612: sprites_mergulhador_306
+    21300614: sprites_mergulhador_307
+    21300616: sprites_mergulhador_308
+    21300618: sprites_mergulhador_309
+    21300620: sprites_mergulhador_310
+    21300622: sprites_mergulhador_311
+    21300624: sprites_mergulhador_312
+    21300626: sprites_mergulhador_313
+    21300628: sprites_mergulhador_314
+    21300630: sprites_mergulhador_315
+    21300632: sprites_mergulhador_316
+    21300634: sprites_mergulhador_317
+    21300636: sprites_mergulhador_318
+    21300638: sprites_mergulhador_319
+    21300640: sprites_mergulhador_320
+    21300642: sprites_mergulhador_321
+    21300644: sprites_mergulhador_322
+    21300646: sprites_mergulhador_323
+    21300648: sprites_mergulhador_324
+    21300650: sprites_mergulhador_325
+    21300652: sprites_mergulhador_326
+    21300654: sprites_mergulhador_327
+    21300656: sprites_mergulhador_328
+    21300658: sprites_mergulhador_329
+    21300660: sprites_mergulhador_330
+    21300662: sprites_mergulhador_331
+    21300664: sprites_mergulhador_332
+    21300666: sprites_mergulhador_333
+    21300668: sprites_mergulhador_334
+    21300670: sprites_mergulhador_335
+    21300672: sprites_mergulhador_336
+    21300674: sprites_mergulhador_337
+    21300676: sprites_mergulhador_338
+    21300678: sprites_mergulhador_339
+    21300680: sprites_mergulhador_340
+    21300682: sprites_mergulhador_341
+    21300684: sprites_mergulhador_342
+    21300686: sprites_mergulhador_343
+    21300688: sprites_mergulhador_344
+    21300690: sprites_mergulhador_345
+    21300692: sprites_mergulhador_346
+    21300694: sprites_mergulhador_347
+    21300696: sprites_mergulhador_348
+    21300698: sprites_mergulhador_349
+    21300700: sprites_mergulhador_350
+    21300702: sprites_mergulhador_351
+    21300704: sprites_mergulhador_352
+    21300706: sprites_mergulhador_353
+    21300708: sprites_mergulhador_354
+    21300710: sprites_mergulhador_355
+    21300712: sprites_mergulhador_356
+    21300714: sprites_mergulhador_357
+    21300716: sprites_mergulhador_358
+    21300718: sprites_mergulhador_359
+    21300720: sprites_mergulhador_360
+    21300722: sprites_mergulhador_361
+    21300724: sprites_mergulhador_362
+    21300726: sprites_mergulhador_363
+    21300728: sprites_mergulhador_364
+    21300730: sprites_mergulhador_365
+    21300732: sprites_mergulhador_366
+    21300734: sprites_mergulhador_367
+    21300736: sprites_mergulhador_368
+    21300738: sprites_mergulhador_369
+    21300740: sprites_mergulhador_370
+    21300742: sprites_mergulhador_371
+    21300744: sprites_mergulhador_372
+    21300746: sprites_mergulhador_373
+    21300748: sprites_mergulhador_374
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -112,28 +477,9 @@ TextureImporter:
         width: 667
         height: 219
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 236.5625, y: -45.749928}
-        - {x: 227.1875, y: -49.499928}
-        - {x: 232.8125, y: -47.624928}
-        - {x: 242.1875, y: -38.249928}
-        - {x: 245.9375, y: -32.62493}
-        - {x: 266.5625, y: -40.124928}
-        - {x: 292.8125, y: -58.874928}
-        - {x: 333.5, y: -30.74993}
-        - {x: 333.5, y: 91.12506}
-        - {x: 309.6875, y: 109.5}
-        - {x: 86.56251, y: 109.5}
-        - {x: -325.93747, y: 53.625065}
-        - {x: -333.43747, y: 42.375065}
-        - {x: -333.43747, y: -47.624928}
-        - {x: -157.18748, y: -109.49992}
-        - {x: 320.9375, y: -109.49992}
-        - {x: 302.1875, y: -66.37493}
-        - {x: 260.9375, y: -38.249928}
-        - {x: 249.6875, y: -38.249928}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_1
@@ -144,37 +490,9 @@ TextureImporter:
         width: 661
         height: 236
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 248.87505, y: -31.812399}
-        - {x: 233.87505, y: -39.312397}
-        - {x: 224.50005, y: -43.062397}
-        - {x: 230.12505, y: -39.312397}
-        - {x: 239.50005, y: -29.937399}
-        - {x: 256.37506, y: -29.937399}
-        - {x: 327.62506, y: -65.5624}
-        - {x: 330.5, y: -50.562397}
-        - {x: 330.5, y: 118}
-        - {x: -191.74992, y: 118}
-        - {x: -330.4999, y: 58.187595}
-        - {x: -330.4999, y: -52.437397}
-        - {x: -159.87492, y: -118}
-        - {x: 303.25006, y: -118}
-        - {x: 299.50006, y: -59.937397}
-        - {x: 256.37506, y: -33.6874}
-      - - {x: -60.49993, y: -31.812399}
-        - {x: -69.87493, y: -28.062399}
-        - {x: -82.99993, y: -22.437399}
-        - {x: -88.62493, y: -24.312399}
-        - {x: -69.87493, y: -29.937399}
-        - {x: -62.37493, y: -29.937399}
-        - {x: -60.49993, y: -31.812399}
-        - {x: -41.74993, y: -43.062397}
-      - - {x: -249.87492, y: -13.0624}
-        - {x: -178.62492, y: -9.3124}
-        - {x: -216.12492, y: -20.562399}
-        - {x: -236.74992, y: -20.562399}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_2
@@ -185,36 +503,9 @@ TextureImporter:
         width: 664
         height: 230
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 250.81259, y: -34.249878}
-        - {x: 239.56259, y: -41.749874}
-        - {x: 232.06259, y: -43.624874}
-        - {x: 241.43759, y: -39.874874}
-        - {x: 254.56259, y: -30.499876}
-        - {x: 308.9376, y: -51.124874}
-        - {x: 332, y: -26.749876}
-        - {x: 332, y: 89.500114}
-        - {x: 322.0626, y: 115}
-        - {x: 76.4376, y: 115}
-        - {x: -167.31238, y: 95.125114}
-        - {x: -302.31238, y: 35.125122}
-        - {x: -330.43738, y: -26.749876}
-        - {x: -321.06238, y: -47.374874}
-        - {x: -309.81238, y: -47.374874}
-        - {x: -231.06238, y: 12.625121}
-        - {x: -131.6874, y: -15.499877}
-        - {x: -43.56239, y: -49.249874}
-        - {x: -32.312393, y: -52.999874}
-        - {x: -36.062393, y: -58.624874}
-        - {x: -69.81239, y: -39.874874}
-        - {x: -176.68738, y: -11.749877}
-        - {x: -332, y: -60.499874}
-        - {x: -332, y: -114.87487}
-        - {x: 292.0626, y: -114.87487}
-        - {x: 299.5626, y: -66.12488}
-        - {x: 258.3126, y: -36.124878}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_3
@@ -225,17 +516,9 @@ TextureImporter:
         width: 669
         height: 231
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -83.24981, y: 115.5}
-        - {x: -334.4998, y: 84.75013}
-        - {x: -334.4998, y: -59.62486}
-        - {x: -332.6248, y: -115.5}
-        - {x: 301.12515, y: -115.5}
-        - {x: 334.5, y: -68.99986}
-        - {x: 334.5, y: 107.25013}
-        - {x: 331.12515, y: 115.5}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_4
@@ -246,26 +529,9 @@ TextureImporter:
         width: 638
         height: 246
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 235.81248, y: -29.374922}
-        - {x: 241.43748, y: -25.624922}
-        - {x: 277.06247, y: -44.37492}
-        - {x: 319, y: -18.124924}
-        - {x: 319, y: 73.75007}
-        - {x: 318.31247, y: 90.62507}
-        - {x: 299.56247, y: 123}
-        - {x: 128.93748, y: 123}
-        - {x: 82.062485, y: 118.75007}
-        - {x: -17.312508, y: 123}
-        - {x: -319, y: 123}
-        - {x: -319, y: -123}
-        - {x: 87.687485, y: -123}
-        - {x: 275.18747, y: -111.874916}
-        - {x: 284.56247, y: -76.249916}
-        - {x: 280.81247, y: -63.12492}
-        - {x: 245.18748, y: -31.249922}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_5
@@ -276,24 +542,9 @@ TextureImporter:
         width: 675
         height: 226
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 253.06256, y: -32.7499}
-        - {x: 292.43756, y: -45.874897}
-        - {x: 307.43756, y: -60.874897}
-        - {x: 337.5, y: -28.999899}
-        - {x: 337.5, y: 113}
-        - {x: -337.5, y: 113}
-        - {x: -337.5, y: -30.874899}
-        - {x: -313.1874, y: -28.999899}
-        - {x: -210.06242, y: -19.624899}
-        - {x: -30.062426, y: -105.87489}
-        - {x: 103.06257, y: -113}
-        - {x: 298.06256, y: -113}
-        - {x: 305.56256, y: -87.12489}
-        - {x: 301.81256, y: -72.1249}
-        - {x: 262.43756, y: -34.6249}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_6
@@ -304,38 +555,9 @@ TextureImporter:
         width: 675
         height: 237
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 256.68753, y: -28.74996}
-        - {x: 245.43753, y: -38.124958}
-        - {x: 239.81253, y: -38.124958}
-        - {x: 234.18753, y: -39.999958}
-        - {x: 230.43753, y: -45.624958}
-        - {x: 226.68753, y: -43.749958}
-        - {x: 232.31253, y: -41.874958}
-        - {x: 241.68753, y: -38.124958}
-        - {x: 247.31253, y: -30.62496}
-        - {x: 249.18753, y: -23.12496}
-        - {x: 269.81253, y: -30.62496}
-        - {x: 292.31253, y: -39.999958}
-        - {x: 307.31253, y: -41.874958}
-        - {x: 337.5, y: -30.62496}
-        - {x: 337.5, y: 118.5}
-        - {x: 86.06254, y: 118.5}
-        - {x: -337.5, y: 16.250038}
-        - {x: -337.5, y: -49.374958}
-        - {x: -230.81244, y: -94.374954}
-        - {x: -107.06245, y: -118.5}
-        - {x: 337.5, y: -118.5}
-        - {x: 337.5, y: -113.124954}
-        - {x: 307.31253, y: -58.749958}
-        - {x: 303.56253, y: -53.124958}
-        - {x: 264.18753, y: -28.74996}
-      - - {x: -138.93745, y: -24.99996}
-        - {x: -144.56245, y: -23.12496}
-        - {x: -150.18744, y: -24.99996}
-        - {x: -157.68744, y: -32.49996}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_7
@@ -346,37 +568,9 @@ TextureImporter:
         width: 669
         height: 232
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 262.00012, y: -30.062368}
-        - {x: 267.62512, y: -33.81237}
-        - {x: 312.6251, y: -54.437366}
-        - {x: 334.5, y: -31.937368}
-        - {x: 334.5, y: 114.31262}
-        - {x: 334.5, y: 116}
-        - {x: 52.00012, y: 116}
-        - {x: -291.12488, y: 58.062626}
-        - {x: -334.24985, y: -13.187369}
-        - {x: -334.24985, y: -75.06236}
-        - {x: -330.49985, y: -78.81236}
-        - {x: -317.37485, y: -73.18736}
-        - {x: -289.24988, y: -28.187368}
-        - {x: -47.374874, y: -35.68737}
-        - {x: -21.124876, y: -46.937366}
-        - {x: -54.874874, y: -39.437366}
-        - {x: -107.37487, y: -41.312366}
-        - {x: -169.24986, y: -31.937368}
-        - {x: -208.62486, y: -60.062366}
-        - {x: -326.74985, y: -82.56236}
-        - {x: -330.49985, y: -90.06236}
-        - {x: -332.37485, y: -101.31236}
-        - {x: -319.24985, y: -116}
-        - {x: 151.3751, y: -116}
-        - {x: 299.5001, y: -108.81236}
-        - {x: 307.0001, y: -60.062366}
-        - {x: 263.87512, y: -31.937368}
-        - {x: 252.6251, y: -31.937368}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_8
@@ -387,27 +581,9 @@ TextureImporter:
         width: 685
         height: 258
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 259.24997, y: -18.312433}
-        - {x: 259.24997, y: -16.437435}
-        - {x: 279.87497, y: -20.187433}
-        - {x: 300.49997, y: -37.06243}
-        - {x: 342.5, y: -22.062433}
-        - {x: 342.5, y: 129}
-        - {x: -340.75, y: 129}
-        - {x: -342.5, y: 120.43756}
-        - {x: -342.5, y: 30.437563}
-        - {x: -340.75, y: 28.562563}
-        - {x: -303.25, y: -128.93742}
-        - {x: -222.625, y: -128.93742}
-        - {x: 307.99997, y: -102.68743}
-        - {x: 309.87497, y: -46.43743}
-        - {x: 266.74997, y: -18.312433}
-      - - {x: 227.37498, y: -33.312435}
-        - {x: 231.12498, y: -33.312435}
-        - {x: 229.24998, y: -31.437433}
+      outline: []
       tessellationDetail: 0
     - serializedVersion: 2
       name: sprites_mergulhador_9
@@ -418,29 +594,9 @@ TextureImporter:
         width: 647
         height: 245
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 239.37503, y: -23.24993}
-        - {x: 231.87503, y: -30.74993}
-        - {x: 222.50003, y: -32.62493}
-        - {x: 216.87503, y: -34.49993}
-        - {x: 215.00003, y: -34.49993}
-        - {x: 222.50003, y: -32.62493}
-        - {x: 237.50003, y: -19.49993}
-        - {x: 291.87503, y: -36.37493}
-        - {x: 320.00003, y: -17.624931}
-        - {x: 323.5, y: 12.375068}
-        - {x: 323.5, y: 106.12506}
-        - {x: 284.37503, y: 122.5}
-        - {x: 1.250038, y: 122.5}
-        - {x: -323.12494, y: 83.62506}
-        - {x: -323.12494, y: -122.5}
-        - {x: 156.87503, y: -122.5}
-        - {x: 295.62503, y: -113.24992}
-        - {x: 297.50003, y: -51.374928}
-        - {x: 275.00003, y: -34.49993}
-        - {x: 250.62503, y: -23.24993}
+      outline: []
       tessellationDetail: 0
     outline: []
   spritePackingTag: 

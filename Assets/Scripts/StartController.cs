@@ -8,12 +8,16 @@ public class StartController : MonoBehaviour
     public GameObject menuDisplay;
     public GameObject creditsDisplay;
     public GameObject instrucDisplay;
+    public bool isStartMenu;
 
     private void Start()
     {
-        menuDisplay.SetActive(true);
-        creditsDisplay.SetActive(false);
-        instrucDisplay.SetActive(false);
+        if (isStartMenu)
+        {
+            menuDisplay.SetActive(true);
+            creditsDisplay.SetActive(false);
+            instrucDisplay.SetActive(false);
+        }
     }
 
     public void ShowMenuDisplay(bool show)

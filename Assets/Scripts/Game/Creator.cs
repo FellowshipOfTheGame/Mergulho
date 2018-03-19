@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Creator : MonoBehaviour {
+public class Creator : MonoBehaviour
+{
 
     private float timer;
     public GameObject fish;
@@ -11,31 +12,47 @@ public class Creator : MonoBehaviour {
     public float timeToSpawn;
     public float xPosition;
     public float rotation;
+    public float screenStart;
     private int result;
+    public float screenEnd;
 
-	void Start () {
+    void Start()
+    {
         timer = 0;
-	}
-	
-	void Update () {
+        for (float i = screenStart; i < screenEnd; i += 16.0f)
+        {
+            Instantiate(fish, new Vector3(i, Random.Range(-5.5f, 10f), 0f), new Quaternion(0f, rotation, 0f, 0f));
+        }
+    }
+
+    void Update()
+    {
         timer += Time.deltaTime;
-        if (timer > timeToSpawn) {
+        if (timer > timeToSpawn)
+        {
             timer = 0f;
             result = SharkOrFish();
-            if (result == 1) {
+            if (result == 1)
+            {
                 Instantiate(shark, new Vector3(xPosition, Random.Range(1, 7.5f), 0f), new Quaternion(0f, rotation, 0f, 0f));
-            } else {
+            }
+            else
+            {
                 Instantiate(fish, new Vector3(xPosition, Random.Range(-5.5f, 10f), 0f), new Quaternion(0f, rotation, 0f, 0f));
             }
         }
-	}
+    }
 
-    private int SharkOrFish() {
+    private int SharkOrFish()
+    {
         int chance;
-        chance = (int) Random.Range(0, sharkProbability);
-        if (chance == 1) {
+        chance = (int)Random.Range(0, sharkProbability);
+        if (chance == 1)
+        {
             return 1;
-        } else {
+        }
+        else
+        {
             return 0;
         }
     }
