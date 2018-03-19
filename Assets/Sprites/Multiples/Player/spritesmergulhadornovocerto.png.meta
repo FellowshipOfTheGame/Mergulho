@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 46033806baef300418fee449d1c1db5e
-timeCreated: 1521415865
+timeCreated: 1521475812
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -107,10 +107,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_0
       rect:
         serializedVersion: 2
-        x: 153
-        y: 1662
-        width: 687
-        height: 296
+        x: 155
+        y: 1664
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,10 +120,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_1
       rect:
         serializedVersion: 2
-        x: 968
-        y: 1662
-        width: 687
-        height: 296
+        x: 969
+        y: 1664
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,10 +133,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_2
       rect:
         serializedVersion: 2
-        x: 1776
-        y: 1662
-        width: 687
-        height: 296
+        x: 1777
+        y: 1664
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,10 +146,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_3
       rect:
         serializedVersion: 2
-        x: 2584
+        x: 2585
         y: 1661
-        width: 687
-        height: 296
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_4
       rect:
         serializedVersion: 2
-        x: 152
-        y: 1204
-        width: 687
-        height: 296
+        x: 156
+        y: 1206
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_5
       rect:
         serializedVersion: 2
-        x: 963
-        y: 1205
-        width: 687
-        height: 296
+        x: 966
+        y: 1206
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,9 +186,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1774
-        y: 1205
-        width: 687
-        height: 296
+        y: 1206
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,10 +198,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_7
       rect:
         serializedVersion: 2
-        x: 2581
-        y: 1205
-        width: 687
-        height: 296
+        x: 2582
+        y: 1206
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,10 +211,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_8
       rect:
         serializedVersion: 2
-        x: 157
-        y: 746
-        width: 687
-        height: 296
+        x: 160
+        y: 747
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,10 +224,10 @@ TextureImporter:
       name: spritesmergulhadornovocerto_9
       rect:
         serializedVersion: 2
-        x: 961
-        y: 749
-        width: 687
-        height: 296
+        x: 966
+        y: 750
+        width: 684
+        height: 294
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
