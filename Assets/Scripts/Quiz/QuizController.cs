@@ -7,30 +7,17 @@ using UnityEngine.UI;
 public class QuizController : MonoBehaviour
 {
     public float lostTime;
-    public int maxScore;
-    public int scoreLostPerError;
-
-    public AudioClip cameraFlash;
-    public AudioClip openChest;
-    public GameObject infoDisplay;
-    public GameObject questionDisplay;
-    public GameObject newPhotoDisplay;
-    public GameObject oxygenTimeBar;
-
-    public Text infoText;
-    public Text questionNumber;
-    public Text questionText;
+    public int maxScore, scoreLostPerError;
+    public AudioClip cameraFlash, openChest;
+    public GameObject infoDisplay, questionDisplay, newPhotoDisplay, oxygenTimeBar;
+    public Text infoText, questionNumber, questionText;
     public SimpleObjectPool answerButtonObjectPool;
     public Transform answerButtonParent;
 
     private DataController dataController;
-    private QuestionData curQuestionData;
+    private QuestionData curQuestion;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
-
-    private float oxygenTime;
-    private float timeToAnswer = 0;
-    private float playTimeAvaliable;
-    private float timePerCent;
+    private float oxygenTime, timeToAnswer = 0, playTimeAvaliable, timePerCent;
     private bool questionAvaliable = false;
 
     private void Start()
@@ -43,7 +30,7 @@ public class QuizController : MonoBehaviour
 
         dataController = FindObjectOfType<DataController>();
 
-        curQuestionData = dataController.GetCurrentQuestionData();
+        curQuestion = dataController.GetQuestion(PlayerPrefs.GetInt("currentQuestion"));
 
         oxygenTime = PlayerPrefs.GetFloat("timeRemaining");
 
@@ -66,11 +53,11 @@ public class QuizController : MonoBehaviour
     {
         RemoveAnswerButtons();
 
-        questionNumber.text = (System.Int32.Parse(curQuestionData.index) + 1).ToString();
-        infoText.text = curQuestionData.infoText;
-        questionText.text = curQuestionData.questionText;
+        questionNumber.text = (System.Int32.Parse(curQuestion.index) + 1).ToString();
+        infoText.text = curQuestion.infoText;
+        questionText.text = curQuestion.questionText;
 
-        for (int i = 0; i < curQuestionData.answers.Length; i++)
+        for (int i = 0; i < curQuestion.answers.Length; i++)
         {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
             answerButtonGameObjects.Add(answerButtonGameObject);
@@ -78,7 +65,7 @@ public class QuizController : MonoBehaviour
             answerButtonGameObject.transform.localScale = Vector3.one;
 
             ColorBlock colors;
-            if (!curQuestionData.answers[i].isCorrect)
+            if (!curQuestion.answers[i].isCorrect)
             {
                 colors = answerButtonGameObject.GetComponent<Button>().colors;
                 colors.pressedColor = Color.red;
@@ -92,7 +79,7 @@ public class QuizController : MonoBehaviour
             }
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.SetUp(curQuestionData.answers[i]);
+            answerButton.SetUp(curQuestion.answers[i]);
         }
 
         questionAvaliable = true;
@@ -113,12 +100,12 @@ public class QuizController : MonoBehaviour
         {
             questionAvaliable = false;
 
-            curQuestionData.questionScore = maxScore - scoreLostPerError * curQuestionData.mistakes;
+            curQuestion.questionScore = maxScore - scoreLostPerError * curQuestion.mistakes;
 
-            PlayerPrefs.SetInt("score", curQuestionData.questionScore + PlayerPrefs.GetInt("score"));
+            PlayerPrefs.SetInt("score", curQuestion.questionScore + PlayerPrefs.GetInt("score"));
 
-            curQuestionData.wasAnswered = true;
-            curQuestionData.timeUsed = timeToAnswer;
+            curQuestion.wasAnswered = true;
+            curQuestion.timeUsed = timeToAnswer;
 
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
             PlayerPrefs.SetInt("questionsAnswered", PlayerPrefs.GetInt("questionsAnswered") + 1);
@@ -129,7 +116,7 @@ public class QuizController : MonoBehaviour
         }
         else
         {
-            curQuestionData.mistakes++;
+            curQuestion.mistakes++;
             oxygenTime -= lostTime;
         }
     }

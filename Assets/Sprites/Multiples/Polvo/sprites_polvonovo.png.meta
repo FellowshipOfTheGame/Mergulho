@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 302d8cc328927834dac52e0d03ffaf2f
-timeCreated: 1521416221
+timeCreated: 1521505102
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -105,12 +105,12 @@ TextureImporter:
       name: sprites_polvonovo_0
       rect:
         serializedVersion: 2
-        x: 143
-        y: 1370
-        width: 591
-        height: 737
+        x: 162
+        y: 1388
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -118,12 +118,12 @@ TextureImporter:
       name: sprites_polvonovo_1
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1368
-        width: 591
-        height: 737
+        x: 921
+        y: 1388
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -131,12 +131,12 @@ TextureImporter:
       name: sprites_polvonovo_2
       rect:
         serializedVersion: 2
-        x: 1677
-        y: 1373
-        width: 591
-        height: 742
+        x: 1696
+        y: 1402
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -144,12 +144,12 @@ TextureImporter:
       name: sprites_polvonovo_3
       rect:
         serializedVersion: 2
-        x: 2465
-        y: 1373
-        width: 590
-        height: 742
+        x: 2482
+        y: 1402
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -157,12 +157,12 @@ TextureImporter:
       name: sprites_polvonovo_4
       rect:
         serializedVersion: 2
-        x: 134
-        y: 518
-        width: 591
-        height: 737
+        x: 155
+        y: 533
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -170,12 +170,12 @@ TextureImporter:
       name: sprites_polvonovo_5
       rect:
         serializedVersion: 2
-        x: 897
-        y: 522
-        width: 591
-        height: 737
+        x: 924
+        y: 542
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -183,12 +183,12 @@ TextureImporter:
       name: sprites_polvonovo_6
       rect:
         serializedVersion: 2
-        x: 1677
-        y: 522
-        width: 591
-        height: 737
+        x: 1697
+        y: 539
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -196,12 +196,12 @@ TextureImporter:
       name: sprites_polvonovo_7
       rect:
         serializedVersion: 2
-        x: 2468
-        y: 522
-        width: 591
-        height: 737
+        x: 2492
+        y: 543
+        width: 549
+        height: 690
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

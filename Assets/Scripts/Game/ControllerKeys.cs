@@ -9,13 +9,12 @@ public class ControllerKeys : MonoBehaviour
     public SpriteRenderer sr;
     public float speed;
 
-    private float yVelocity;
-    private float xVelocity;
+    private float yVelocity, xVelocity;
     private bool movement;
     private GameController game;
 
-
-    void Start() {
+    void Start()
+    {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -27,7 +26,8 @@ public class ControllerKeys : MonoBehaviour
         LoadPlayerPosition();
     }
 
-    void Update() {
+    void Update()
+    {
         if (game.isGameActive)
         {
             anim.speed = 1;
@@ -61,13 +61,15 @@ public class ControllerKeys : MonoBehaviour
         SavePlayerPosition();
     }
 
-    private void SavePlayerPosition() {
+    private void SavePlayerPosition()
+    {
         PlayerPrefs.SetFloat("playerX", transform.position.x);
         PlayerPrefs.SetFloat("playerY", transform.position.y);
         PlayerPrefs.SetFloat("playerZ", transform.position.z);
     }
 
-    private void LoadPlayerPosition() {
+    private void LoadPlayerPosition()
+    {
         transform.position = new Vector3(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"), PlayerPrefs.GetFloat("playerZ"));
     }
 }

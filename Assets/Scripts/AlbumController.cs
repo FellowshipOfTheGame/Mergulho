@@ -8,41 +8,25 @@ using UnityEngine.UI;
 public class AlbumController : MonoBehaviour
 {
     public AudioSource bookFlip;
-    public GameObject RightArrow;
-    public GameObject LeftArrow;
-    public GameObject page1;
-    public GameObject page2;
-    public GameObject frames2;
+    public GameObject RightArrow, LeftArrow, framesObject, imagesObject;
 
     private DataController dataController;
     private QuestionData questionData;
-    private Image[] imgsPage1;
-    private Image[] imgsPage2;
-    private Sprite emptySprite;
+    private Image[] frames, images;
     private Sprite newSprite;
-
-    private int questionsLength;
-    private int pages;
-    private int currentPages;
-
-
     private Sprite[] sprites;
+    private int questionsLength, pages, currentPages, index, length;
 
     private void Start () {
         dataController = FindObjectOfType<DataController>();
+        sprites = dataController.GetSprites();
+        questionsLength = PlayerPrefs.GetInt("questionsLength");
 
-        imgsPage1 = page1.GetComponentsInChildren<Image>();
-        imgsPage2 = page2.GetComponentsInChildren<Image>();
-
-        questionsLength = dataController.GetQuestionDataLengh();
+        frames = framesObject.GetComponentsInChildren<Image>();
+        images = imagesObject.GetComponentsInChildren<Image>();
 
         pages = Mathf.CeilToInt(questionsLength / 8f);
-
         currentPages = 1;
-
-        emptySprite = Resources.Load<Sprite>("emptySprite");
-
-        sprites = dataController.GetCollectibleSprites();
 
         TurnPage(0);
 	}
@@ -60,31 +44,27 @@ public class AlbumController : MonoBehaviour
             LeftArrow.SetActive(true);
     }
 
-    private void LoadImages(int index, int length, Image[] imgs)
+    private void LoadImages()
     {
         for (int i = 0; index < length; i++)
         {
-            if (index < questionsLength) {
-                frames2.SetActive(true);
+            if (index < questionsLength)
+            {
+                frames[i].color = Color.white;
 
-                questionData = dataController.GetQuestionData(index);
+                questionData = dataController.GetQuestion(index);
 
                 if (questionData.wasAnswered)
                 {
-                    imgs[i].sprite = sprites[index];
-                    imgs[i].color = Color.white;
+                    images[i].sprite = sprites[index];
+                    images[i].color = Color.white;
                 }
-                else
-                {
-                    imgs[i].sprite = emptySprite;
-                    imgs[i].color = Color.clear;
-                }
+                else images[i].color = Color.clear;
             }
             else
             {
-                frames2.SetActive(false);
-                imgs[i].sprite = emptySprite;
-                imgs[i].color = Color.clear;
+                frames[i].color = Color.clear;
+                images[i].color = Color.clear;
             }
 
             index++;
@@ -99,14 +79,13 @@ public class AlbumController : MonoBehaviour
         else if(dir == -1)
             currentPages--;
 
-        int index = 8 * (currentPages - 1);
-        int length = 8 * currentPages;
+        index = 8 * (currentPages - 1);
+        length = 8 * currentPages;
 
         if (index < 0)
             index *= -1;
 
-        LoadImages(index, length - 4, imgsPage1);
-        LoadImages(index + 4, length, imgsPage2);
+        LoadImages();
     }
 
     public void LoadScene(string name)

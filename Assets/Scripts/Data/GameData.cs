@@ -5,5 +5,5 @@ using UnityEngine;
 [System.Serializable]
 public class GameData
 {
-    public QuestionData[] allQuestionData;
+    public QuestionData[] questions;
 }

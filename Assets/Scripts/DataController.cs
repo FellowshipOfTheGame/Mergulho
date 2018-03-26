@@ -1,108 +1,186 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using System.IO;
+using System.Collections;
 
 public class DataController : MonoBehaviour
 {
     public float timePerQuestion;
     public GameObject sprite;
 
-    private QuestionData[] allQuestionData;
-    private string gameDataFileName = "data.json";
-    private float playTimeAvaliable;
+    private SpriteRenderer sprRend;
+    private QuestionData[] questions;
+    private Texture2D[] textures;
     private Sprite[] sprites;
+    private bool isFinished, isLoadedJson, isLoadedImages, isDataReady, isLoading;
+    private string jsonFilePath, imagesPath, jsonData;
+    private float playTimeAvaliable;
 
     private void Start()
     {
         PlayerPrefs.DeleteAll();
-
         DontDestroyOnLoad(gameObject);
 
-        LoadGameData();
+        sprRend = sprite.GetComponent<SpriteRenderer>();
 
-        LoadCollectibleImages();
+        isLoading = false;
+        isLoadedJson = false;
+        isLoadedImages = false;
+        isFinished = false;
+        isDataReady = false;
 
-        SceneManager.LoadScene("Start");
+        jsonFilePath = Path.Combine(Application.streamingAssetsPath, "questoes.json");
+        imagesPath = Path.Combine(Application.streamingAssetsPath, "Collectible/");
     }
 
-    private void LoadGameData()
+    private void Update()
     {
-        // Path.Combine combines strings into a file path
-        // Application.StreamingAssets points to Assets/StreamingAssets in the Editor, 
-        // and the StreamingAssets folder in a build
-        string filePath = Path.Combine(Application.streamingAssetsPath, gameDataFileName);
-
-        if (File.Exists(filePath))
+        if (!isFinished)
         {
-            // Read the json from the file into a string
-            string dataAsJson = File.ReadAllText(filePath);
-            // Pass the json to JsonUtility, and tell it to create a GameData object from it
-            GameData loadedData = JsonUtility.FromJson<GameData>(dataAsJson);
+            sprRend.color = new Color(sprRend.color.r, sprRend.color.g, sprRend.color.b, Mathf.PingPong(Time.time, 0.5f));
 
-            // Retrieve the allQuestionData property of loadedData
-            allQuestionData = loadedData.allQuestionData;
-
-            playTimeAvaliable = allQuestionData.Length * timePerQuestion;
-
-            PlayerPrefs.SetFloat("playTimeAvaliable", playTimeAvaliable);
-            PlayerPrefs.SetFloat("timeRemaining", playTimeAvaliable);
-            PlayerPrefs.SetInt("score", 0);
-            PlayerPrefs.SetInt("currentQuestion", 0);
-            PlayerPrefs.SetInt("recoveredKeys", 0);
-            PlayerPrefs.SetInt("questionsAnswered", 0);
-            PlayerPrefs.SetInt("questionsLength", GetQuestionDataLengh());
-        }
-        else
-        {
-            Debug.LogError("Cannot load game data!");
-        }
-    }
-
-    private void LoadCollectibleImages()
-    {
-        Texture2D texture = null;
-        Rect r;
-        Vector2 v;
-
-        byte[] imageBytes;
-        string oneImagePath;
-        string imagesPath = Path.Combine(Application.streamingAssetsPath, "Collectible/");
-        sprites = new Sprite[allQuestionData.Length];
-
-        for (int i = 0; i < allQuestionData.Length; i++)
-        {
-            texture = null;
-            oneImagePath = imagesPath + i + ".png";
-
-            if (File.Exists(oneImagePath))
+            if (!isLoadedJson)
             {
-                imageBytes = File.ReadAllBytes(oneImagePath);
-                texture = new Texture2D(170, 160);
-                texture.LoadImage(imageBytes);
-                r = new Rect(0, 0, texture.width, texture.height);
-                v = new Vector2(0.5f, 0.5f);
-                sprites[i] = Sprite.Create(texture, r, v);
+                isLoadedJson = true;
+                StartCoroutine(RequestJsonFile());
+            }
+
+            if (isLoading) {
+                isLoading = false;
+                LoadJsonData();
+            }
+
+            if (!isLoadedImages && isDataReady)
+            {
+                isDataReady = false;
+                StartCoroutine(RequestImages());
+            }
+
+            if (isLoadedImages)
+            {
+                isFinished = true;
+
+                LoadImages();
+
+                StartPlayerPrefs();
+
+                SceneManager.LoadScene("Start");
+                Camera.main.enabled = false;
             }
         }
     }
 
-    public Sprite[] GetCollectibleSprites()
+    private IEnumerator RequestJsonFile()
+    {
+        //WebGL Build
+        if (jsonFilePath.Contains("://") || jsonFilePath.Contains(":///"))
+        {
+            UnityWebRequest www = UnityWebRequest.Get(jsonFilePath);
+            yield return www.Send();
+            jsonData = www.downloadHandler.text;
+        }
+        else //Desktop Build
+        {
+            if (File.Exists(jsonFilePath))
+                jsonData = File.ReadAllText(jsonFilePath);
+            else
+                Debug.LogError("Cannot load game data!");
+        }
+
+        isLoading = true;
+    }
+
+    private void LoadJsonData()
+    {
+        GameData loadedData = JsonUtility.FromJson<GameData>(jsonData);
+        questions = loadedData.questions;
+        playTimeAvaliable = questions.Length * timePerQuestion;
+
+        isDataReady = true;
+    }
+
+    private void StartPlayerPrefs()
+    {
+        PlayerPrefs.SetFloat("playTimeAvaliable", playTimeAvaliable);
+        PlayerPrefs.SetFloat("timeRemaining", playTimeAvaliable);
+        PlayerPrefs.SetInt("questionsLength", questions.Length);
+        PlayerPrefs.SetInt("score", 0);
+        PlayerPrefs.SetInt("currentQuestion", 0);
+        PlayerPrefs.SetInt("recoveredKeys", 0);
+        PlayerPrefs.SetInt("questionsAnswered", 0);
+    }
+
+    private IEnumerator RequestImages()
+    {
+        string oneImagePath;
+        textures = new Texture2D[questions.Length];
+
+        //WebGL Build
+        if (imagesPath.Contains("://") || imagesPath.Contains(":///"))
+        {
+            UnityWebRequest www;
+            for (int i = 0; i < questions.Length; i++)
+            {
+                oneImagePath = Path.Combine(imagesPath, i + ".png");
+
+                www = UnityWebRequest.GetTexture(oneImagePath);
+                yield return www.Send();
+
+                if (www.isError)
+                    Debug.LogError(www.error);
+                else
+                    textures[i] = ((DownloadHandlerTexture)www.downloadHandler).texture;
+            }
+        }
+        else //Desktop Build
+        {
+            Texture2D texture = null;
+            byte[] imageBytes;
+
+            for (int i = 0; i < questions.Length; i++)
+            {
+                texture = null;
+                oneImagePath = Path.Combine(imagesPath, i + ".png");
+
+                if (File.Exists(oneImagePath))
+                {
+                    imageBytes = File.ReadAllBytes(oneImagePath);
+                    texture = new Texture2D(170, 160);
+                    texture.LoadImage(imageBytes);
+                    textures[i] = texture;
+                }
+                else
+                    Debug.LogError("Cannot load game data!");
+            }
+        }
+
+        isLoadedImages = true;
+    }
+
+    private void LoadImages()
+    {
+        Rect r;
+        Vector2 v;
+        sprites = new Sprite[questions.Length];
+
+        for (int i = 0; i < questions.Length; i++)
+        {
+            r = new Rect(0, 0, textures[i].width, textures[i].height);
+            v = new Vector2(0.5f, 0.5f);
+            sprites[i] = Sprite.Create(textures[i], r, v);
+        }
+    }
+    
+    /*  Public Methods  */
+
+    public Sprite[] GetSprites()
     {
         return sprites;
     }
 
-    public QuestionData GetCurrentQuestionData()
+    public QuestionData GetQuestion(int index)
     {
-        return allQuestionData[PlayerPrefs.GetInt("currentQuestion")];
-    }
-
-    public QuestionData GetQuestionData(int index)
-    {
-        return allQuestionData[index];
-    }
-
-    public int GetQuestionDataLengh()
-    {
-        return allQuestionData.Length;
+        return questions[index];
     }
 }

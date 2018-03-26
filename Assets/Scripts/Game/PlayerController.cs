@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
     public float dano;
-    private float timeRemaining;
     public GameObject panel;
+
+    private float timeRemaining;
 
     void Start ()
     {
@@ -27,8 +27,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D trigger)
     {
-        if (trigger.gameObject.tag == "Tubarao")  {
+        if (trigger.gameObject.tag == "Tubarao")
             panel.SetActive(false);
-        }
     }
 }

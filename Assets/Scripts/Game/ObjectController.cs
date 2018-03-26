@@ -5,28 +5,36 @@ public class ObjectController : MonoBehaviour
 {
     public int index;
     public float earnOxygenTime;
-    public Sprite[] sprites;
     public AudioClip soundEffect;
+    public Sprite[] sprites;
 
+    private GameController gameController;
     private DataController dataController;
-    private QuestionData questionData;
+    private QuestionData question;
     private int recoveredKeys;
     private float timeRemaining;
 
     private void Start()
     {
         dataController = FindObjectOfType<DataController>();
-        questionData = dataController.GetQuestionData(index);
 
-        if (gameObject.tag == "Chest" && questionData.wasAnswered)
+        if (index < PlayerPrefs.GetInt("questionsLength"))
         {
-            ChangeSprite(2);
-            Destroy(gameObject.GetComponent<Collider2D>());
+            question = dataController.GetQuestion(index);
+
+            if (gameObject.tag == "Chest" && question.wasAnswered)
+            {
+                ChangeSprite(2);
+                Destroy(gameObject.GetComponent<Collider2D>());
+            }
+            if (gameObject.tag == "Bubble" && PlayerPrefs.GetString("bubble_" + index).Equals("caught"))
+                Destroy(gameObject);
+            if (gameObject.tag == "Key" && PlayerPrefs.GetString("key_" + index).Equals("caught"))
+                Destroy(gameObject);
         }
-        if (gameObject.tag == "Bubble" && PlayerPrefs.GetString("bubble_" + index).Equals("caught"))
+        else
             Destroy(gameObject);
-        if (gameObject.tag == "Key" && PlayerPrefs.GetString("key_" + index).Equals("caught"))
-            Destroy(gameObject);
+
     }
 
     private void Update()
@@ -37,7 +45,7 @@ public class ObjectController : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (gameObject.tag == "Chest" && !questionData.wasAnswered)
+        if (gameObject.tag == "Chest" && !question.wasAnswered)
             ChangeSprite(0);
         else if (gameObject.tag == "Key" || gameObject.tag == "Bubble")
             ChangeSprite(1);
@@ -45,7 +53,7 @@ public class ObjectController : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (gameObject.tag == "Chest" && !questionData.wasAnswered)
+        if (gameObject.tag == "Chest" && !question.wasAnswered)
             ChangeSprite(1);
         else if(gameObject.tag == "Key" || gameObject.tag == "Bubble")
             ChangeSprite(0);
@@ -54,7 +62,7 @@ public class ObjectController : MonoBehaviour
     private void OnMouseDown() {
         if (gameObject.tag == "Chest")
         {
-            if (!questionData.wasAnswered && recoveredKeys > 0)
+            if (!question.wasAnswered && recoveredKeys > 0)
             {
                 PlayerPrefs.SetInt("currentQuestion", index);
                 PlayerPrefs.SetInt("recoveredKeys", recoveredKeys - 1);

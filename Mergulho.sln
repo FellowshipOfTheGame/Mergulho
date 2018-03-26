@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mergulho", "Mergulho.csproj", "{C434EF9B-CDFD-369B-6544-4A8C9DCEE25D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mergulho.Editor", "Mergulho.Editor.csproj", "{C13FBF19-46A7-90CC-0188-FEFA1FDFAF36}"
