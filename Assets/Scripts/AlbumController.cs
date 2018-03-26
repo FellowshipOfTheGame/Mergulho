@@ -90,6 +90,11 @@ public class AlbumController : MonoBehaviour
 
     public void LoadScene(string name)
     {
-        SceneManager.LoadScene(name);
+        if (PlayerPrefs.GetFloat("timeRemaining") <= 0f)
+            SceneManager.LoadScene("Lose");
+        else if(PlayerPrefs.GetInt("questionsAnswered") == PlayerPrefs.GetInt("questionsLength"))
+            SceneManager.LoadScene("Win");
+        else
+            SceneManager.LoadScene(name);
     }
 }

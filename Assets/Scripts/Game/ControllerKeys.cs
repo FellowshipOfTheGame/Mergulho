@@ -56,6 +56,7 @@ public class ControllerKeys : MonoBehaviour
         }
         else
         {
+            audioSources[0].Pause();
             yVelocity = 0;
             xVelocity = 0;
             rigidbody2.velocity = new Vector2(0, 0);

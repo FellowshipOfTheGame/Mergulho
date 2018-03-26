@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class StartController : MonoBehaviour
 {
-    public GameObject menuDisplay, creditsDisplay, instrucDisplay, quitButton;
+    public GameObject menuDisplay, creditsDisplay, instrucDisplay, control, objective1, objective2, quitButton;
     public bool isStartMenu;
+
+    private GameObject[] instructions;
 
     private void Start()
     {
@@ -20,6 +22,9 @@ public class StartController : MonoBehaviour
             menuDisplay.SetActive(true);
             creditsDisplay.SetActive(false);
             instrucDisplay.SetActive(false);
+            control.SetActive(false);
+            objective1.SetActive(false);
+            objective2.SetActive(false);
         }
     }
 
@@ -36,6 +41,21 @@ public class StartController : MonoBehaviour
     public void ShowInstructionsDisplay(bool show)
     {
         instrucDisplay.SetActive(show);
+    }
+
+    public void ShowObjective1(bool show)
+    {
+        objective1.SetActive(show);
+    }
+
+    public void ShowObjective2(bool show)
+    {
+        objective2.SetActive(show);
+    }
+
+    public void ShowControllers(bool show)
+    {
+        control.SetActive(show);
     }
 
     public void LoadScene(string name)
