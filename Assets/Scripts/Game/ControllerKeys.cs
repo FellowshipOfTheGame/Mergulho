@@ -4,24 +4,27 @@ using UnityEngine;
 
 public class ControllerKeys : MonoBehaviour
 {
-    public Animator anim;
-    public Rigidbody2D rb;
-    public SpriteRenderer sr;
     public float speed;
+    public Rigidbody2D rigidbody2;
+    public SpriteRenderer spriteRenderer;
+    public AudioClip swimSound, reentrySound;
 
+    private Animator animator;
     private float yVelocity, xVelocity;
-    private bool movement;
+    private bool movement, play;
     private GameController game;
+    private AudioSource[] audioSources;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
-        game = GameObject.FindObjectOfType<GameController>();
+        audioSources = Camera.main.GetComponents<AudioSource>();
+        animator = GetComponent<Animator>();
+        rigidbody2 = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        game = FindObjectOfType<GameController>();
 
         movement = false;
-        anim.SetBool("HorizontalMovement", movement);
+        animator.SetBool("HorizontalMovement", movement);
 
         LoadPlayerPosition();
     }
@@ -30,7 +33,7 @@ public class ControllerKeys : MonoBehaviour
     {
         if (game.isGameActive)
         {
-            anim.speed = 1;
+            animator.speed = 1;
 
             yVelocity = Input.GetAxis("Vertical");
             xVelocity = Input.GetAxis("Horizontal");
@@ -38,25 +41,29 @@ public class ControllerKeys : MonoBehaviour
             if (xVelocity == 0)
                 movement = false;
             else
+            {
                 movement = true;
+                if (!audioSources[0].isPlaying)
+                    audioSources[0].PlayOneShot(swimSound);
+            }
 
             if (xVelocity > 0 && xVelocity <= 1)
-                sr.flipX = false;
+                spriteRenderer.flipX = false;
             if (xVelocity < 0 && xVelocity >= -1)
-                sr.flipX = true;
+                spriteRenderer.flipX = true;
 
-            rb.velocity = new Vector2(xVelocity, yVelocity) * speed;
+            rigidbody2.velocity = new Vector2(xVelocity, yVelocity) * speed;
         }
         else
         {
             yVelocity = 0;
             xVelocity = 0;
-            rb.velocity = new Vector2(0, 0);
+            rigidbody2.velocity = new Vector2(0, 0);
             movement = false;
-            anim.speed = 0;
+            animator.speed = 0;
         }
 
-        anim.SetBool("HorizontalMovement", movement);
+        animator.SetBool("HorizontalMovement", movement);
 
         SavePlayerPosition();
     }

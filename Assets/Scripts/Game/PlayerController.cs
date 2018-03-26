@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float dano;
+    public float damage;
     public GameObject panel;
+    public AudioClip bubbles;
 
+    private AudioSource[] audioSources;
     private float timeRemaining;
 
     void Start ()
     {
+        audioSources = Camera.main.GetComponents<AudioSource>();
         panel.SetActive(false);
     }
 
@@ -19,9 +22,12 @@ public class PlayerController : MonoBehaviour
         if (trigger.gameObject.tag == "Tubarao")
         {
             timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
-            timeRemaining -= dano;
+            timeRemaining -= damage;
             panel.SetActive(true);
             PlayerPrefs.SetFloat("timeRemaining", timeRemaining);
+
+            if (!audioSources[1].isPlaying)
+                audioSources[1].PlayOneShot(bubbles);
         }
     }
 

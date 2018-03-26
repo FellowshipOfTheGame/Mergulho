@@ -38,7 +38,7 @@ public class DataController : MonoBehaviour
     {
         if (!isFinished)
         {
-            sprRend.color = new Color(sprRend.color.r, sprRend.color.g, sprRend.color.b, Mathf.PingPong(Time.time, 0.5f));
+            sprRend.color = new Color(sprRend.color.r, sprRend.color.g, sprRend.color.b, Mathf.PingPong(Time.time, 1f));
 
             if (!isLoadedJson)
             {

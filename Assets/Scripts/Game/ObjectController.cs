@@ -13,9 +13,12 @@ public class ObjectController : MonoBehaviour
     private QuestionData question;
     private int recoveredKeys;
     private float timeRemaining;
+    private AudioSource[] audioSources;
 
     private void Start()
     {
+        audioSources = Camera.main.GetComponents<AudioSource>();
+
         dataController = FindObjectOfType<DataController>();
 
         if (index < PlayerPrefs.GetInt("questionsLength"))
@@ -71,14 +74,14 @@ public class ObjectController : MonoBehaviour
         }
         else if (gameObject.tag == "Bubble")
         {
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(soundEffect);
+            audioSources[1].PlayOneShot(soundEffect);
             PlayerPrefs.SetFloat("timeRemaining", timeRemaining + earnOxygenTime);
             PlayerPrefs.SetString("bubble_" + index, "caught");
             Destroy(gameObject);
         }
         else if (gameObject.tag == "Key")
         {
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(soundEffect);
+            audioSources[1].PlayOneShot(soundEffect);
             PlayerPrefs.SetInt("recoveredKeys", recoveredKeys + 1);
             PlayerPrefs.SetString("key_" + index, "caught");
             Destroy(gameObject);

@@ -8,12 +8,13 @@ public class QuizController : MonoBehaviour
 {
     public float lostTime;
     public int maxScore, scoreLostPerError;
-    public AudioClip cameraFlash, openChest;
+    public AudioClip cameraFlash, openChest, bubbles;
     public GameObject infoDisplay, questionDisplay, newPhotoDisplay, oxygenTimeBar;
     public Text infoText, questionNumber, questionText;
     public SimpleObjectPool answerButtonObjectPool;
     public Transform answerButtonParent;
 
+    private AudioSource audioSource;
     private DataController dataController;
     private QuestionData curQuestion;
     private List<GameObject> answerButtonGameObjects = new List<GameObject>();
@@ -22,7 +23,9 @@ public class QuizController : MonoBehaviour
 
     private void Start()
     {
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(openChest);
+        audioSource = Camera.main.GetComponent<AudioSource>();
+
+        audioSource.PlayOneShot(openChest);
 
         ShowInfoDisplay(true);
         ShowQuestionDisplay(false);
@@ -110,12 +113,14 @@ public class QuizController : MonoBehaviour
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
             PlayerPrefs.SetInt("questionsAnswered", PlayerPrefs.GetInt("questionsAnswered") + 1);
 
-            Camera.main.GetComponent<AudioSource>().PlayOneShot(cameraFlash);
+            audioSource.PlayOneShot(cameraFlash);
+
             ShowPhotoDisplay(true);
             ShowQuestionDisplay(false);
         }
         else
         {
+            audioSource.PlayOneShot(bubbles);
             curQuestion.mistakes++;
             oxygenTime -= lostTime;
         }
