@@ -39,7 +39,10 @@ public class ControllerKeys : MonoBehaviour
             xVelocity = Input.GetAxis("Horizontal");
 
             if (xVelocity == 0)
+            {
                 movement = false;
+                audioSources[0].Stop();
+            }
             else
             {
                 movement = true;

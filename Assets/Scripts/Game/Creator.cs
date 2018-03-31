@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Creator : MonoBehaviour
-{ 
-    public GameObject fish, shark;
-    public int sharkProbability;
-    public float timeToSpawn, xPosition, rotation, screenStart, screenEnd;
+{
 
-    private int result;
     private float timer;
+    public GameObject fish;
+    public GameObject shark;
+    public GameObject turtle;
+    public int sharkProbability;
+    public int turtleProbability;
+    public float timeToSpawn;
+    public float xPosition;
+    public float rotation;
+    public float screenStart;
+    private int result;
+    public float screenEnd;
 
     void Start()
     {
@@ -23,26 +30,32 @@ public class Creator : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-
         if (timer > timeToSpawn)
         {
             timer = 0f;
-            result = SharkOrFish();
-
-            if (result == 1)
+            result = SharkFishOrTurtle ();
+            if (result == 1) {
                 Instantiate(shark, new Vector3(xPosition, Random.Range(1, 7.5f), 0f), new Quaternion(0f, rotation, 0f, 0f));
-            else
+            } else if (result == 2){
+                Instantiate(turtle, new Vector3(xPosition, Random.Range(-2.5f, 9.0f), 0f), new Quaternion(0f, rotation, 0f, 0f));
+            } else {
                 Instantiate(fish, new Vector3(xPosition, Random.Range(-5.5f, 10f), 0f), new Quaternion(0f, rotation, 0f, 0f));
+            }
         }
     }
 
-    private int SharkOrFish()
-    {
-        int chance = (int)Random.Range(0, sharkProbability);
-
-        if (chance == 1)
-             return 1;
-        else
-            return 0;
+    private int SharkFishOrTurtle() {
+        int chance;
+        chance = (int)Random.Range(0, sharkProbability);
+        if (chance == 1) {
+            return 1;
+        } else {
+            chance = (int)Random.Range(0, turtleProbability);
+            if (chance == 1) {
+                return 2;
+            } else {
+                return 0;
+            }
+        }
     }
 }

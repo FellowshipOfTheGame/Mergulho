@@ -25,6 +25,7 @@ public class StartController : MonoBehaviour
             control.SetActive(false);
             objective1.SetActive(false);
             objective2.SetActive(false);
+
         }
     }
 
@@ -60,6 +61,12 @@ public class StartController : MonoBehaviour
 
     public void LoadScene(string name)
     {
+        SceneManager.LoadScene(name);
+    }
+
+    public void LoadSceneAndDestroy(string name)
+    {
+        Destroy(FindObjectOfType<DataController>());
         SceneManager.LoadScene(name);
     }
 

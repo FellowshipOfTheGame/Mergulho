@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class QuizController : MonoBehaviour
 {
     public float lostTime;
-    public int maxScore, scoreLostPerError;
     public AudioClip cameraFlash, openChest, bubbles;
     public GameObject infoDisplay, questionDisplay, newPhotoDisplay, oxygenTimeBar;
     public Text infoText, questionNumber, questionText;
@@ -50,6 +49,7 @@ public class QuizController : MonoBehaviour
         timePerCent = oxygenTime / playTimeAvaliable;
 
         oxygenTimeBar.transform.localScale = new Vector3(timePerCent, oxygenTimeBar.transform.localScale.y);
+
     }
 
     private void ShowQuestion()
@@ -103,10 +103,6 @@ public class QuizController : MonoBehaviour
         {
             questionAvaliable = false;
 
-            curQuestion.questionScore = maxScore - scoreLostPerError * curQuestion.mistakes;
-
-            PlayerPrefs.SetInt("score", curQuestion.questionScore + PlayerPrefs.GetInt("score"));
-
             curQuestion.wasAnswered = true;
             curQuestion.timeUsed = timeToAnswer;
 
@@ -123,6 +119,9 @@ public class QuizController : MonoBehaviour
             audioSource.PlayOneShot(bubbles);
             curQuestion.mistakes++;
             oxygenTime -= lostTime;
+            if (oxygenTime <= 0f) {
+                SceneManager.LoadScene("Lose");
+            }
         }
     }
 

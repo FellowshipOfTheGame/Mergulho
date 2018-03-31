@@ -14,12 +14,14 @@ public class ObjectController : MonoBehaviour
     private int recoveredKeys;
     private float timeRemaining;
     private AudioSource[] audioSources;
+    private int keyWarningTimes;
 
     private void Start()
     {
         audioSources = Camera.main.GetComponents<AudioSource>();
 
         dataController = FindObjectOfType<DataController>();
+        gameController = FindObjectOfType<GameController>();
 
         if (index < PlayerPrefs.GetInt("questionsLength"))
         {
@@ -42,6 +44,7 @@ public class ObjectController : MonoBehaviour
 
     private void Update()
     {
+        keyWarningTimes = PlayerPrefs.GetInt("keyWarningTimes");
         recoveredKeys = PlayerPrefs.GetInt("recoveredKeys");
         timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
     }
@@ -70,6 +73,11 @@ public class ObjectController : MonoBehaviour
                 PlayerPrefs.SetInt("currentQuestion", index);
                 PlayerPrefs.SetInt("recoveredKeys", recoveredKeys - 1);
                 SceneManager.LoadScene("Quiz");
+            } else if (!question.wasAnswered && recoveredKeys == 0) {
+                PlayerPrefs.SetInt("keyWarningTimes", keyWarningTimes - 1);
+                if (keyWarningTimes > 0) {
+                    gameController.ShowKeyWarning(true);
+                }
             }
         }
         else if (gameObject.tag == "Bubble")
@@ -92,5 +100,7 @@ public class ObjectController : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = sprites[index];
     }
+
+
 }
 

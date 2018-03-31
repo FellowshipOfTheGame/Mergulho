@@ -19,23 +19,19 @@ public class Swim : MonoBehaviour
 
     private void Update ()
     {
-        if (game.isGameActive == true)
-        {
-            anim.speed = 1;
+        if (game.isGameActive == true) {
             anim.SetBool("swim", true);
             rb.velocity = new Vector2(xVelocity, 0);
-        }
-        else
-        {
-            anim.speed = 0;
-            anim.SetBool("swim", false);
+        } else {
             rb.velocity = new Vector2(0, 0);
+            anim.SetBool("swim", false);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (trigger.gameObject.tag == "Destroyers")
+        if (trigger.gameObject.tag == "Destroyers") {
             Destroy(gameObject);
+        }
     }
 }

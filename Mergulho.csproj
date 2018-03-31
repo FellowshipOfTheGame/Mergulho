@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Data\QuestionData.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
+    <Compile Include="Assets\Scripts\Game\AudioController.cs" />
     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
     <Compile Include="Assets\Scripts\Game\ControllerKeys.cs" />
     <Compile Include="Assets\Scripts\Game\Creator.cs" />

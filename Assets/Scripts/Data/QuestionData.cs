@@ -6,8 +6,7 @@ public class QuestionData
     public string questionText;
     public AnswerData[] answers;
 
-    public bool wasAnswered;
-    public float timeUsed;
-    public int mistakes;
-    public int questionScore;
+    public bool wasAnswered = false;
+    public float timeUsed = 0;
+    public int mistakes = 0;
 }

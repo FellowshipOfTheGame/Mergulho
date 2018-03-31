@@ -20,6 +20,7 @@ public class DataController : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.DeleteAll();
+
         DontDestroyOnLoad(gameObject);
 
         sprRend = sprite.GetComponent<SpriteRenderer>();
@@ -105,10 +106,10 @@ public class DataController : MonoBehaviour
         PlayerPrefs.SetFloat("playTimeAvaliable", playTimeAvaliable);
         PlayerPrefs.SetFloat("timeRemaining", playTimeAvaliable);
         PlayerPrefs.SetInt("questionsLength", questions.Length);
-        PlayerPrefs.SetInt("score", 0);
         PlayerPrefs.SetInt("currentQuestion", 0);
         PlayerPrefs.SetInt("recoveredKeys", 0);
         PlayerPrefs.SetInt("questionsAnswered", 0);
+        PlayerPrefs.SetInt("keyWarningTimes", 3);
     }
 
     private IEnumerator RequestImages()
