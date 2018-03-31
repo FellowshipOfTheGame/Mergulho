@@ -66,7 +66,10 @@ public class StartController : MonoBehaviour
 
     public void LoadSceneAndDestroy(string name)
     {
-        Destroy(FindObjectOfType<DataController>());
+        GameObject[] reload = GameObject.FindGameObjectsWithTag("Reload");
+        foreach (GameObject go in reload)
+            Destroy(go);
+
         SceneManager.LoadScene(name);
     }
 

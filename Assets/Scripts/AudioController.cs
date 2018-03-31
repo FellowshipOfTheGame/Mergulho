@@ -25,16 +25,24 @@ public class AudioController : MonoBehaviour {
     }
 
     void Update() {
-        timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
-        if (timeRemaining <= change) {
-            audioSource.pitch = finalPitch;
-        } else {
-            audioSource.pitch = startingPitch;
 
-        }
-        scene = SceneManager.GetActiveScene();
-        if ((scene.name == "Win") || (scene.name == "Lose")) {
-            audioSource.Stop();
+        if (PlayerPrefs.GetInt("isFinished") == 0)
+        {
+            timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
+            if (timeRemaining <= change)
+            {
+                audioSource.pitch = finalPitch;
+            }
+            else
+            {
+                audioSource.pitch = startingPitch;
+
+            }
+            scene = SceneManager.GetActiveScene();
+            if ((scene.name == "Win") || (scene.name == "Lose"))
+            {
+                audioSource.Stop();
+            }
         }
     }
 }

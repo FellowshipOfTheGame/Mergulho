@@ -28,8 +28,10 @@ public class DataController : MonoBehaviour
         isLoading = false;
         isLoadedJson = false;
         isLoadedImages = false;
-        isFinished = false;
         isDataReady = false;
+        isFinished = false;
+
+        PlayerPrefs.SetInt("isFinished", 1);
 
         jsonFilePath = Path.Combine(Application.streamingAssetsPath, "questoes.json");
         imagesPath = Path.Combine(Application.streamingAssetsPath, "Collectible/");
@@ -61,6 +63,7 @@ public class DataController : MonoBehaviour
             if (isLoadedImages)
             {
                 isFinished = true;
+                PlayerPrefs.SetInt("isFinished", 0);
 
                 LoadImages();
 
