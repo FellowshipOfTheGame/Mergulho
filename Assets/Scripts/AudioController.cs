@@ -9,6 +9,7 @@ public class AudioController : MonoBehaviour {
     public float startingPitch = 1f;
     public float finalPitch = 1.2f;
     public float whenChange = 0.2f;
+    public float winnerPitch, loserPitch;
 
     private float timeRemaining;
     private float playTime;
@@ -25,7 +26,6 @@ public class AudioController : MonoBehaviour {
     }
 
     void Update() {
-
         if (PlayerPrefs.GetInt("isFinished") == 0)
         {
             timeRemaining = PlayerPrefs.GetFloat("timeRemaining");
@@ -38,10 +38,17 @@ public class AudioController : MonoBehaviour {
                 audioSource.pitch = startingPitch;
 
             }
+
             scene = SceneManager.GetActiveScene();
-            if ((scene.name == "Win") || (scene.name == "Lose"))
+            if (scene.name == "Win")
             {
-                audioSource.Stop();
+                PlayerPrefs.SetInt("isFinished", 1);
+                audioSource.pitch = winnerPitch;
+            }
+            else if (scene.name == "Lose")
+            {
+                PlayerPrefs.SetInt("isFinished", 1);
+                audioSource.pitch = loserPitch;
             }
         }
     }
