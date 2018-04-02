@@ -119,9 +119,11 @@ public class QuizController : MonoBehaviour
             audioSource.PlayOneShot(bubbles);
             curQuestion.mistakes++;
             oxygenTime -= lostTime;
-            if (oxygenTime <= 0f) {
+
+            PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
+
+            if (oxygenTime <= 0f)
                 SceneManager.LoadScene("Lose");
-            }
         }
     }
 
