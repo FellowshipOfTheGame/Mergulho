@@ -8,11 +8,13 @@ using UnityEngine.UI;
 public class AlbumController : MonoBehaviour
 {
     public AudioSource bookFlip;
-    public GameObject RightArrow, LeftArrow, framesObject, imagesObject;
+    public GameObject RightArrow, LeftArrow, framesObject, imagesObject, lupaObject, bigFrame;
+    public Image bigImage;
 
     private DataController dataController;
     private QuestionData questionData;
-    private Image[] frames, images;
+    private Image[] frames, images, lupasSprites;
+    private Button[] lupas;
     private Sprite newSprite;
     private Sprite[] sprites;
     private int questionsLength, pages, currentPages, index, length;
@@ -24,6 +26,8 @@ public class AlbumController : MonoBehaviour
 
         frames = framesObject.GetComponentsInChildren<Image>();
         images = imagesObject.GetComponentsInChildren<Image>();
+        lupas = lupaObject.GetComponentsInChildren<Button>();
+        lupasSprites = lupaObject.GetComponentsInChildren<Image>();
 
         pages = Mathf.CeilToInt(questionsLength / 8f);
         currentPages = 1;
@@ -58,13 +62,21 @@ public class AlbumController : MonoBehaviour
                 {
                     images[i].sprite = sprites[index];
                     images[i].color = Color.white;
+                    lupas[i].interactable = true;
+                    lupasSprites[i].color = Color.white;
                 }
-                else images[i].color = Color.clear;
+                else {
+                    images[i].color = Color.clear;
+                    lupas[i].interactable = false;
+                    lupasSprites[i].color = Color.clear;
+                }
             }
             else
             {
                 frames[i].color = Color.clear;
                 images[i].color = Color.clear;
+                lupasSprites[i].color = Color.clear;
+                lupas[i].interactable = false;
             }
 
             index++;
@@ -96,5 +108,20 @@ public class AlbumController : MonoBehaviour
             SceneManager.LoadScene("Win");
         else
             SceneManager.LoadScene(name);
+    }
+
+    public void BigFrameActive(int index) {
+        if (index < 0) {
+            bigFrame.SetActive(false);
+            bigImage.color = Color.clear;
+
+        } else {
+            if (currentPages > 1) {
+                index += (8*(currentPages -1));
+            }
+            bigImage.sprite = sprites[index];
+            bigImage.color = Color.white;
+            bigFrame.SetActive(true);
+        }
     }
 }
