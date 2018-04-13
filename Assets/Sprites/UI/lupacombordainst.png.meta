@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b173aa2557e36b043b89d9f3928b4533
+guid: 690ac725cf0c36c4b97a50e0df194ec3
 timeCreated: 1523239322
 licenseType: Free
 TextureImporter:
@@ -51,7 +51,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 128
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -59,7 +59,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: Standalone
-    maxTextureSize: 64
+    maxTextureSize: 128
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -67,7 +67,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
   - buildTarget: WebGL
-    maxTextureSize: 64
+    maxTextureSize: 128
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50

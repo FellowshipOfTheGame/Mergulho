@@ -129,7 +129,7 @@ public class QuizController : MonoBehaviour
 
     public void LoadScene(string name)
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(name);
     }
 
     public void ShowInfoDisplay(bool show)
