@@ -34,7 +34,7 @@ public class DataController : MonoBehaviour
         PlayerPrefs.SetInt("isFinished", 1);
 
         jsonFilePath = Path.Combine(Application.streamingAssetsPath, "questoes.json");
-        imagesPath = Path.Combine(Application.streamingAssetsPath, "Collectible/");
+        imagesPath = Application.streamingAssetsPath;
     }
 
     private void Update()
