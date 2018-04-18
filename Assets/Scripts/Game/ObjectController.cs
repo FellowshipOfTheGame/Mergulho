@@ -32,14 +32,15 @@ public class ObjectController : MonoBehaviour
                 ChangeSprite(2);
                 Destroy(gameObject.GetComponent<Collider2D>());
             }
-            if (gameObject.tag == "Bubble" && PlayerPrefs.GetString("bubble_" + index).Equals("caught"))
-                Destroy(gameObject);
-            if (gameObject.tag == "Key" && PlayerPrefs.GetString("key_" + index).Equals("caught"))
-                Destroy(gameObject);
         }
         else
             Destroy(gameObject);
 
+
+        if (gameObject.tag == "Bubble" && PlayerPrefs.GetString("bubble_" + index).Equals("caught"))
+            Destroy(gameObject);
+        if (gameObject.tag == "Key" && PlayerPrefs.GetString("key_" + index).Equals("caught"))
+            Destroy(gameObject);
     }
 
     private void Update()
