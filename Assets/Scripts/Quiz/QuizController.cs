@@ -60,6 +60,7 @@ public class QuizController : MonoBehaviour
         infoText.text = curQuestion.infoText;
         questionText.text = curQuestion.questionText;
 
+        ColorBlock colors;
         for (int i = 0; i < curQuestion.answers.Length; i++)
         {
             GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
@@ -67,19 +68,14 @@ public class QuizController : MonoBehaviour
             answerButtonGameObject.transform.SetParent(answerButtonParent);
             answerButtonGameObject.transform.localScale = Vector3.one;
 
-            ColorBlock colors;
+            colors = answerButtonGameObject.GetComponent<Button>().colors;
+
             if (!curQuestion.answers[i].isCorrect)
-            {
-                colors = answerButtonGameObject.GetComponent<Button>().colors;
                 colors.pressedColor = Color.red;
-                answerButtonGameObject.GetComponent<Button>().colors = colors;
-            }
             else
-            {
-                colors = answerButtonGameObject.GetComponent<Button>().colors;
                 colors.pressedColor = Color.green;
-                answerButtonGameObject.GetComponent<Button>().colors = colors;
-            }
+
+            answerButtonGameObject.GetComponent<Button>().colors = colors;
 
             AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
             answerButton.SetUp(curQuestion.answers[i]);

@@ -127,7 +127,7 @@
     },
     {
       "index": "5",
-      "infoText": "Os indivíduos da espécie Mussismilia hispida são endêmicos do Brasil, ou seja, só ocorrem em nosso litoral e em mais nenhum outro lugar do mundo. Vivem em ambientes de águas claras, rasas e quentes (acima de 20° C). São cnidários que formam colônias que parecem cérebros, com coloração que pode variar entre cinza, azul e verde.",
+      "infoText": "Os indivíduos da espécie <i>Mussismilia hispida</i> são endêmicos do Brasil, ou seja, só ocorrem em nosso litoral e em mais nenhum outro lugar do mundo. Vivem em ambientes de águas claras, rasas e quentes (acima de 20° C). São cnidários que formam colônias que parecem cérebros, com coloração que pode variar entre cinza, azul e verde.",
       "questionText": "Qual o nome popular desses organismos?",
       "answers": [
         {
@@ -156,9 +156,8 @@
       "questionText": "Quem são esses organismos?",
       "answers": [
         {
-          "answerText": "Palythoa",
-          "isCorrect": true,
-          "isScientific": true
+          "answerText": "<i>Palythoa</i>",
+          "isCorrect": true
         },
         {
           "answerText": "Anêmona-do-mar"
@@ -185,8 +184,7 @@
           "answerText": "Coral-cérebro"
         },
         {
-          "answerText": "Palythoa",
-          "isScientific": true
+          "answerText": "<i>Palythoa</i>"
         },
         {
           "answerText": "Ouriço-do-mar"
@@ -254,7 +252,7 @@
     },
     {
       "index": "10",
-      "infoText": "Algas verdes do gênero Ulva. São aparentadas das plantas terrestres. Possuem cloroplastos com clorofilas a e b, que são pigmentos da fotossíntese. A morfologia destas algas é do tipo foliácea e elas são bastante apreciadas por alguns peixes e tartarugas. Geralmente ocorrem em águas rasas, em locais com alta quantidade de matéria orgânica ou com poluição por esgoto.",
+      "infoText": "Algas verdes do gênero <i>Ulva</i>. São aparentadas das plantas terrestres. Possuem cloroplastos com clorofilas a e b, que são pigmentos da fotossíntese. A morfologia destas algas é do tipo foliácea e elas são bastante apreciadas por alguns peixes e tartarugas. Geralmente ocorrem em águas rasas, em locais com alta quantidade de matéria orgânica ou com poluição por esgoto.",
       "questionText": "Quem são esses organismos?",
       "answers": [
         {
@@ -392,9 +390,8 @@
           "answerText": "Tartaruga cabeçuda"
         },
         {
-          "answerText": "Schizoporella unicornis",
-          "isCorrect": true,
-          "isScientific": true
+          "answerText": "<i>Schizoporella unicornis</i>",
+          "isCorrect": true
         },
         {
           "answerText": "Lírio-do-mar"
@@ -437,9 +434,8 @@
           "answerText": "Esponja-do-mar laranja"
         },
         {
-          "answerText": "Padina",
-          "isCorrect": true,
-          "isScientific": true
+          "answerText": "<i>Padina</i>",
+          "isCorrect": true
         },
         {
           "answerText": "Polvo"
