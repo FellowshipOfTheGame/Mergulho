@@ -5,6 +5,8 @@ public class QuestionData
     public string infoText;
     public string questionText;
     public AnswerData[] answers;
+    public string name;
+    public string scientific;
 
     public bool wasAnswered = false;
     public float timeUsed = 0;

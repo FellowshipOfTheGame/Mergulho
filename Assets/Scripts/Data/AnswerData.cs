@@ -2,6 +2,7 @@
 public class AnswerData
 {
 	public string answerText;
-	public bool isCorrect;
+    public bool isCorrect = false;
+    public bool isScientific =  false;
 }
 
