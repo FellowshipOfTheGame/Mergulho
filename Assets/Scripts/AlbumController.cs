@@ -10,6 +10,7 @@ public class AlbumController : MonoBehaviour
     public AudioSource bookFlip;
     public GameObject RightArrow, LeftArrow, framesObject, imagesObject, lupaObject, bigFrame;
     public Image bigImage;
+    public Text popular, scientific;
 
     private DataController dataController;
     private QuestionData questionData;
@@ -23,6 +24,8 @@ public class AlbumController : MonoBehaviour
         dataController = FindObjectOfType<DataController>();
         sprites = dataController.GetSprites();
         questionsLength = PlayerPrefs.GetInt("questionsLength");
+
+        bigFrame.SetActive(false);
 
         frames = framesObject.GetComponentsInChildren<Image>();
         images = imagesObject.GetComponentsInChildren<Image>();
@@ -119,6 +122,11 @@ public class AlbumController : MonoBehaviour
             if (currentPages > 1) {
                 index += (8*(currentPages -1));
             }
+
+            questionData = dataController.GetQuestion(index);
+            popular.text = questionData.name;
+            scientific.text = questionData.scientific;
+
             bigImage.sprite = sprites[index];
             bigImage.color = Color.white;
             bigFrame.SetActive(true);

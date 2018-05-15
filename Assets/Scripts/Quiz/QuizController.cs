@@ -8,15 +8,13 @@ public class QuizController : MonoBehaviour
 {
     public float lostTime;
     public AudioClip cameraFlash, openChest, bubbles;
-    public GameObject infoDisplay, questionDisplay, newPhotoDisplay, oxygenTimeBar;
+    public GameObject answersObj, infoDisplay, questionDisplay, newPhotoDisplay, oxygenTimeBar;
     public Text infoText, questionNumber, questionText;
-    public SimpleObjectPool answerButtonObjectPool;
-    public Transform answerButtonParent;
 
     private AudioSource audioSource;
     private DataController dataController;
     private QuestionData curQuestion;
-    private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+    private AnswerButton[] answers;
     private float oxygenTime, timeToAnswer = 0, playTimeAvaliable, timePerCent;
     private bool questionAvaliable = false;
 
@@ -38,6 +36,8 @@ public class QuizController : MonoBehaviour
 
         playTimeAvaliable = PlayerPrefs.GetFloat("playTimeAvaliable");
 
+        answers = answersObj.GetComponentsInChildren<AnswerButton>();
+
         ShowQuestion();
     }
 
@@ -54,43 +54,31 @@ public class QuizController : MonoBehaviour
 
     private void ShowQuestion()
     {
-        RemoveAnswerButtons();
-
         questionNumber.text = (System.Int32.Parse(curQuestion.index) + 1).ToString();
         infoText.text = curQuestion.infoText;
         questionText.text = curQuestion.questionText;
 
         ColorBlock colors;
-        for (int i = 0; i < curQuestion.answers.Length; i++)
+
+        for (int i = 0; i < answers.Length; i++)
         {
-            GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
-            answerButtonGameObjects.Add(answerButtonGameObject);
-            answerButtonGameObject.transform.SetParent(answerButtonParent);
-            answerButtonGameObject.transform.localScale = Vector3.one;
-
-            colors = answerButtonGameObject.GetComponent<Button>().colors;
-
+            //Muda a cor para o botao pressionado
+            colors = answers[i].GetComponent<Button>().colors;
             if (!curQuestion.answers[i].isCorrect)
+            {
                 colors.pressedColor = Color.red;
+            }
             else
+            {
                 colors.pressedColor = Color.green;
+            }
+            answers[i].GetComponent<Button>().colors = colors;
 
-            answerButtonGameObject.GetComponent<Button>().colors = colors;
-
-            AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
-            answerButton.SetUp(curQuestion.answers[i]);
+            //Muda o texto da alternativa
+            answers[i].SetUp(curQuestion.answers[i]);
         }
 
         questionAvaliable = true;
-    }
-
-    private void RemoveAnswerButtons()
-    {
-        while (answerButtonGameObjects.Count > 0)
-        {
-            answerButtonObjectPool.ReturnObject(answerButtonGameObjects[0]);
-            answerButtonGameObjects.RemoveAt(0);
-        }
     }
 
     public void AnswerButtonClicked(bool isCorrect)

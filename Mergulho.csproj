@@ -98,7 +98,6 @@
     <Compile Include="Assets\Scripts\Game\Swim.cs" />
     <Compile Include="Assets\Scripts\Quiz\AnswerButton.cs" />
     <Compile Include="Assets\Scripts\Quiz\QuizController.cs" />
-    <Compile Include="Assets\Scripts\Quiz\SimpleObjectPool.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\StartController.cs" />
   </ItemGroup>
