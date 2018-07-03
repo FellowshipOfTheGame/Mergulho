@@ -1,0 +1,4 @@
+start=Iniciar
+instructions=Instruções
+credits=Créditos
+quit=Sair

@@ -20,8 +20,6 @@ public class DataController : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
-
         DontDestroyOnLoad(gameObject);
 
         sprRend = sprite.GetComponent<SpriteRenderer>();
@@ -34,7 +32,15 @@ public class DataController : MonoBehaviour
 
         PlayerPrefs.SetInt("isFinished", 1);
 
-        jsonFilePath = Path.Combine(Application.streamingAssetsPath, "questoes.json");
+        if (PlayerPrefs.GetString("lang") == "pt")
+        {
+            jsonFilePath = Path.Combine(Application.streamingAssetsPath, "questions_pt.json");
+        }
+        else if (PlayerPrefs.GetString("lang") == "en")
+        {
+            jsonFilePath = Path.Combine(Application.streamingAssetsPath, "questions_en.json");
+        }
+
         imagesPath = Application.streamingAssetsPath;
     }
 

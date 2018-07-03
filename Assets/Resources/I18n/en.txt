@@ -1,0 +1,4 @@
+start=Start
+instructions=Instructions
+credits=Credits
+quit=Quit

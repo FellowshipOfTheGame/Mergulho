@@ -65,7 +65,6 @@ public class StartController : MonoBehaviour
         instruction3.SetActive(show);
     }
 
-
     public void LoadScene(string name)
     {
         SceneManager.LoadScene(name);
@@ -76,6 +75,8 @@ public class StartController : MonoBehaviour
         GameObject[] reload = GameObject.FindGameObjectsWithTag("Reload");
         foreach (GameObject go in reload)
             Destroy(go);
+
+        PlayerPrefs.DeleteAll();
 
         SceneManager.LoadScene(name);
     }
