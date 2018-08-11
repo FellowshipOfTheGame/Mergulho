@@ -10,12 +10,12 @@ public class ControllerKeys : MonoBehaviour
     public AudioClip swimSound, reentrySound;
 
     private Animator animator;
-    private float yVelocity, xVelocity;
+    public float yVelocity, xVelocity;
     private bool movement, play;
     private GameController game;
     private AudioSource[] audioSources;
 
-    void Start()
+    void Awake()
     {
         audioSources = Camera.main.GetComponents<AudioSource>();
         animator = GetComponent<Animator>();
@@ -79,8 +79,9 @@ public class ControllerKeys : MonoBehaviour
         PlayerPrefs.SetFloat("playerZ", transform.position.z);
     }
 
-    private void LoadPlayerPosition()
+    public Vector3 LoadPlayerPosition()
     {
         transform.position = new Vector3(PlayerPrefs.GetFloat("playerX"), PlayerPrefs.GetFloat("playerY"), PlayerPrefs.GetFloat("playerZ"));
+        return transform.position;
     }
 }
