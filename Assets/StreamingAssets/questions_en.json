@@ -2,399 +2,399 @@
   "questions": [
     {
       "index": "0",
-      "infoText": "São organismos que possuem cinco braços e coloração avermelhada.  São carnívoros e alimentam-se principalmente de moluscos. A digestão do alimento ocorre fora de seu corpo, ou seja, lançam seus estômagos e suco digestivo para fora do corpo e, após isso, engolem o alimento já digerido.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "They are organisms that have five arms and reddish coloration. They are carnivorous and feed mainly on mollusks. The digestion of food takes place outside their body, that is, they throw their stomachs and digestive juice out of the body and afterwards swallow the already digested food.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Ouriços-do-mar"
+          "answerText": "Sea urchins"
         },
         {
-          "answerText": "Pepinos-do-mar"
+          "answerText": "Sea cucumbers"
         },
         {
-          "answerText": "Lírios-do-mar"
+          "answerText": "Sea lilies"
         },
         {
-          "answerText": "Estrelas-do-mar",
+          "answerText": "Starfish",
           "isCorrect": true
         },
         {
-          "answerText": "Anêmonas-do-mar"
+          "answerText": "Sea anemones"
         }
       ],
-      "name": "Estrela-do-mar",
+      "name": "Starfish",
       "scientific": "Echinaster brasiliensis"
     },
     {
       "index": "1",
-      "infoText": "São equinodermos, aparentados às estrelas-do-mar. Alimentam-se de algas delicadas, raspando e arrancando-as das rochas, sendo que as únicas que sobram são as calcárias, de coloração rósea e que são resistentes à herbivoria. Podem ficar abrigados em buracos chamados de \"locas\". Sua coloração é negra e possuem espinhos pontiagudos, os quais podem perfurar a pele humana e causar infecções. Muitas pessoas acham que são capazes de \"lançar\" seus espinhos, mas isso não é verdade. ",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "They are echinoderms, related to the Starfish. They feed on delicate algae, scraping and tearing them off the rocks, leaving only the coralline crustose, which are of a pink color and resistant to herbivory. They can be sheltered in holes called \"pits\". Their color is black and they have sharp spines, which can pierce human skin and cause infections. Many people think they are able to \"throw\" their spines, but that is not true.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Ouriços-do-mar",
+          "answerText": "Sea urchins",
           "isCorrect": true
         },
         {
-          "answerText": "Pepinos-do-mar"
+          "answerText": "Sea cucumbers"
         },
         {
-          "answerText": "Lírios-do-mar"
+          "answerText": "Sea lilies"
         },
         {
-          "answerText": "Estrelas-do-mar"
+          "answerText": "Starfish"
         },
         {
-          "answerText": "Anêmonas-do-mar"
+          "answerText": "Sea anemones"
         }
       ],
-      "name": "Ouriço-do-mar preto",
+      "name": "Black sea urchin",
       "scientific": "Echinometra lucunter"
     },
     {
       "index": "2",
-      "infoText": "Crustáceos presentes no litoral brasileiro e bastante apreciados na culinária, sendo um alimento de luxo. Por isso, estão ameaçados e existe a época do defeso, na qual não se pode caçar estes organismos. Podem viver em profundidades de até 90 metros e geralmente se escondem em fendas nas rochas durante o dia e saem à noite para se alimentar. As fêmeas podem botar até 100.000 ovos, os quais ficam presos na parte inferior de seus abdomens. Possuem 5 pares de pernas no tórax, pertencendo à ordem Decapoda.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Crustaceans present on the Brazilian coast and highly prized in cooking, being a luxury food. Therefore, they are threatened and there is the season of the “closure”, in which no one can hunt these organisms. They can live in depths of up to 90 meters and usually hide in cracks in the rocks during the day and go out at night to feed. Females can lay up to 100,000 eggs, which are trapped in the bottom of their abdomens. They have 5 pairs of legs in the thorax, belonging to the Decapoda order.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Craca"
+          "answerText": "Barnacle"
         },
         {
-          "answerText": "Barata-da-praia"
+          "answerText": "Sea roach"
         },
         {
-          "answerText": "Anêmona-do-mar"
+          "answerText": "Sea anemone"
         },
         {
-          "answerText": "Lagosta vermelha",
+          "answerText": "Red lobster",
           "isCorrect": true
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         }
       ],
-      "name": "Lagosta vermelha",
+      "name": "Red lobster",
       "scientific": "Panulirus argus"
     },
     {
       "index": "3",
-      "infoText": "São organismos que parecem algas, mas na verdade são animais aparentados às estrelas-do-mar, que pertencem à classe Crinoidea. Possuem 5 braços ramificados, que lembram penas, e que são utilizados na sua alimentação por filtração, pois servem como barreiras para as partículas em suspensão na água.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "They are organisms that look like algae, but are actually animals related to Starfish, which belong to the class Crinoidea. They have 5 branched arms, which resemble feathers, and which are used in their feeding by filtration, as they serve as barriers for particles suspended in water.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Craca"
+          "answerText": "Barnacle"
         },
         {
-          "answerText": "Barata-da-praia"
+          "answerText": "Sea roach"
         },
         {
-          "answerText": "Lírio-do-mar",
+          "answerText": "Sea lily",
           "isCorrect": true
         },
         {
-          "answerText": "Lagosta vermelha"
+          "answerText": "Red lobster"
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         }
       ],
-      "name": "Lírio-do-mar",
+      "name": "Sea lily",
       "scientific": "Tropiometra carinata"
     },
     {
       "index": "4",
-      "infoText": "Animais do grupo dos cnidários, com corpo em forma de cilindro contendo uma extremidade fixa ao substrato e a outra cercada por tentáculos, entre os quais está a boca. Capturam o alimento com os tentáculos. São animais que só ocorrem no Brasil e produzem uma molécula chamada caissarona, que podem contribuir na produção de medicamentos para distúrbios intestinais.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Animals of the group of cnidarians, with cylinder-shaped body containing one end attached to the substrate and the other surrounded by tentacles, among which is the mouth. They catch the food with the tentacles. They are animals that only occur in Brazil and produce a molecule called caissarone, which may contribute to the production of drugs for intestinal disorders.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Tartaruga-marinha"
+          "answerText": "Sea turtle"
         },
         {
-          "answerText": "Barata-da-praia"
+          "answerText": "Sea roach"
         },
         {
-          "answerText": "Lírios-do-mar"
+          "answerText": "Sea lilies"
         },
         {
-          "answerText": "Anêmona-do-mar",
+          "answerText": "Sea anemone",
           "isCorrect": true
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         }
       ],
-      "name": "Anêmona-do-mar",
+      "name": "Sea anemone",
       "scientific": "Bunodosoma caissarum"
     },
     {
       "index": "5",
-      "infoText": "Os indivíduos da espécie <i>Mussismilia hispida</i> são endêmicos do Brasil, ou seja, só ocorrem em nosso litoral e em mais nenhum outro lugar do mundo. Vivem em ambientes de águas claras, rasas e quentes (acima de 20° C). São cnidários que formam colônias que parecem cérebros, com coloração que pode variar entre cinza, azul e verde.",
-      "questionText": "Qual o nome popular desses organismos?",
+      "infoText": "Individuals of the species <i>Mussismilia hispida</i> are endemic to Brazil, that is, occur only on the coast of this country and nowhere else in the world. They live in clear, shallow and warm water environments (above 20°C). They are cnidarians that form colonies that look like brains, with coloration that can range from gray, blue, and green.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Barata-da-praia"
+          "answerText": "Sea roach"
         },
         {
-          "answerText": "Coral-cérebro",
+          "answerText": "Brain Coral",
           "isCorrect": true
         },
         {
-          "answerText": "Anêmona-do-mar"
+          "answerText": "Sea anemone"
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         },
         {
-          "answerText": "Tartaruga-marinha"
+          "answerText": "Sea turtle"
         }
       ],
-      "name": "Coral-cérebro",
+      "name": "Brain Coral",
       "scientific": "Mussismilia hispida"
     },
     {
       "index": "6",
-      "infoText": "São cnidários coloniais de coloração alaranjada. A cor é dada pelas algas que ficam associadas aos seus tecidos, em uma relação ecológica que chamamos de simbiose. Se a temperatura da água aumenta muita, estas algas podem morrer e causar o branqueamento e posterior morte dessas colônias. Vivem entre 2 e 7 metros de profundidade e as colônias ficam recobertas por um muco produzido por elas, que é utilizado por pescadores como analgésico. Esse muco deu a estes organismos o nome popular de \"baba-de-boi\".",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "They are colonial cnidarians of orange coloration. The color is given by the algae that are associated with their tissues, in an ecological relation that we call symbiosis. If the temperature of the water increases greatly, these algae may die and cause the whitening and subsequent death of these colonies. They live between 2 and 7 meters deep and the colonies are covered by a mucus produced by them, which is used by fishermen as an analgesic. This mucus gave these organisms the popular name in Brazil of \"baba-de-boi\" (something like or slime).",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
           "answerText": "<i>Palythoa</i>",
           "isCorrect": true
         },
         {
-          "answerText": "Anêmona-do-mar"
+          "answerText": "Sea anemone"
         },
         {
-          "answerText": "Coral-cérebro"
+          "answerText": "Brain Coral"
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         },
         {
-          "answerText": "Tartaruga-marinha"
+          "answerText": "Sea turtle"
         }
       ],
-      "name": "Baba-de-boi",
+      "name": "",
       "scientific": "Palythoa caribaeorum"
     },
     {
       "index": "7",
-      "infoText": "Pouco conhecidos da maioria da população, esses organismos formam um dos maiores depósitos de carbonato de cálcio do mundo e estão ameaçados pela acidificação da água do mar que está ocorrendo como consequência das mudanças climáticas globais. A acidez da água impede a formação de estruturas calcárias pelos organismos marinhos. Esses organismos são algas vermelhas que formam grandes bancos submarinos, como se fossem rochas de cor rosada no fundo do mar e o nome deles em grego significa \"rocha de cor rosa ou vermelha\". No Brasil, ocorrem principalmente no Parque Nacional Marinho de Abrolhos, ocupando uma área de aproximadamente 20.000 Km2.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Little known to most of the population, these organisms form one of the largest deposits of calcium carbonate in the world and are threatened by the acidification of sea water that is occurring as a consequence of global climate change. The acidity of water prevents the formation of limestone structures by marine organisms. These organisms are red algae that form large submarine banks, as if they were pinkish rocks on the seabed and their name in Greek means \"pink or red rock.\" In Brazil, they occur mainly in the Abrolhos National Marine Park, occupying an area of approximately 20,000 km2.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Coral-cérebro"
+          "answerText": "Brain Coral"
         },
         {
           "answerText": "<i>Palythoa</i>"
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         },
         {
-          "answerText": "Tartaruga-marinha"
+          "answerText": "Sea turtle"
         },
         {
-          "answerText": "Rodolitos",
+          "answerText": "Rhodolith",
           "isCorrect": true
         }
       ],
-      "name": "Rodolito",
+      "name": "Rhodolith",
       "scientific": ""
     },
     {
       "index": "8",
-      "infoText": "São algas de coloração parda, bastante abundantes no litoral do Brasil, principalmente na região Sudeste. Ocupam a área dos costões rochosos que fica no limite da maré baixa, ficando parcialmente exposta ao ar durante algumas horas do dia. Estas algas possuem o corpo dividido em um eixo central e ramos laterais chamados de lâminas, que parecem folhas, mas não são. Ainda, podem possuir vesículas de ar (ou vesículas flutuadoras) que fazem com que os indivíduos flutuem na água. Em outros lugares do mundo, algumas espécies destas algas podem formar extensos bancos flutuantes, os quais servem de abrigo e fonte de alimento para diversas espécies, como as tartarugas marinhas.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "They are brown algae, abundant in the Brazilian coast, mainly in the Southeast region. They occupy the area of the rocky shores that is at the limit of the low tide, being partially exposed to the air during some hours of the day. These algae have the body divid e d into a central axis and lateral branches called blades, which look like leaves, but are not. Still, they may have air vesicles  or floating vesicles) that cause individuals to float in water. Elsewhere in the world, some species of these algae may form extensive floating banks, which serve as a shelter and source of food for various species, such as sea turtles.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Anêmona-do-mar"
+          "answerText": "Sea anemone"
         },
         {
-          "answerText": "Coral-cérebro"
+          "answerText": "Brain Coral"
         },
         {
-          "answerText": "Rodolitos"
+          "answerText": "Rhodolith"
         },
         {
-          "answerText": "Sargaço",
+          "answerText": "Sargasso",
           "isCorrect": true
         },
         {
-          "answerText": "Tartaruga-marinha"
+          "answerText": "Sea turtle"
         }
       ],
-      "name": "Sargaço",
+      "name": "Sargasso",
       "scientific": "Sargassum vulgare"
     },
     {
       "index": "9",
-      "infoText": "Vertebrado marinho que pode viver por até 67 anos e os adultos pesam 200 Kg em média. Possuem uma mandíbula forte, uma cabeça grande e uma carapaça rígida, caracterizada pela presença de 5 pares de placas dorsais. Podem ficar submersas por até 4 horas ininterruptamente, mas geralmente os mergulhos ficam entre 15 e 30 minutos. Alimentam-se principalmente de invertebrados, como crustáceos e moluscos. As fêmeas iniciam a fase reprodutiva entre os 17 e 33 anos. Os ovos são colocados em buracos cavados na areia da praia onde a fêmea nasceu, os quais são cobertos de areia. Muitos filhotes morrem logo após o nascimento e isso, associado ao fato da demora para a maturidade sexual, faz com que estes organismos estejam ameaçados.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Marine vertebrate that can live for up to 67 years and adults weigh 200kg on average. They have a strong jaw, a large head and a rigid carapace, characterized by the presence of 5 pairs of dorsal plates. They can be submerged for up to 4 hours without interruption, but generally the dives are between 15 and 30 minutes. They feed main lyon invertebrates such as crustaceans and mollusks. Females begin the reproductive phase between the ages of 17 and 33 years. The eggs are placed in holes dug in the sand of the beach where the female was born, which are covered with sand. Many puppies die soon after birth and this, coupled with the delay to sexual maturity, causes these organisms to be threatened.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Coral-cérebro"
+          "answerText": "Brain Coral"
         },
         {
-          "answerText": "Rodolitos"
+          "answerText": "Rhodolith"
         },
         {
-          "answerText": "Sargaço"
+          "answerText": "Sargasso"
         },
         {
-          "answerText": "Ouriço-do-mar"
+          "answerText": "Sea urchins"
         },
         {
-          "answerText": "Tartaruga cabeçuda",
+          "answerText": "Loggerhead Sea Turtle",
           "isCorrect": true
         }
       ],
-      "name": "Tartaruga marinha comum ou cabeçuda",
+      "name": "Loggerhead Sea Turtle",
       "scientific": "Caretta caretta"
     },
     {
       "index": "10",
-      "infoText": "Algas verdes do gênero <i>Ulva</i>. São aparentadas das plantas terrestres. Possuem cloroplastos com clorofilas a e b, que são pigmentos da fotossíntese. A morfologia destas algas é do tipo foliácea e elas são bastante apreciadas por alguns peixes e tartarugas. Geralmente ocorrem em águas rasas, em locais com alta quantidade de matéria orgânica ou com poluição por esgoto.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Green algae of the genus <i>Ulva</i>. They are related to terrestrial plants. They have chloroplasts with chlorophyll a and b, which are pigments related to the photosynthesis process. The morphology of these algae is foliaceous and they are highly appreciated by some fish and turtles. They usually occur in shallow water, in places with high amounts of organic matter or with pollution by sewage.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Rodolitos"
+          "answerText": "Rhodolith"
         },
         {
-          "answerText": "Sargaço"
+          "answerText": "Sargasso"
         },
         {
-          "answerText": "Anêmona-do-mar"
+          "answerText": "Sea anemone"
         },
         {
-          "answerText": "Alface-do-mar",
+          "answerText": " ",
           "isCorrect": true
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         }
       ],
-      "name": "Alface-do-mar",
+      "name": "Sea Lettuce",
       "scientific": "Ulva lactuca"
     },
     {
       "index": "11",
-      "infoText": "Organismos sésseis e crostosos, de coloração entre o laranja e o vermelho. São filtradores, sendo que a água do mar entra pelos diversos poros do corpo e percorre o sistema de canais com células que absorvem os nutrientes da água. Estes poros caracterizam o filo destes organismos (Porifera). O esqueleto é formado por espículas e fibras de colágeno. Produzem uma substância urticante que pode causar dermatite.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Sessile and crustose organisms, colored between orange and red. They are filtering organisms, and sea water enters the various pores of the body and runs through the system of channels with cells that absorb nutrients from the water. These pores characterize the phylum of these organisms (Porifera). The skeleton is formed by spicules and collagen fibers. They produce a stinging substance that can cause dermatitis.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Sargaço"
+          "answerText": "Sargasso"
         },
         {
-          "answerText": "Anêmona-do-mar"
+          "answerText": "Sea anemone"
         },
         {
-          "answerText": "Esponja-do-mar laranja",
+          "answerText": "Orange sea sponge",
           "isCorrect": true
         },
         {
-          "answerText": "Alface-do-mar"
+          "answerText": "Sea Lettuce"
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         }
       ],
-      "name": "Esponja-laranja",
+      "name": "Orange sea sponge",
       "scientific": ""
     },
     {
       "index": "12",
-      "infoText": "Apesar de parecerem algas, são na verdade aparentados às anêmonas-do-mar, pertencendo ao grupo dos cnidários. São coloniais e o esqueleto calcário sustenta os indivíduos da colônia, formando uma estrutura ereta e ramificada, de coloração vermelha. São bioindicadores de mudanças climáticas, pois são sensíveis às mudanças de temperatura da água.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Although they seem algae, they are actually related to Sea anemones, belonging to the group of cnidarians. They are colonial and the calcareous skeleton supports the individuals of the colony, forming an erect and branched structure, of red coloration. They are bioindicators of climate change because they are sensitive to changes in water temperature.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Ouriços-do-mar"
+          "answerText": "Sea urchins"
         },
         {
-          "answerText": "Esponja-do-mar laranja"
+          "answerText": "Orange sea sponge"
         },
         {
-          "answerText": "Alface-do-mar"
+          "answerText": "Sea Lettuce"
         },
         {
-          "answerText": "Gorgônia",
+          "answerText": "Gorgonia",
           "isCorrect": true
         },
         {
-          "answerText": "Rodolitos"
+          "answerText": "Rhodolith"
         }
       ],
-      "name": "Gorgônia",
+      "name": "Gorgonia",
       "scientific": "Gorgonia elegans"
     },
     {
       "index": "13",
-      "infoText": "São moluscos cefalópodes. Possuem oito braços com ventosas, dispostos ao redor da boca. São predadores, alimentando-se principalmente de peixes e crustáceos. Apresentam boa visão, o que é uma vantagem na hora de procurar alimento. Possuem glândulas que liberam tinta em momentos de estresse e fuga de predadores. São muito apreciados na culinária.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "They are cephalopod molluscs. They have eight arms with suction cups, arranged around the mouth. They are predators, feeding mainly on fish and crustaceans. They have good vision, which is an advantage when looking for food. They have glands that release paint in times of stress or predators’ scaping. They are much appreciated as food.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Esponja-do-mar laranja"
+          "answerText": "Orange sea sponge"
         },
         {
-          "answerText": "Alface-do-mar"
+          "answerText": "Sea Lettuce"
         },
         {
-          "answerText": "Polvo",
+          "answerText": "Octopus",
           "isCorrect": true
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         },
         {
-          "answerText": "Lírio-do-mar"
+          "answerText": "Sea lily"
         }
       ],
-      "name": "Polvo",
+      "name": "Octopus",
       "scientific": "Octopus vulgaris"
     },
     {
       "index": "14",
-      "infoText": "Algas que formam tufos de consistência macia. O talo é formado de filamentos que parecem fios de cabelo, cheios de ramificações e com coloração vermelha. São apreciadas por organismos herbívoros, como peixes e ouriços. Tem um ciclo de vida curto e crescem bem rápido.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Algae that form turfs of soft consistency. The thallus is formed of filaments that look like strands of hair, full of branches and red in color. They are appreciated by herbivorous organisms such as fish and hedgehogs. It has a short life cycle and grows very fast.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Esponja-do-mar laranja"
+          "answerText": "Orange sea sponge"
         },
         {
-          "answerText": "Algas vermelhas filamentosas",
+          "answerText": "Filamentous red algae",
           "isCorrect": true
         },
         {
-          "answerText": "Polvo"
+          "answerText": "Octopus"
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         },
         {
-          "answerText": "Lírio-do-mar"
+          "answerText": "Sea lily"
         }
       ],
-      "name": "Algas vermelhas filamentosas",
+      "name": "Filamentous red algae",
       "scientific": "Polysihphonia spp."
     },
     {
       "index": "15",
-      "infoText": "Colônias de consistência bem rígida, de coloração alaranjada, parecendo pequenas árvores. Os indivíduos que formam a colônia são bem pequenos, só sendo possível visualizá-los com auxílio de uma lupa ou de um microscópio. Apesar de bastante parecidos com corais, estes organismos pertencem a outro grupo, denominado Ectoprocta. A espécie não é nativa do Brasil, tendo sido trazida do Japão.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Colonies of very rigid consistency, orange in color, looking like small trees. The individuals that form the colony are very small, only being possible to visualize them with a magnifying glass or a microscope. Although quite similar to corals, these organisms belong to another group, called Ectoprocta. The species is not native to Brazil, having been brought from Japan.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Alface-do-mar"
+          "answerText": "Sea Lettuce"
         },
         {
-          "answerText": "Polvo"
+          "answerText": "Octopus"
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         },
         {
           "answerText": "<i>Schizoporella unicornis</i>",
           "isCorrect": true
         },
         {
-          "answerText": "Lírio-do-mar"
+          "answerText": "Sea lily"
         }
       ],
       "name": "",
@@ -402,49 +402,49 @@
     },
     {
       "index": "16",
-      "infoText": "Também conhecida como jamanta, é uma espécie de peixe, de um grupo aparentado aos tubarões. Tem o corpo em forma de losango e uma cauda longa, sem espinho. Podem pesar até 1.350 Kg. Alimentam-se de plâncton e de pequenos peixes.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Also known as “jamanta”, it is a species of fish, from a group related to sharks. It has a diamond-shaped body and a long tail, without a thorn. They can weigh up to 1350 kg. They feed on plankton and small fish.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Esponja-do-mar laranja"
+          "answerText": "Orange sea sponge"
         },
         {
-          "answerText": "Raias manta",
+          "answerText": "Giant manta ray",
           "isCorrect": true
         },
         {
-          "answerText": "Polvo"
+          "answerText": "Octopus"
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         },
         {
-          "answerText": "Lírio-do-mar"
+          "answerText": "Sea lily"
         }
       ],
-      "name": "Raia manta",
+      "name": "Giant manta ray",
       "scientific": "Manta birostris"
     },
     {
       "index": "17",
-      "infoText": "Alga parda que tem o talo em formato de ventarola. O talo cresce pela margem, que fica enrolada.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Brown seaweed that has a thallus shaped like a fan. The thallus grows by the margin, which is curled.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Esponja-do-mar laranja"
+          "answerText": "Orange sea sponge"
         },
         {
           "answerText": "<i>Padina</i>",
           "isCorrect": true
         },
         {
-          "answerText": "Polvo"
+          "answerText": "Octopus"
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         },
         {
-          "answerText": "Lírio-do-mar"
+          "answerText": "Sea lily"
         }
       ],
       "name": "",
@@ -452,52 +452,52 @@
     },
     {
       "index": "18",
-      "infoText": "Organismos de coloração negra, que possuem uma extremidade do corpo fixada às rochas e a outra extremidade formada por dois sifões, um por onde a água e o alimento entram (sifão inalante) e outro por onde sai água e excretas (sifão exalante). O corpo é revestido por uma camada de células chamada de túnica (de onde vem o nome do grupo ao qual pertencem – Tunicata). Alimentam-se por filtração e as trocas gasosas ocorrem por brânquias na faringe. Apesar de possuírem uma morfologia pouco complexa, são parentes próximos dos vertebrados, por possuírem notocorda.",
-      "questionText": "Quem são esses organismos?",
+      "infoText": "Black colored organisms, which have one end of the body fixed to the rocks and the other end formed by two siphons, one where the water and the food enters (inhaling siphon) and the other through which water and excreta comes out (exhaling siphon). The body is covered by a layer of cells called a tunica (from which comes the name of the group to which they belong - Tunicata). They are filterers and gaseous exchanges occur through gills in the pharynx. Although they have a rather complex morphology, they are close relatives of vertebrates, because they have notochord.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Alface-do-mar"
+          "answerText": "Sea Lettuce"
         },
         {
-          "answerText": "Polvo"
+          "answerText": "Octopus"
         },
         {
-          "answerText": "Ascídia negra",
+          "answerText": "Black ascidian",
           "isCorrect": true
         },
         {
-          "answerText": "Estrela-do-mar"
+          "answerText": "Starfish"
         },
         {
-          "answerText": "Lírio-do-mar"
+          "answerText": "Sea lily"
         }
       ],
-      "name": "Ascídia preta",
+      "name": "Black ascidian",
       "scientific": "Phalusia nigra"
     },
     {
       "index": "19",
-      "infoText": "Peixe comum nos mares tropicais e subtropicais de todo o mundo, abundante na costa brasileira. O seu corpo possui entre 8 e 15 centímetros de comprimento, é oval achatado e apresenta cinco listras pretas verticais na parte dorsal, lembrando a insígnia de um sargento. Possui coloração cinza com porções amareladas, alaranjadas ou azuladas. Alimenta-se de invertebrados e algas.",
-      "questionText": "Quem é esse organismo?",
+      "infoText": "Common fish in the tropical and subtropical seas of the world, abundant in the Brazilian coast. Their body is between 8 and 15 centimeters in length, oval in form and with 5 vertical black stripes in the dorsal part, resembling a insignia of a sergeant. It has a gray color with agglomerated yellowish or blueish portions. It feeds on invertebrates and algae.",
+      "questionText": "Which are these organisms?",
       "answers": [
         {
-          "answerText": "Sargentinho",
+          "answerText": "Sergeant major fish",
           "isCorrect": true
         },
         {
-          "answerText": "Raia manta"
+          "answerText": "Giant manta ray"
         },
         {
-          "answerText": "Polvo"
+          "answerText": "Octopus"
         },
         {
-          "answerText": "Tartaruga cabeçuda"
+          "answerText": "Loggerhead Sea Turtle"
         },
         {
-          "answerText": "Lagosta"
+          "answerText": "Lobster"
         }
       ],
-      "name": "Sargentinho",
+      "name": "Sergeant major fish",
       "scientific": "Abdefduf saxatilis"
     }
   ]

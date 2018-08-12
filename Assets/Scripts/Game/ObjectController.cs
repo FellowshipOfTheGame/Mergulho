@@ -52,6 +52,8 @@ public class ObjectController : MonoBehaviour
 
     private void OnMouseOver()
     {
+        Debug.Log("oi");
+
         if (gameObject.tag == "Chest" && !question.wasAnswered)
             ChangeSprite(0);
         else if (gameObject.tag == "Key" || gameObject.tag == "Bubble")
@@ -60,6 +62,8 @@ public class ObjectController : MonoBehaviour
 
     private void OnMouseExit()
     {
+        Debug.Log("tchau");
+
         if (gameObject.tag == "Chest" && !question.wasAnswered)
             ChangeSprite(1);
         else if(gameObject.tag == "Key" || gameObject.tag == "Bubble")
@@ -67,6 +71,9 @@ public class ObjectController : MonoBehaviour
     }
 
     private void OnMouseDown() {
+
+        Debug.Log("cliquei");
+
         if (gameObject.tag == "Chest")
         {
             if (!question.wasAnswered && recoveredKeys > 0)
