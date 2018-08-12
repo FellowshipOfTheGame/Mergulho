@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,10 +8,8 @@ using UnityEngine.UI;
 public class StartController : MonoBehaviour
 {
     public GameObject menuDisplay, creditsDisplay, instrucDisplay, quitButton;
-    public GameObject instruction0, instruction1, instruction2, instruction3;
     public bool isStartMenu;
-
-    private GameObject[] instructions;
+    public GameObject[] instructions;
 
     private void Start()
     {
@@ -23,10 +22,13 @@ public class StartController : MonoBehaviour
             menuDisplay.SetActive(true);
             creditsDisplay.SetActive(false);
             instrucDisplay.SetActive(false);
-            instruction0.SetActive(false);
-            instruction1.SetActive(false);
-            instruction2.SetActive(false);
-            instruction3.SetActive(false);
+
+            for(int i = 1; i < instructions.Length; i++)
+            {
+                instructions[i].SetActive(false);
+            }
+
+            instructions[0].SetActive(true);
         }
     }
 
@@ -45,24 +47,14 @@ public class StartController : MonoBehaviour
         instrucDisplay.SetActive(show);
     }
 
-    public void ShowInstructions0(bool show)
+    public void EnablePageInstruction(string page)
     {
-        instruction0.SetActive(show);
+        instructions[Int32.Parse(page)].SetActive(true);
     }
 
-    public void ShowInstructions1(bool show)
+    public void DisablePageInstruction(string page)
     {
-        instruction1.SetActive(show);
-    }
-
-    public void ShowInstructions2(bool show)
-    {
-        instruction2.SetActive(show);
-    }
-
-    public void ShowInstructions3(bool show)
-    {
-        instruction3.SetActive(show);
+        instructions[Int32.Parse(page)].SetActive(false);
     }
 
     public void LoadScene(string name)

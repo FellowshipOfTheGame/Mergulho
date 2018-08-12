@@ -6,8 +6,7 @@ using System.Collections;
 
 public class DataController : MonoBehaviour
 {
-    public float time16;
-    public float time24;
+    public float time;
     public GameObject sprite;
 
     private SpriteRenderer sprRend;
@@ -107,10 +106,7 @@ public class DataController : MonoBehaviour
         GameData loadedData = JsonUtility.FromJson<GameData>(jsonData);
         questions = loadedData.questions;
 
-        if(questions.Length < 16)
-            playTimeAvaliable = questions.Length * time16;
-        else
-            playTimeAvaliable = questions.Length * time24;
+        playTimeAvaliable = questions.Length * time;
 
         isDataReady = true;
     }

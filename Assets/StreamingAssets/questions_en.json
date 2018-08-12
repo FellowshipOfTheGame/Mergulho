@@ -1,0 +1,504 @@
+{
+  "questions": [
+    {
+      "index": "0",
+      "infoText": "São organismos que possuem cinco braços e coloração avermelhada.  São carnívoros e alimentam-se principalmente de moluscos. A digestão do alimento ocorre fora de seu corpo, ou seja, lançam seus estômagos e suco digestivo para fora do corpo e, após isso, engolem o alimento já digerido.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Ouriços-do-mar"
+        },
+        {
+          "answerText": "Pepinos-do-mar"
+        },
+        {
+          "answerText": "Lírios-do-mar"
+        },
+        {
+          "answerText": "Estrelas-do-mar",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Anêmonas-do-mar"
+        }
+      ],
+      "name": "Estrela-do-mar",
+      "scientific": "Echinaster brasiliensis"
+    },
+    {
+      "index": "1",
+      "infoText": "São equinodermos, aparentados às estrelas-do-mar. Alimentam-se de algas delicadas, raspando e arrancando-as das rochas, sendo que as únicas que sobram são as calcárias, de coloração rósea e que são resistentes à herbivoria. Podem ficar abrigados em buracos chamados de \"locas\". Sua coloração é negra e possuem espinhos pontiagudos, os quais podem perfurar a pele humana e causar infecções. Muitas pessoas acham que são capazes de \"lançar\" seus espinhos, mas isso não é verdade. ",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Ouriços-do-mar",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Pepinos-do-mar"
+        },
+        {
+          "answerText": "Lírios-do-mar"
+        },
+        {
+          "answerText": "Estrelas-do-mar"
+        },
+        {
+          "answerText": "Anêmonas-do-mar"
+        }
+      ],
+      "name": "Ouriço-do-mar preto",
+      "scientific": "Echinometra lucunter"
+    },
+    {
+      "index": "2",
+      "infoText": "Crustáceos presentes no litoral brasileiro e bastante apreciados na culinária, sendo um alimento de luxo. Por isso, estão ameaçados e existe a época do defeso, na qual não se pode caçar estes organismos. Podem viver em profundidades de até 90 metros e geralmente se escondem em fendas nas rochas durante o dia e saem à noite para se alimentar. As fêmeas podem botar até 100.000 ovos, os quais ficam presos na parte inferior de seus abdomens. Possuem 5 pares de pernas no tórax, pertencendo à ordem Decapoda.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Craca"
+        },
+        {
+          "answerText": "Barata-da-praia"
+        },
+        {
+          "answerText": "Anêmona-do-mar"
+        },
+        {
+          "answerText": "Lagosta vermelha",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        }
+      ],
+      "name": "Lagosta vermelha",
+      "scientific": "Panulirus argus"
+    },
+    {
+      "index": "3",
+      "infoText": "São organismos que parecem algas, mas na verdade são animais aparentados às estrelas-do-mar, que pertencem à classe Crinoidea. Possuem 5 braços ramificados, que lembram penas, e que são utilizados na sua alimentação por filtração, pois servem como barreiras para as partículas em suspensão na água.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Craca"
+        },
+        {
+          "answerText": "Barata-da-praia"
+        },
+        {
+          "answerText": "Lírio-do-mar",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Lagosta vermelha"
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        }
+      ],
+      "name": "Lírio-do-mar",
+      "scientific": "Tropiometra carinata"
+    },
+    {
+      "index": "4",
+      "infoText": "Animais do grupo dos cnidários, com corpo em forma de cilindro contendo uma extremidade fixa ao substrato e a outra cercada por tentáculos, entre os quais está a boca. Capturam o alimento com os tentáculos. São animais que só ocorrem no Brasil e produzem uma molécula chamada caissarona, que podem contribuir na produção de medicamentos para distúrbios intestinais.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Tartaruga-marinha"
+        },
+        {
+          "answerText": "Barata-da-praia"
+        },
+        {
+          "answerText": "Lírios-do-mar"
+        },
+        {
+          "answerText": "Anêmona-do-mar",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        }
+      ],
+      "name": "Anêmona-do-mar",
+      "scientific": "Bunodosoma caissarum"
+    },
+    {
+      "index": "5",
+      "infoText": "Os indivíduos da espécie <i>Mussismilia hispida</i> são endêmicos do Brasil, ou seja, só ocorrem em nosso litoral e em mais nenhum outro lugar do mundo. Vivem em ambientes de águas claras, rasas e quentes (acima de 20° C). São cnidários que formam colônias que parecem cérebros, com coloração que pode variar entre cinza, azul e verde.",
+      "questionText": "Qual o nome popular desses organismos?",
+      "answers": [
+        {
+          "answerText": "Barata-da-praia"
+        },
+        {
+          "answerText": "Coral-cérebro",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Anêmona-do-mar"
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        },
+        {
+          "answerText": "Tartaruga-marinha"
+        }
+      ],
+      "name": "Coral-cérebro",
+      "scientific": "Mussismilia hispida"
+    },
+    {
+      "index": "6",
+      "infoText": "São cnidários coloniais de coloração alaranjada. A cor é dada pelas algas que ficam associadas aos seus tecidos, em uma relação ecológica que chamamos de simbiose. Se a temperatura da água aumenta muita, estas algas podem morrer e causar o branqueamento e posterior morte dessas colônias. Vivem entre 2 e 7 metros de profundidade e as colônias ficam recobertas por um muco produzido por elas, que é utilizado por pescadores como analgésico. Esse muco deu a estes organismos o nome popular de \"baba-de-boi\".",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "<i>Palythoa</i>",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Anêmona-do-mar"
+        },
+        {
+          "answerText": "Coral-cérebro"
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        },
+        {
+          "answerText": "Tartaruga-marinha"
+        }
+      ],
+      "name": "Baba-de-boi",
+      "scientific": "Palythoa caribaeorum"
+    },
+    {
+      "index": "7",
+      "infoText": "Pouco conhecidos da maioria da população, esses organismos formam um dos maiores depósitos de carbonato de cálcio do mundo e estão ameaçados pela acidificação da água do mar que está ocorrendo como consequência das mudanças climáticas globais. A acidez da água impede a formação de estruturas calcárias pelos organismos marinhos. Esses organismos são algas vermelhas que formam grandes bancos submarinos, como se fossem rochas de cor rosada no fundo do mar e o nome deles em grego significa \"rocha de cor rosa ou vermelha\". No Brasil, ocorrem principalmente no Parque Nacional Marinho de Abrolhos, ocupando uma área de aproximadamente 20.000 Km2.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Coral-cérebro"
+        },
+        {
+          "answerText": "<i>Palythoa</i>"
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        },
+        {
+          "answerText": "Tartaruga-marinha"
+        },
+        {
+          "answerText": "Rodolitos",
+          "isCorrect": true
+        }
+      ],
+      "name": "Rodolito",
+      "scientific": ""
+    },
+    {
+      "index": "8",
+      "infoText": "São algas de coloração parda, bastante abundantes no litoral do Brasil, principalmente na região Sudeste. Ocupam a área dos costões rochosos que fica no limite da maré baixa, ficando parcialmente exposta ao ar durante algumas horas do dia. Estas algas possuem o corpo dividido em um eixo central e ramos laterais chamados de lâminas, que parecem folhas, mas não são. Ainda, podem possuir vesículas de ar (ou vesículas flutuadoras) que fazem com que os indivíduos flutuem na água. Em outros lugares do mundo, algumas espécies destas algas podem formar extensos bancos flutuantes, os quais servem de abrigo e fonte de alimento para diversas espécies, como as tartarugas marinhas.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Anêmona-do-mar"
+        },
+        {
+          "answerText": "Coral-cérebro"
+        },
+        {
+          "answerText": "Rodolitos"
+        },
+        {
+          "answerText": "Sargaço",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Tartaruga-marinha"
+        }
+      ],
+      "name": "Sargaço",
+      "scientific": "Sargassum vulgare"
+    },
+    {
+      "index": "9",
+      "infoText": "Vertebrado marinho que pode viver por até 67 anos e os adultos pesam 200 Kg em média. Possuem uma mandíbula forte, uma cabeça grande e uma carapaça rígida, caracterizada pela presença de 5 pares de placas dorsais. Podem ficar submersas por até 4 horas ininterruptamente, mas geralmente os mergulhos ficam entre 15 e 30 minutos. Alimentam-se principalmente de invertebrados, como crustáceos e moluscos. As fêmeas iniciam a fase reprodutiva entre os 17 e 33 anos. Os ovos são colocados em buracos cavados na areia da praia onde a fêmea nasceu, os quais são cobertos de areia. Muitos filhotes morrem logo após o nascimento e isso, associado ao fato da demora para a maturidade sexual, faz com que estes organismos estejam ameaçados.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Coral-cérebro"
+        },
+        {
+          "answerText": "Rodolitos"
+        },
+        {
+          "answerText": "Sargaço"
+        },
+        {
+          "answerText": "Ouriço-do-mar"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda",
+          "isCorrect": true
+        }
+      ],
+      "name": "Tartaruga marinha comum ou cabeçuda",
+      "scientific": "Caretta caretta"
+    },
+    {
+      "index": "10",
+      "infoText": "Algas verdes do gênero <i>Ulva</i>. São aparentadas das plantas terrestres. Possuem cloroplastos com clorofilas a e b, que são pigmentos da fotossíntese. A morfologia destas algas é do tipo foliácea e elas são bastante apreciadas por alguns peixes e tartarugas. Geralmente ocorrem em águas rasas, em locais com alta quantidade de matéria orgânica ou com poluição por esgoto.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Rodolitos"
+        },
+        {
+          "answerText": "Sargaço"
+        },
+        {
+          "answerText": "Anêmona-do-mar"
+        },
+        {
+          "answerText": "Alface-do-mar",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        }
+      ],
+      "name": "Alface-do-mar",
+      "scientific": "Ulva lactuca"
+    },
+    {
+      "index": "11",
+      "infoText": "Organismos sésseis e crostosos, de coloração entre o laranja e o vermelho. São filtradores, sendo que a água do mar entra pelos diversos poros do corpo e percorre o sistema de canais com células que absorvem os nutrientes da água. Estes poros caracterizam o filo destes organismos (Porifera). O esqueleto é formado por espículas e fibras de colágeno. Produzem uma substância urticante que pode causar dermatite.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Sargaço"
+        },
+        {
+          "answerText": "Anêmona-do-mar"
+        },
+        {
+          "answerText": "Esponja-do-mar laranja",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Alface-do-mar"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        }
+      ],
+      "name": "Esponja-laranja",
+      "scientific": ""
+    },
+    {
+      "index": "12",
+      "infoText": "Apesar de parecerem algas, são na verdade aparentados às anêmonas-do-mar, pertencendo ao grupo dos cnidários. São coloniais e o esqueleto calcário sustenta os indivíduos da colônia, formando uma estrutura ereta e ramificada, de coloração vermelha. São bioindicadores de mudanças climáticas, pois são sensíveis às mudanças de temperatura da água.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Ouriços-do-mar"
+        },
+        {
+          "answerText": "Esponja-do-mar laranja"
+        },
+        {
+          "answerText": "Alface-do-mar"
+        },
+        {
+          "answerText": "Gorgônia",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Rodolitos"
+        }
+      ],
+      "name": "Gorgônia",
+      "scientific": "Gorgonia elegans"
+    },
+    {
+      "index": "13",
+      "infoText": "São moluscos cefalópodes. Possuem oito braços com ventosas, dispostos ao redor da boca. São predadores, alimentando-se principalmente de peixes e crustáceos. Apresentam boa visão, o que é uma vantagem na hora de procurar alimento. Possuem glândulas que liberam tinta em momentos de estresse e fuga de predadores. São muito apreciados na culinária.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Esponja-do-mar laranja"
+        },
+        {
+          "answerText": "Alface-do-mar"
+        },
+        {
+          "answerText": "Polvo",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        },
+        {
+          "answerText": "Lírio-do-mar"
+        }
+      ],
+      "name": "Polvo",
+      "scientific": "Octopus vulgaris"
+    },
+    {
+      "index": "14",
+      "infoText": "Algas que formam tufos de consistência macia. O talo é formado de filamentos que parecem fios de cabelo, cheios de ramificações e com coloração vermelha. São apreciadas por organismos herbívoros, como peixes e ouriços. Tem um ciclo de vida curto e crescem bem rápido.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Esponja-do-mar laranja"
+        },
+        {
+          "answerText": "Algas vermelhas filamentosas",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Polvo"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        },
+        {
+          "answerText": "Lírio-do-mar"
+        }
+      ],
+      "name": "Algas vermelhas filamentosas",
+      "scientific": "Polysihphonia spp."
+    },
+    {
+      "index": "15",
+      "infoText": "Colônias de consistência bem rígida, de coloração alaranjada, parecendo pequenas árvores. Os indivíduos que formam a colônia são bem pequenos, só sendo possível visualizá-los com auxílio de uma lupa ou de um microscópio. Apesar de bastante parecidos com corais, estes organismos pertencem a outro grupo, denominado Ectoprocta. A espécie não é nativa do Brasil, tendo sido trazida do Japão.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Alface-do-mar"
+        },
+        {
+          "answerText": "Polvo"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        },
+        {
+          "answerText": "<i>Schizoporella unicornis</i>",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Lírio-do-mar"
+        }
+      ],
+      "name": "",
+      "scientific": "Schizoporella unicornis"
+    },
+    {
+      "index": "16",
+      "infoText": "Também conhecida como jamanta, é uma espécie de peixe, de um grupo aparentado aos tubarões. Tem o corpo em forma de losango e uma cauda longa, sem espinho. Podem pesar até 1.350 Kg. Alimentam-se de plâncton e de pequenos peixes.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Esponja-do-mar laranja"
+        },
+        {
+          "answerText": "Raias manta",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Polvo"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        },
+        {
+          "answerText": "Lírio-do-mar"
+        }
+      ],
+      "name": "Raia manta",
+      "scientific": "Manta birostris"
+    },
+    {
+      "index": "17",
+      "infoText": "Alga parda que tem o talo em formato de ventarola. O talo cresce pela margem, que fica enrolada.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Esponja-do-mar laranja"
+        },
+        {
+          "answerText": "<i>Padina</i>",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Polvo"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        },
+        {
+          "answerText": "Lírio-do-mar"
+        }
+      ],
+      "name": "",
+      "scientific": "Padina gymnospora"
+    },
+    {
+      "index": "18",
+      "infoText": "Organismos de coloração negra, que possuem uma extremidade do corpo fixada às rochas e a outra extremidade formada por dois sifões, um por onde a água e o alimento entram (sifão inalante) e outro por onde sai água e excretas (sifão exalante). O corpo é revestido por uma camada de células chamada de túnica (de onde vem o nome do grupo ao qual pertencem – Tunicata). Alimentam-se por filtração e as trocas gasosas ocorrem por brânquias na faringe. Apesar de possuírem uma morfologia pouco complexa, são parentes próximos dos vertebrados, por possuírem notocorda.",
+      "questionText": "Quem são esses organismos?",
+      "answers": [
+        {
+          "answerText": "Alface-do-mar"
+        },
+        {
+          "answerText": "Polvo"
+        },
+        {
+          "answerText": "Ascídia negra",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Estrela-do-mar"
+        },
+        {
+          "answerText": "Lírio-do-mar"
+        }
+      ],
+      "name": "Ascídia preta",
+      "scientific": "Phalusia nigra"
+    },
+    {
+      "index": "19",
+      "infoText": "Peixe comum nos mares tropicais e subtropicais de todo o mundo, abundante na costa brasileira. O seu corpo possui entre 8 e 15 centímetros de comprimento, é oval achatado e apresenta cinco listras pretas verticais na parte dorsal, lembrando a insígnia de um sargento. Possui coloração cinza com porções amareladas, alaranjadas ou azuladas. Alimenta-se de invertebrados e algas.",
+      "questionText": "Quem é esse organismo?",
+      "answers": [
+        {
+          "answerText": "Sargentinho",
+          "isCorrect": true
+        },
+        {
+          "answerText": "Raia manta"
+        },
+        {
+          "answerText": "Polvo"
+        },
+        {
+          "answerText": "Tartaruga cabeçuda"
+        },
+        {
+          "answerText": "Lagosta"
+        }
+      ],
+      "name": "Sargentinho",
+      "scientific": "Abdefduf saxatilis"
+    }
+  ]
+}

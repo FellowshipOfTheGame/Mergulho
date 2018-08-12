@@ -7,12 +7,11 @@ public class ItemController : MonoBehaviour {
     public GameObject item;
     private bool isActive;
 
-    public void Start () {
+    public void Start() {
         isActive = false;
     }
 
-
-	public void ShowItem () {
+	public void ShowItem() {
         isActive = !isActive;
         item.SetActive(isActive);
     }
