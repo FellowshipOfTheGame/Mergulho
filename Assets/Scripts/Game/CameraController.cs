@@ -3,38 +3,40 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
-    public GameObject player;
+    private ControllerKeys playerController;
     public float leftLimit, rightLimit, upLimit, downLimit;
 
-    private Vector3 posicao; 
-    
+    private Vector3 posicao, player;
+
     void Start()
     {
+        playerController = FindObjectOfType<ControllerKeys>();
     }
 
     void LateUpdate()
     {
-        if (player.transform.position.x > leftLimit)
+        player = playerController.LoadPlayerPosition();
+        if (player.x > leftLimit)
         {
-            if (player.transform.position.x < rightLimit)
-                posicao.x = player.transform.position.x;
+            if (player.x < rightLimit)
+                posicao.x = player.x;
             else
                 posicao.x = rightLimit;
         }
         else
             posicao.x = leftLimit;
 
-        if (player.transform.position.y > downLimit)
+        if (player.y > downLimit)
         {
-            if (player.transform.position.y < upLimit)
-                posicao.y = player.transform.position.y;
+            if (player.y < upLimit)
+                posicao.y = player.y;
             else
                 posicao.y = upLimit;
         }
         else
             posicao.y = downLimit;
 
-        posicao.z = player.transform.position.z;
+        posicao.z = -10;
         transform.position = posicao;
     }
 }

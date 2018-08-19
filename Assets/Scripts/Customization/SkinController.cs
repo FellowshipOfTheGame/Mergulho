@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkinController : MonoBehaviour
 {
 
+    public GameObject Mergulhador;
     private SpriteRenderer spriteRenderer;
     private Vector3 posicao;
     private ControllerKeys playerController;
@@ -13,13 +14,13 @@ public class SkinController : MonoBehaviour
     private bool movement;
 
 
-    void Start()
+    void Awake()
     {
         game = FindObjectOfType<GameController>();
         playerController = FindObjectOfType<ControllerKeys>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        posicao = playerController.LoadPlayerPosition();
+        posicao = Mergulhador.transform.position;
         transform.position = posicao;
     }
 
