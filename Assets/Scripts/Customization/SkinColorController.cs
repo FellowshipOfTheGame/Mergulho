@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SkinColorController : MonoBehaviour {
 
-    public SpriteRenderer skin; 
+    public SpriteRenderer skin;
     private Color32 color;
     //private int[] aux = new int[3];
 
