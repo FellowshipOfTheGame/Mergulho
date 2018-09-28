@@ -36,15 +36,15 @@ class I18n
     /// <summary>
     /// Init on first use
     /// </summary>
-    static I18n()
+    /*static I18n()
     {
         LoadLanguage();
-    }
+    }*/
 
     /// <summary>
     /// Load language files from ressources
     /// </summary>
-    private static void LoadLanguage()
+    public static void LoadLanguage()
     {
         if (Fields == null)
             Fields = new Dictionary<string, string>();

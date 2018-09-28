@@ -80,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AlbumController.cs" />
-    <Compile Include="Assets\Scripts\AssistantController.cs" />
     <Compile Include="Assets\Scripts\AudioController.cs" />
     <Compile Include="Assets\Scripts\Customization\CustomizationController.cs" />
     <Compile Include="Assets\Scripts\Customization\ItemController.cs" />
@@ -90,6 +89,7 @@
     <Compile Include="Assets\Scripts\Data\GameData.cs" />
     <Compile Include="Assets\Scripts\Data\QuestionData.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
+    <Compile Include="Assets\Scripts\Game\AssistantController.cs" />
     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
     <Compile Include="Assets\Scripts\Game\ControllerKeys.cs" />
     <Compile Include="Assets\Scripts\Game\Creator.cs" />

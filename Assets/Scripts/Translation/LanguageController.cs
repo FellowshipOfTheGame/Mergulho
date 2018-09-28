@@ -8,11 +8,8 @@ public class LanguageController : MonoBehaviour {
     public void SelectLanguage(string lang)
     {
         PlayerPrefs.DeleteAll();
-
         PlayerPrefs.SetString("lang", lang);
-
-        I18n i18n = new I18n();
-
+        I18n.LoadLanguage();
         SceneManager.LoadScene("Persistent");
     }
 }

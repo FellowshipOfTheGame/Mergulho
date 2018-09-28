@@ -21,22 +21,16 @@ public class QuizController : MonoBehaviour
     private void Start()
     {
         audioSource = Camera.main.GetComponent<AudioSource>();
-
         audioSource.PlayOneShot(openChest);
-
-        ShowInfoDisplay(true);
-        ShowQuestionDisplay(false);
-        ShowPhotoDisplay(false);
-
         dataController = FindObjectOfType<DataController>();
-
         curQuestion = dataController.GetQuestion(PlayerPrefs.GetInt("currentQuestion"));
-
         oxygenTime = PlayerPrefs.GetFloat("timeRemaining");
-
         playTimeAvaliable = PlayerPrefs.GetFloat("playTimeAvaliable");
-
         answers = answersObj.GetComponentsInChildren<AnswerButton>();
+
+        infoDisplay.SetActive(true);
+        newPhotoDisplay.SetActive(false);
+        questionDisplay.SetActive(false);
 
         ShowQuestion();
     }
@@ -47,9 +41,7 @@ public class QuizController : MonoBehaviour
             timeToAnswer += Time.deltaTime;
 
         timePerCent = oxygenTime / playTimeAvaliable;
-
         oxygenTimeBar.transform.localScale = new Vector3(timePerCent, oxygenTimeBar.transform.localScale.y);
-
     }
 
     private void ShowQuestion()
@@ -59,7 +51,6 @@ public class QuizController : MonoBehaviour
         questionText.text = curQuestion.questionText;
 
         ColorBlock colors;
-
         for (int i = 0; i < answers.Length; i++)
         {
             //Muda a cor para o botao pressionado
@@ -86,26 +77,20 @@ public class QuizController : MonoBehaviour
         if (isCorrect)
         {
             questionAvaliable = false;
-
             curQuestion.wasAnswered = true;
             curQuestion.timeUsed = timeToAnswer;
-
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
             PlayerPrefs.SetInt("questionsAnswered", PlayerPrefs.GetInt("questionsAnswered") + 1);
-
             audioSource.PlayOneShot(cameraFlash);
-
-            ShowPhotoDisplay(true);
-            ShowQuestionDisplay(false);
+            newPhotoDisplay.SetActive(true);
+            questionDisplay.SetActive(false);
         }
         else
         {
             audioSource.PlayOneShot(bubbles);
             curQuestion.mistakes++;
             oxygenTime -= lostTime;
-
             PlayerPrefs.SetFloat("timeRemaining", oxygenTime);
-
             if (oxygenTime <= 0f)
                 SceneManager.LoadScene("Lose");
         }
@@ -114,20 +99,5 @@ public class QuizController : MonoBehaviour
     public void LoadScene(string name)
     {
         SceneManager.LoadScene(name);
-    }
-
-    public void ShowInfoDisplay(bool show)
-    {
-        infoDisplay.SetActive(show);
-    }
-
-    public void ShowQuestionDisplay(bool show)
-    {
-        questionDisplay.SetActive(show);
-    }
-
-    public void ShowPhotoDisplay(bool show)
-    {
-        newPhotoDisplay.SetActive(show);
     }
 }

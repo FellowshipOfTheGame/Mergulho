@@ -8,25 +8,20 @@ public class ObjectController : MonoBehaviour
     public AudioClip soundEffect;
     public Sprite[] sprites;
 
-    private GameController gameController;
     private DataController dataController;
     private QuestionData question;
-    private int recoveredKeys;
-    private float timeRemaining;
     private AudioSource[] audioSources;
-    private int keyWarningTimes;
+    private int recoveredKeys, keyWarningTimes;
+    private float timeRemaining;
 
     private void Start()
     {
         audioSources = Camera.main.GetComponents<AudioSource>();
-
         dataController = FindObjectOfType<DataController>();
-        gameController = FindObjectOfType<GameController>();
 
         if (index < PlayerPrefs.GetInt("questionsLength"))
         {
             question = dataController.GetQuestion(index);
-
             if (gameObject.tag == "Chest" && question.wasAnswered)
             {
                 ChangeSprite(2);
@@ -77,9 +72,7 @@ public class ObjectController : MonoBehaviour
                 SceneManager.LoadScene("Quiz");
             } else if (!question.wasAnswered && recoveredKeys == 0) {
                 PlayerPrefs.SetInt("keyWarningTimes", keyWarningTimes - 1);
-                if (keyWarningTimes > 0) {
-                    gameController.ShowKeyWarning(true);
-                }
+                PlayerPrefs.SetInt("clickChestWKey", 1);
             }
         }
         else if (gameObject.tag == "Bubble")
