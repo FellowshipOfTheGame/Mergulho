@@ -31,7 +31,11 @@ public class StartController : MonoBehaviour
         foreach (GameObject go in reload)
             Destroy(go);
 
+        string lang = PlayerPrefs.GetString("lang");
+
         PlayerPrefs.DeleteAll();
+
+        PlayerPrefs.SetString("lang", lang);
 
         SceneManager.LoadScene(name);
     }
